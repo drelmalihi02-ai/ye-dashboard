@@ -9,12 +9,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Send notice
+      - name: Send notice with chart screenshot
         env:
           TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT: ${{ secrets.CHANNEL_ID }}
         run: |
-          curl -sS --fail "https://api.telegram.org/bot${TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${CHAT}" \
-            --data-urlencode "text@notice.txt" \
-            -d "disable_web_page_preview=false" > /dev/null
+          API="https://api.telegram.org/bot${TOKEN}"
+          LEN=$(wc -m < notice.txt)
+          if [ -f chart.png ] && [ "$LEN" -le 1000 ]; then
+            # One post: chart image with the notice as its caption.
+            curl -sS --fail "$API/sendPhoto" \
+              -F "chat_id=${CHAT}" \
+              -F "photo=@chart.png" \
+              -F "caption=<notice.txt" \
+              -F "parse_mode=HTML" > /dev/null
+          else
+            # Notice too long for a caption: send the chart first, then the text.
+            if [ -f chart.png ]; then
+              curl -sS --fail "$API/sendPhoto" -F "chat_id=${CHAT}" -F "photo=@chart.png" > /dev/null
+            fi
+            curl -sS --fail "$API/sendMessage" \
+              --data-urlencode "chat_id=${CHAT}" \
+              --data-urlencode "text@notice.txt" \
+              -d "parse_mode=HTML" \
+              -d "disable_web_page_preview=true" > /dev/null
+          fi
