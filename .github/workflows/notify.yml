@@ -19,14 +19,14 @@ jobs:
           if [ -f chart.png ] && [ "$LEN" -le 1000 ]; then
             # One post: chart image with the notice as its caption.
             curl -sS --fail "$API/sendPhoto" \
-              -F "chat_id=${CHAT}" \
+              --form-string "chat_id=${CHAT}" \
               -F "photo=@chart.png" \
               -F "caption=<notice.txt" \
               -F "parse_mode=HTML" > /dev/null
           else
             # Notice too long for a caption: send the chart first, then the text.
             if [ -f chart.png ]; then
-              curl -sS --fail "$API/sendPhoto" -F "chat_id=${CHAT}" -F "photo=@chart.png" > /dev/null
+              curl -sS --fail "$API/sendPhoto" --form-string "chat_id=${CHAT}" -F "photo=@chart.png" > /dev/null
             fi
             curl -sS --fail "$API/sendMessage" \
               --data-urlencode "chat_id=${CHAT}" \
