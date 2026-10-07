@@ -1,14 +1,14 @@
-<b>YE Paradise: dashboard updated to 7 Oct 2026, 19:25 (Aden)</b>
+<b>YE Paradise: dashboard updated to 7 Oct 2026, 21:11 (Aden)</b>
 
-• 331 incidents itemised since 1 Sep
+• 332 incidents itemised since 1 Sep
 • 103 civilians killed, 144 injured
-• 1,642 Saudi strikes and missiles claimed by the Armed Forces
+• 1,798 Saudi strikes and missiles claimed by the Armed Forces
 • 37 AA strikes on Saudi territory
 
 <b>New since the last update</b>
-• Saudi artillery on Razih, Sa'dah, injured a civilian. Artillery also hit Ghamr, and rocket and artillery fire hit Al al-Shaykh in Munabbih.
-• In a speech, Abdulmalik al-Houthi claimed Saudi Arabia let Israeli officers fly reconnaissance over Sa'dah, Hajjah and Amran, and repeated the claim of 1,642 Saudi strikes and missiles since de-escalation. He called for mass rallies on Friday.
+• The Armed Forces say Saudi Arabia carried out 156 air strikes and missiles in 24 hours on Sana'a city, Taiz, Sa'dah, Al-Jawf, Marib and Amran, their highest daily count so far. They put the total since the escalation began at 1,798.
+• The Armed Forces claim 11 ballistic missiles hit Saudi-backed forces from south of Bab al-Mandab to Ras al-Ara and Al-Madaribah, Lahj, and a further missile hit a 13th Giants Brigade company. No new civilian casualties reported.
 
-<i>Pending review: Sa'dah rocket and artillery report on Munabbih logged as one rocket incident. Leader's speech logged as context only, not as incidents.</i>
+<i>Pending review: the Lahj missile claims logged as one ground operation. New footage of the Al-Ma'afer and Al-Mawasit push in Taiz treated as the 5 Oct claim, not a new operation.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
