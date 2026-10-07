@@ -1,8 +1,12 @@
-YE Paradise: dashboard updated to 7 Oct 2026, 06:01 (Aden)
+YE Paradise: dashboard updated to 7 Oct 2026, 15:45 (Aden)
 
-320 incidents itemised since 1 Sep. 103 civilians killed, 143 injured.
+328 incidents itemised since 1 Sep. 103 civilians killed, 143 injured.
 1,642 Saudi strikes and missiles claimed by the Armed Forces.
 37 AA strikes on Saudi territory.
+
+New since the last update: Saudi rockets, air strikes and artillery on Sa'dah border districts, incl. 2 strikes on telecom sites in Al-Safra and Al Salem. A series of Saudi strikes on Al-Mawasit and Sami', Taiz. No new civilian casualties reported.
+The Armed Forces say their ballistic missiles hit Saudi military supplies at Badr camp next to Aden airport, and claim Saudi-backed forces were driven out of east Al-Jawf and As-Silw, Taiz.
+Pending review: Al Salem district unconfirmed. Sa'dah artillery and drone report logged as one incident. Aden camp strike placed in Khor Maksar.
 
 Reported figures, not independently verified.
 Dashboard: https://drelmalihi02-ai.github.io/ye-dashboard/
