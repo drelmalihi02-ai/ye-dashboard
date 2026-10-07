@@ -1,14 +1,15 @@
-<b>YE Paradise: dashboard updated to 7 Oct 2026, 21:11 (Aden)</b>
+<b>YE Paradise: dashboard updated to 7 Oct 2026, 23:11 (Aden)</b>
 
-• 332 incidents itemised since 1 Sep
+• 333 incidents itemised since 1 Sep
 • 103 civilians killed, 144 injured
 • 1,798 Saudi strikes and missiles claimed by the Armed Forces
 • 37 AA strikes on Saudi territory
 
 <b>New since the last update</b>
-• The Armed Forces say Saudi Arabia carried out 156 air strikes and missiles in 24 hours on Sana'a city, Taiz, Sa'dah, Al-Jawf, Marib and Amran, their highest daily count so far. They put the total since the escalation began at 1,798.
-• The Armed Forces claim 11 ballistic missiles hit Saudi-backed forces from south of Bab al-Mandab to Ras al-Ara and Al-Madaribah, Lahj, and a further missile hit a 13th Giants Brigade company. No new civilian casualties reported.
+• Saudi artillery shelled areas of Al-Dhaher, a border district in Sa'dah, again on the night of 7 Oct. No casualties reported.
+• Flight tracking sites reported a halt to operations at King Khalid airport in Riyadh. The Armed Forces have made no new claim on it.
+• A Supreme Political Council member warned Saudi Arabia against further escalation and praised gains on the Taiz and west coast fronts.
 
-<i>Pending review: the Lahj missile claims logged as one ground operation. New footage of the Al-Ma'afer and Al-Mawasit push in Taiz treated as the 5 Oct claim, not a new operation.</i>
+<i>Pending review: Al-Dhaher shelling logged as a new incident although the report calls it continuing. Riyadh airport halt not logged.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
