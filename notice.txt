@@ -1,12 +1,14 @@
-YE Paradise: dashboard updated to 7 Oct 2026, 15:45 (Aden)
+<b>YE Paradise: dashboard updated to 7 Oct 2026, 19:25 (Aden)</b>
 
-328 incidents itemised since 1 Sep. 103 civilians killed, 143 injured.
-1,642 Saudi strikes and missiles claimed by the Armed Forces.
-37 AA strikes on Saudi territory.
+• 331 incidents itemised since 1 Sep
+• 103 civilians killed, 144 injured
+• 1,642 Saudi strikes and missiles claimed by the Armed Forces
+• 37 AA strikes on Saudi territory
 
-New since the last update: Saudi rockets, air strikes and artillery on Sa'dah border districts, incl. 2 strikes on telecom sites in Al-Safra and Al Salem. A series of Saudi strikes on Al-Mawasit and Sami', Taiz. No new civilian casualties reported.
-The Armed Forces say their ballistic missiles hit Saudi military supplies at Badr camp next to Aden airport, and claim Saudi-backed forces were driven out of east Al-Jawf and As-Silw, Taiz.
-Pending review: Al Salem district unconfirmed. Sa'dah artillery and drone report logged as one incident. Aden camp strike placed in Khor Maksar.
+<b>New since the last update</b>
+• Saudi artillery on Razih, Sa'dah, injured a civilian. Artillery also hit Ghamr, and rocket and artillery fire hit Al al-Shaykh in Munabbih.
+• In a speech, Abdulmalik al-Houthi claimed Saudi Arabia let Israeli officers fly reconnaissance over Sa'dah, Hajjah and Amran, and repeated the claim of 1,642 Saudi strikes and missiles since de-escalation. He called for mass rallies on Friday.
 
-Reported figures, not independently verified.
-Dashboard: https://drelmalihi02-ai.github.io/ye-dashboard/
+<i>Pending review: Sa'dah rocket and artillery report on Munabbih logged as one rocket incident. Leader's speech logged as context only, not as incidents.</i>
+
+<a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
