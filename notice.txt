@@ -1,4 +1,4 @@
-<b>YE Paradise: dashboard updated to 7 Oct 2026, 23:11 (Aden)</b>
+<b>YE Paradise: dashboard updated to 8 Oct 2026, 00:15 (Aden)</b>
 
 • 333 incidents itemised since 1 Sep
 • 103 civilians killed, 144 injured
@@ -6,10 +6,7 @@
 • 37 AA strikes on Saudi territory
 
 <b>New since the last update</b>
-• Saudi artillery shelled areas of Al-Dhaher, a border district in Sa'dah, again on the night of 7 Oct. No casualties reported.
-• Flight tracking sites reported a halt to operations at King Khalid airport in Riyadh. The Armed Forces have made no new claim on it.
-• A Supreme Political Council member warned Saudi Arabia against further escalation and praised gains on the Taiz and west coast fronts.
-
-<i>Pending review: Al-Dhaher shelling logged as a new incident although the report calls it continuing. Riyadh airport halt not logged.</i>
+• Late on 7 Oct the Foreign Ministry blamed Saudi Arabia for the escalation at Bab al-Mandab and said Sana'a's control of the west coast poses no threat to shipping.
+• No new attacks or civilian casualties were reported after 23:11 on 7 Oct.
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
