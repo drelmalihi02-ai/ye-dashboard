@@ -1,19 +1,13 @@
-🇾🇪 <b>Yemen update | 8 Oct 2026, 18:47 (Aden)</b>
+🇾🇪 <b>Yemen update | 8 Oct 2026, 18:56 (Aden)</b>
 
-<b>🚀 Strikes on Saudi Arabia</b>
-🚀 AA/Houthis claim 2 cruise missiles on King Khalid airport (Riyadh) this evening, their third strike claim there today.
-🚀 AA/Houthis also claim ballistic missiles on Najran airport and Khamis Mushait air base, halting air traffic and causing damage.
-💥 An AA/Houthi strike hits an empty parked aircraft at King Khalid airport (Riyadh, KSA). Destruction of a Saudia A310 is claimed.
+<b>🩸 Civilian casualties</b>
+🔻 KSA air strikes on a passenger bus on the Shar'jab to Al-Turbah road (Taiz): toll now 2 civilians killed, 7 injured, a pregnant woman miscarried.
 
-<b>✈️ Air travel</b>
-✈️ Air India suspends flights to and from Riyadh (KSA) until further notice.
+<b>🏛️ Commemoration</b>
+🕯️ Sana'a marks 10 years since the KSA strike on the Great Hall funeral (8 Oct 2016): 155 civilians killed, over 550 injured.
 
-<b>⚔️ Taiz front</b>
-📍 AA/Houthi forces reportedly take Jabal Habashi peak (Taiz). IRG/PLC forces still hold its south-eastern sector.
-⚔️ AA/Houthi and IRG/PLC forces fight for a second day over Qadas (Taiz). Outcome not stated.
+📊 Since 1 Sep: 344 incidents, 106 civilians killed, 157 injured
 
-📊 Since 1 Sep: 344 incidents, 104 civilians killed, 150 injured
-
-<i>Pending review: aircraft type and owner at Riyadh airport unconfirmed. Jabal Habashi capture and Qadas fighting not confirmed by either side.</i>
+<i>Pending review: bus strike district assumed (Ash-Shamayatayn). Toll is a single AA/Houthi-side report.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
