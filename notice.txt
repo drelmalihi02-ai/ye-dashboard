@@ -1,14 +1,18 @@
-<b>YE Paradise: dashboard updated to 8 Oct 2026, 06:03 (Aden)</b>
+🇾🇪 <b>Yemen update | 8 Oct 2026, 11:38 (Aden)</b>
 
-• 334 incidents itemised since 1 Sep
-• 104 civilians killed, 147 injured
-• 1,798 Saudi strikes and missiles claimed by the Armed Forces
-• 38 AA strikes on Saudi territory
+<b>⚔️ Taiz front</b>
+🇾🇪📍 Sana'a forces reported to have taken the Jabal Habashi peak, Qadas and the town of al-Misrakh, south of Taiz city. PLC forces still hold the peak's south-eastern sector.
+💥 Saudi air strikes reported on Qadas after it changed hands. Clashes continue in al-Athbarah, north of Qadas.
 
-<b>New since the last update</b>
-• The Armed Forces claim a Bayraktar Akinci drone shot down over Taiz early on 8 Oct.
-• The Armed Forces claim a ballistic missile hit King Khalid airport in Riyadh and halted traffic, their third claim there since 5 Oct.
-• They repeat their last warning to airlines that Saudi airspace is a war zone, except over Mecca and Medina.
-• No new civilian casualties reported since the last update.
+<b>🇸🇦 Saudi Arabia</b>
+💥 Explosions heard across Riyadh, with smoke at several points. Air traffic at Riyadh airport halted. No claim yet.
+🇸🇾 Saudi media say Syria is discussing joining the war against Sana'a after President al-Sharaa visited Riyadh.
+
+<b>🏛️ Home front</b>
+🇾🇪 Armed tribal gathering in Al-Hada, Dhamar, backs the Armed Forces and declares continued mobilisation.
+
+📊 Since 1 Sep: 334 incidents, 104 civilians killed, 147 injured
+
+<i>Pending review: Taiz front gains come from field reports dated 7 Oct, not yet confirmed by an official statement.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
