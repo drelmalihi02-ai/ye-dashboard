@@ -1,14 +1,14 @@
-<b>YE Paradise: dashboard updated to 8 Oct 2026, 03:18 (Aden)</b>
+<b>YE Paradise: dashboard updated to 8 Oct 2026, 06:03 (Aden)</b>
 
 • 334 incidents itemised since 1 Sep
 • 104 civilians killed, 147 injured
 • 1,798 Saudi strikes and missiles claimed by the Armed Forces
-• 37 AA strikes on Saudi territory
+• 38 AA strikes on Saudi territory
 
 <b>New since the last update</b>
-• Early on 8 Oct a Saudi air strike on a fuel station in the Haran area of Dhamar city killed 1 civilian and injured 3, the Health Ministry says.
-• Saudi sources reported a blast in Riyadh without warning and flight trackers showed King Khalid airport halted. Sana'a has made no claim, so neither is logged.
-
-<i>Pending review: Haran placed in Dhamar City district. Strike count not stated, logged as 1.</i>
+• The Armed Forces claim a Bayraktar Akinci drone shot down over Taiz early on 8 Oct.
+• The Armed Forces claim a ballistic missile hit King Khalid airport in Riyadh and halted traffic, their third claim there since 5 Oct.
+• They repeat their last warning to airlines that Saudi airspace is a war zone, except over Mecca and Medina.
+• No new civilian casualties reported since the last update.
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
