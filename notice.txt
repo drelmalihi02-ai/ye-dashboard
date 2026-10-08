@@ -1,13 +1,14 @@
-🇾🇪 <b>Yemen update | 8 Oct 2026, 18:56 (Aden)</b>
+🇾🇪 <b>Yemen update | 8 Oct 2026, 19:49 (Aden)</b>
+
+<b>✈️ Riyadh airport disruption</b>
+✈️ About 300 flights to and from King Khalid airport (Riyadh, KSA) cancelled today after AA/Houthi strikes, nearly half of departures.
+⚠️ 31 more cancellations expected Friday across KSA airports.
 
 <b>🩸 Civilian casualties</b>
-🔻 KSA air strikes on a passenger bus on the Shar'jab to Al-Turbah road (Taiz): toll now 2 civilians killed, 7 injured, a pregnant woman miscarried.
-
-<b>🏛️ Commemoration</b>
-🕯️ Sana'a marks 10 years since the KSA strike on the Great Hall funeral (8 Oct 2016): 155 civilians killed, over 550 injured.
+🔻 A Yemeni rights group demands an investigation into the KSA air strikes on a passenger bus on the Shar'jab to Al-Turbah road (Taiz). Toll unchanged: 2 killed, 7 injured.
 
 📊 Since 1 Sep: 344 incidents, 106 civilians killed, 157 injured
 
-<i>Pending review: bus strike district assumed (Ash-Shamayatayn). Toll is a single AA/Houthi-side report.</i>
+<i>Pending review: flight cancellation figures are third-party estimates. Bus strike district assumed (Ash-Shamayatayn).</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
