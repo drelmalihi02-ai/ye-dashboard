@@ -1,18 +1,20 @@
-🇾🇪 <b>Yemen update | 8 Oct 2026, 15:20 (Aden)</b>
+🇾🇪 <b>Yemen update | 8 Oct 2026, 15:53 (Aden)</b>
 
 <b>💥 KSA air strikes</b>
-💥 KSA jets hit Yarim city, Ibb, with 7 air strikes, and Jabal al-Khadra in As-Sayyani, Ibb.
-📡 KSA air strikes hit telecom networks on Jabal Bard, Kusmah (Raymah) and in Bani Matar, Sana'a (2 strikes).
-✈️ KSA air strikes hit Hodeidah airport, western Yemen. Number of strikes not stated.
-💥 KSA air strike on Al-Dhaher border district, Sa'dah.
+📡 KSA jets hit telecom networks in Al-Bayda city and the Mukayras and Rada' districts, Al-Bayda, with 6 air strikes.
+📡 KSA air strikes (5) hit telecom networks in As-Sayyani district, Ibb.
 
-<b>⚠️ Warnings to KSA</b>
-⚠️ AA/Houthis warn experts, engineers and workers at all KSA oil facilities to stay away from sites they may target.
-✈️ AA/Houthis renew their warning to airlines, travellers and staff at KSA airports named earlier.
-🛫 KSA: Riyadh airport closed again, with no landings for 80+ minutes and no take-offs for 90+ minutes.
+<b>🩸 Civilian casualties</b>
+🔻 KSA air strike on the main road in As-Sayyani, Ibb, injures 3 civilians.
 
-📊 Since 1 Sep: 340 incidents, 104 civilians killed, 147 injured
+<b>🚀 Strikes on Saudi Arabia</b>
+🚀 AA/Houthis claim a second ballistic missile on King Khalid airport, Riyadh, at noon, causing damage and halting flights. Renewed explosions heard in Riyadh.
 
-<i>Pending review: no civilian casualties reported yet from the new strikes.</i>
+<b>🏛️ Home front</b>
+📣 AA/Houthi organisers call mass rallies on Friday afternoon in Al-Sabeen Square, Sana'a, and in governorate squares.
+
+📊 Since 1 Sep: 342 incidents, 104 civilians killed, 150 injured
+
+<i>Pending review: unclear if the As-Sayyani road strike is one of the 5 telecom strikes. The renewed Riyadh explosions are not tied to a specific claim.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
