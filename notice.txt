@@ -1,19 +1,17 @@
 🇾🇪 <b>Yemen update | 8 Oct 2026, 17:53 (Aden)</b>
 
-<b>🩸 Civilian casualties</b>
-🔻 KSA air strikes (2) hit a passenger bus on the Shar'jab to Al-Turbah road, Taiz. Dead and injured reported, toll not stated.
-
 <b>🚀 Strikes on Saudi Arabia</b>
-🚀 Fire crews deploy and smoke rises at King Khalid airport, Riyadh (KSA), after today's AA/Houthi missile claims. Unconfirmed reports say an aircraft was destroyed.
+⚠️ AA/Houthis warn staff at Saudi oil facilities and airports to stay away, saying these sites are now targets.
+✈️ Lufthansa Group suspends all flights to Riyadh (KSA) until 16 Oct.
 
-<b>⚔️ Taiz front</b>
-📍 Internet cut in Taiz city. Claims say an AA/Houthi offensive on the city is imminent.
+<b>🇵🇰 New actor</b>
+🇵🇰 A senior Pakistani military official says Pakistan has quietly joined the KSA war on AA/Houthis, with Pakistani jets striking AA/Houthi positions.
 
-<b>🏛️ Politics and statements</b>
-🎙️ AA/Houthi leader says his forces are ready for any new Israeli escalation and accuses KSA of working with Israel to defame the holy sites.
+<b>🩸 Civilian casualties</b>
+🕯️ AA/Houthi media visit the family of student Athir al-Amri in Sana'a, killed in a KSA strike. Date and place not stated.
 
 📊 Since 1 Sep: 344 incidents, 104 civilians killed, 150 injured
 
-<i>Pending review: Shar'jab bus strike district assumed (Ash-Shamayatayn) and toll not yet stated. Aircraft loss at Riyadh airport and Taiz offensive are unconfirmed claims.</i>
+<i>Pending review: Pakistani role is a single unnamed official's claim, not confirmed by Pakistan or KSA. Athir al-Amri strike not yet identified or logged.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
