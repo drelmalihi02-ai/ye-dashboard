@@ -1,19 +1,18 @@
-🇾🇪 <b>Yemen update | 8 Oct 2026, 12:46 (Aden)</b>
+🇾🇪 <b>Yemen update | 8 Oct 2026, 15:20 (Aden)</b>
 
-<b>🇸🇦 Riyadh</b>
-💥 KSA capital: further explosions reported in Riyadh with smoke at several points. No AA/Houthi claim yet.
-✈️ KSA: Riyadh airport stays closed to flights and now tops the world list of most disrupted airports.
+<b>💥 KSA air strikes</b>
+💥 KSA jets hit Yarim city, Ibb, with 7 air strikes, and Jabal al-Khadra in As-Sayyani, Ibb.
+📡 KSA air strikes hit telecom networks on Jabal Bard, Kusmah (Raymah) and in Bani Matar, Sana'a (2 strikes).
+✈️ KSA air strikes hit Hodeidah airport, western Yemen. Number of strikes not stated.
+💥 KSA air strike on Al-Dhaher border district, Sa'dah.
 
-<b>🇵🇰 Allies of KSA</b>
-✈️ A senior Pakistani military official says Pakistan has quietly joined the KSA war, with Pakistani jets striking AA/Houthi positions.
+<b>⚠️ Warnings to KSA</b>
+⚠️ AA/Houthis warn experts, engineers and workers at all KSA oil facilities to stay away from sites they may target.
+✈️ AA/Houthis renew their warning to airlines, travellers and staff at KSA airports named earlier.
+🛫 KSA: Riyadh airport closed again, with no landings for 80+ minutes and no take-offs for 90+ minutes.
 
-<b>🏛️ Home front</b>
-🇾🇪 Armed tribal gathering in Hamdan bin Zaid, Sa'dah, backs AA/Houthi forces and warns KSA over its vital facilities.
-🇾🇪 Harib al-Qaramish tribes, Marib, declare general mobilisation behind AA/Houthi forces and urge IRG/PLC fighters to take the amnesty.
-🎙️ AA/Houthi leader Abdulmalik al-Houthi speaks at 16:00 (Aden) on the Great Hall strike anniversary and latest events.
+📊 Since 1 Sep: 340 incidents, 104 civilians killed, 147 injured
 
-📊 Since 1 Sep: 334 incidents, 104 civilians killed, 147 injured
-
-<i>Pending review: unclear if the Riyadh explosions are a new round or the earlier one. The Pakistan claim is not confirmed by Pakistan or KSA.</i>
+<i>Pending review: no civilian casualties reported yet from the new strikes.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
