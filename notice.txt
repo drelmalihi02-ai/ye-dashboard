@@ -1,10 +1,10 @@
-🇾🇪 <b>Yemen update | 9 Oct 2026, 23:59 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 10 Oct 2026, 01:39 (Sana'a)</b>
 
-<b>💥 KSA strikes</b>
-🚀 KSA rockets hit areas of Kitaf wa al-Boqe', Sahar and Al Salem (Sa'dah) near midnight, AA/Houthis say. No casualties reported.
+<b>🇸🇦 Saudi Arabia</b>
+✈️ 171 flights cancelled at King Khalid airport (Riyadh) on Friday after AA/Houthi strikes, flight tracking shows.
+🩸 KSA tells the UN Security Council AA/Houthi attacks on Abha and Riyadh airports on 6 and 7 Oct killed 3 civilians and injured 36.
+🔻 KSA also says AA/Houthi attacks on Abha, Khamis Mushait, Jazan and Najran in September injured 73 civilians.
 
 📊 Since 1 Sep: 363 incidents, 108 civilians killed, 161 injured
-
-<i>Pending review: Al Salem's district is unconfirmed.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
