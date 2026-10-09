@@ -133,6 +133,20 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 @media (max-width:1000px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.span7,.span5,.span6{grid-column:span 12}}
 @media (max-width:800px){.feed{grid-template-columns:1fr}.feed li:nth-child(2){border-top:1px solid var(--line2)}}
 @media (max-width:560px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi .v{font-size:23px}}
+.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:8px 36px}
+.dbgrid h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2);margin:6px 0 8px}
+.dbrow{display:grid;grid-template-columns:minmax(96px,150px) 1fr;gap:10px;align-items:center;padding:3px 0;font-size:13.5px;cursor:pointer;border-radius:4px}
+.dbrow:hover,.dbrow.on{background:var(--line2)}
+.dbrow .dn{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dbrow.zero .dn{color:var(--muted)}
+.dbrow .dv{display:flex;align-items:center;gap:8px;min-width:0;flex-wrap:wrap}
+.dbrow .bar2{height:14px;border-radius:0 4px 4px 0;background:var(--c-saudi);min-width:2px}
+.dbrow.zero .bar2{background:var(--line)}
+.dbrow .num{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.dbrow.zero .num{color:var(--muted);font-weight:400}
+.dbrow .cas2{color:var(--crit);font-size:12.5px;font-weight:600}
+.dbrow .oth{color:var(--muted);font-size:12.5px}
+.dbnote{font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 /* ---- governorate tabs and gravity maps ---- */
 :root{--g0:#efc0aa;--g1:#e38a66;--g2:#c9452f;--g3:#8c1c1c;--dfill:#efe9de;--dline:#cbc4b6}
@@ -412,6 +426,13 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
       <h2>Districts</h2>
       <p class="sub">Sorted by the map measure. Click a row to filter.</p>
       <div class="dscroll"><table class="dtable"><thead><tr><th>District</th><th>Inc.</th><th>Strikes</th><th>Killed</th><th>Inj.</th></tr></thead><tbody id="g-dist"></tbody></table></div>
+    </section>
+    <section class="panel span12" id="g-dbar-panel" hidden>
+      <h2>Air strikes and civilian casualties by district</h2>
+      <p class="sub" id="g-dbar-sub"></p>
+      <div class="legend"><span><i style="background:var(--c-saudi)"></i>Air strikes (KSA)</span><span><i style="background:var(--crit)"></i>Civilians killed / injured</span><span><i style="background:var(--line)"></i>None itemised</span></div>
+      <div class="dbgrid" id="g-dbar"></div>
+      <p class="dbnote" id="g-dbar-note"></p>
     </section>
     <section class="panel span7">
       <h2>Incidents per day, by type</h2>
@@ -764,6 +785,35 @@ function renderNational(inc,ev){const {A}=distAgg(inc);
   const rows=Object.keys(D.gov).map(g=>({g,n:inc.filter(e=>e.gov===g).length,k:ev.filter(e=>e.gov===g).reduce((s,e)=>s+e.k,0)})).filter(r=>r.n).sort((a,b)=>b.n-a.n);
   document.getElementById("govlist").innerHTML=rows.map(r=>`<li><button data-g="${r.g}"><span>${D.gov[r.g]}</span><span class="n">${fmt(r.n)}</span><span class="k">${r.k?r.k+" killed":""}</span></button></li>`).join("");
   document.querySelectorAll("#govlist button").forEach(b=>b.addEventListener("click",()=>openGov(b.dataset.g)))}
+const SANAA_CITY=["Old City","Shu'ub","Azaal","As Safiyah","As Sab'in","Al Wehdah","At Tahrir","Ma'in","Ath Thawrah","Bani Al Harith"];
+const DBAR={
+  sanaa:[{h:"Sana'a city (Amanat al-Asimah)",list:SANAA_CITY,uns:/^Capital/,unsL:"City, district not stated"},
+         {h:"Sana'a governorate",list:null,skip:SANAA_CITY,uns:/^Sana'a governorate|unspecified/i,unsL:"Governorate, district not stated"}],
+  aden:[{h:"Aden governorate",list:null,uns:/./,unsL:"District not stated"}]};
+function renderDBars(g,inc){
+  const panel=document.getElementById("g-dbar-panel"),cfg=DBAR[g];panel.hidden=!cfg;if(!cfg)return;
+  const geos=(D.geo[g]||[]).map(x=>x[0]);let multi=0;
+  const row=()=>({air:0,airGE:false,oth:0,k:0,i:0});
+  const groups=cfg.map(c=>{const names=c.list?c.list.filter(n=>geos.includes(n)):geos.filter(n=>!(c.skip||[]).includes(n)&&!/Outskirts/.test(n));
+    return {c,R:Object.fromEntries(names.map(n=>[n,row()])),U:row(),T:row()}});
+  const add=(r,e)=>{if(e.cat==="Air strike"){r.air+=e.n==null?1:e.n;if(e.n==null)r.airGE=true}else r.oth++;r.k+=e.k;r.i+=e.i};
+  inc.forEach(e=>{const keys=[...new Set(e.dist.map(d=>geoOf(g,d)).filter(Boolean))];
+    if(keys.length>1&&e.cat==="Air strike")multi++;
+    if(!keys.length){const raw=e.dist.join(" ");const G=groups.find(x=>x.c.uns.test(raw))||groups[groups.length-1];add(G.U,e);add(G.T,e);return}
+    const hit=new Set();keys.forEach(k=>{let G=groups.find(x=>x.R[k]);if(!G){G=groups.find(x=>!x.c.list);if(G)G.R[k]=G.R[k]||row()}if(G){add(G.R[k],e);hit.add(G)}});hit.forEach(G=>add(G.T,e))});
+  const mx=Math.max(1,...groups.flatMap(G=>[...Object.values(G.R),G.U].map(r=>r.air)));
+  const line=(name,lab,r,click)=>{const z=!r.air&&!r.oth&&!r.k&&!r.i;
+    const cas=r.k||r.i?`<span class="cas2">${r.k?r.k+" killed":""}${r.k&&r.i?", ":""}${r.i?r.i+" injured":""}</span>`:"";
+    const oth=r.oth?`<span class="oth">+${r.oth} other attack${r.oth>1?"s":""}</span>`:"";
+    return `<div class="dbrow${z?" zero":""}${SELD===name?" on":""}"${click?` data-d="${name}" tabindex="0"`:""} title="${lab}: ${r.air} air strikes${r.k||r.i?`, ${r.k} killed, ${r.i} injured`:""}"><span class="dn">${lab}</span><span class="dv"><span class="bar2" style="width:${(r.air/mx*62).toFixed(1)}%"></span><span class="num">${r.airGE?"≥":""}${r.air}</span>${cas}${oth}</span></div>`};
+  document.getElementById("g-dbar").innerHTML=groups.map(G=>{const tot=G.T;
+    const ent=Object.entries(G.R).sort((a,b)=>b[1].air-a[1].air||(b[1].k+b[1].i)-(a[1].k+a[1].i)||b[1].oth-a[1].oth||dLabel(a[0]).localeCompare(dLabel(b[0])));
+    const u=G.U;const hasU=u.air||u.oth||u.k||u.i;
+    return `<div><h3>${G.c.h} · ${tot.airGE?"≥":""}${tot.air} strikes${tot.k||tot.i?`, ${tot.k} killed, ${tot.i} injured`:""}</h3>${ent.map(([n,r])=>line(n,dLabel(n),r,true)).join("")}${hasU?line("",G.c.unsL,u,false):""}</div>`}).join("");
+  document.getElementById("g-dbar-sub").textContent=`Bar length = KSA air strikes counted in the posts, ${dLab(win().start)} to ${dLab(LAST)}. Red text = civilians killed or injured. "≥" means at least one report gave no strike count.`;
+  document.getElementById("g-dbar-note").textContent=(multi?`${multi} air strike report${multi>1?"s name":" names"} more than one district. ${multi>1?"Their":"Its"} strikes are shown in each district named, so district bars can add up to more than the total. `:"")+"Combatant tolls are not counted.";
+  document.querySelectorAll("#g-dbar .dbrow[data-d]").forEach(el=>{const go=()=>{SELD=SELD===el.dataset.d?null:el.dataset.d;LOGN=30;renderGov()};el.addEventListener("click",go);el.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();go()}})});
+}
 function renderGov(){
   charts.forEach(c=>c.destroy());charts=[];
   const B=base();Chart.defaults.font.family="IBM Plex Sans";Chart.defaults.color=B.tick;
@@ -797,6 +847,8 @@ function renderGov(){
   const rows=items.slice().sort((a,b)=>mval(b)-mval(a)||b.inc-a.inc),mx=Math.max(1,...rows.map(mval));
   document.getElementById("g-dist").innerHTML=rows.length?rows.map(a=>`<tr data-d="${a.geo}" class="${SELD===a.geo?"on":""}" tabindex="0"><td>${dLabel(a.geo)}<span class="bar" style="width:${(mval(a)/mx*100).toFixed(0)}%;background:var(${GRAV[gravCls(a.k,a.i)][0]})"></span></td><td>${a.inc}</td><td>${a.air||"–"}</td><td class="${a.k?"kk":""}">${a.k||"–"}</td><td>${a.i||"–"}</td></tr>`).join(""):`<tr><td colspan="5" class="empty">No incidents in the period</td></tr>`;
   document.querySelectorAll("#g-dist tr[data-d]").forEach(tr=>{const go=()=>{SELD=SELD===tr.dataset.d?null:tr.dataset.d;LOGN=30;renderGov()};tr.addEventListener("click",go);tr.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();go()}})});
+  // district bars: air strikes and civilian casualties (Sana'a city, Sana'a governorate, Aden)
+  renderDBars(g,inc);
   // charts
   const xT={grid:{display:false},ticks:{maxRotation:0,autoSkip:true,autoSkipPadding:10,color:B.tick},border:{color:B.grid}};
   const yT={beginAtZero:true,ticks:{precision:0,color:B.tick},grid:{color:B.grid},border:{display:false}};
