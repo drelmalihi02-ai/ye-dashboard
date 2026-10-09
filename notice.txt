@@ -1,24 +1,22 @@
-🇾🇪 <b>Yemen update | 9 Oct 2026, 16:44 (Aden)</b>
+🇾🇪 <b>Yemen update | 9 Oct 2026, 21:45 (Sana'a)</b>
 
-<b>⚔️ Taiz and Bab al-Mandab fronts</b>
-⚔️ AA/Houthis say they drove IRG/PLC forces out of all of Jabal Habashi district (Taiz).
-📍 AA/Houthi forces reportedly reach Al-Misrakh (Taiz) on the road to Taiz city. Heavy clashes, town not taken.
-🚀 AA/Houthis say ballistic missiles broke an IRG/PLC push from Lahj at Ras al-Arah toward Dhubab, south of Bab al-Mandab. IRG/PLC forces reportedly still pressing there.
+<b>⚔️ Bab al-Mandab front</b>
+⚔️ AA/Houthis say they repelled a second IRG/PLC push from Lahj toward Bab al-Mandab with ballistic missiles and artillery, claiming 22 armoured vehicles destroyed.
+💥 KSA jets back the IRG/PLC offensive, bombing AA/Houthi positions at Jabal Kahboob and Al-Omari heights and camp (Dhubab, Taiz).
+📍 KSA and IRG/PLC official media claim IRG/PLC forces took Mayun Island in the Bab al-Mandab strait. Not confirmed.
 
 <b>💥 KSA strikes</b>
-💥 3 KSA air strikes on Jabal Attan (Sana'a city) and 6 on Fanadhakh, Bani Hushaysh (Sana'a governorate).
-📡 KSA air strikes on telecom networks in Bilad ar-Rus and Arhab (Sana'a), Kitaf (2) and Sahar (2) in Sa'dah. No casualties reported.
+🩸 KSA air strike on Sana'a airport kills 2 staff and injures 2, AA/Houthis say.
+💥 3 KSA air strikes on Hodeidah city. KSA rocket and artillery fire on Al-Dhaher and Razih (Sa'dah).
+🔥 AA/Houthi civil defence says overnight KSA strikes set 4 factories and stores ablaze in Sana'a city and Hamdan, one destroyed.
+📊 AA/Houthis count 77 KSA strikes and missiles in 24 hours, 1,934 since the escalation began.
 
-<b>✈️ Riyadh airport</b>
-🩸 KSA says 3 Saudi citizens were killed in the AA/Houthi attack on King Khalid airport (Riyadh).
-✈️ Pakistan International Airlines suspends Riyadh flights. Flight tracking shows traffic halted at King Khalid airport.
+<b>✈️ Riyadh flights</b>
+✈️ 156 flights cancelled at King Khalid airport (Riyadh) since dawn. flydubai, Emirates and Etihad suspend Riyadh flights, and EU aviation regulators widen their Saudi airspace warning.
+🛫 AA/Houthis say humanitarian flights to and from Riyadh may run if cleared by their operations centre in Sana'a.
 
-<b>🏛️ Politics and statements</b>
-🇸🇦 KSA reportedly rejects any ceasefire with AA/Houthis until IRG/PLC forces retake all lost territory.
-📢 AA/Houthi mass rallies in Sana'a and Sa'dah declare general mobilisation to protect Bab al-Mandab. AA/Houthi foreign ministry tells all to keep away from declared targets.
+📊 Since 1 Sep: 361 incidents, 108 civilians killed, 161 injured
 
-📊 Since 1 Sep: 356 incidents, 106 civilians killed, 159 injured
-
-<i>Pending review: Al-Misrakh, Jabal Habashi and Bab al-Mandab gains are AA/Houthi-side claims. KSA death toll at Riyadh airport is a single report. Kitaf telecom strike site (Jabal Anm) assumed.</i>
+<i>Pending review: Sana'a airport strike timing linked to the afternoon flash on the capital. Mayun Island capture and Bab al-Mandab losses are rival claims. Hodeidah city district assumed (Al-Hawak).</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
