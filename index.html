@@ -1231,6 +1231,7 @@ document.querySelectorAll("#period button").forEach(b=>{b.setAttribute("aria-pre
     pl.textContent="❚❚";pl.setAttribute("aria-label","Pause");RPT=setInterval(()=>{i++;if(i>=days.length){stop();return}go(i)},days.length>20?450:700)});
   document.getElementById("rp-x").addEventListener("click",()=>{stop();REPLAY=null;const {ev,inc}=periodEvents();renderNational(inc,ev)})})();
 /* section nav, share/export/print, compare mode */
+let DLCAP=null;try{if(window.claude&&typeof window.claude.use==="function")window.claude.use("downloads").then(d=>{DLCAP=d}).catch(()=>{})}catch(e){}
 function toast(t){const el=document.createElement("div");el.className="toast";el.textContent=t;document.body.appendChild(el);setTimeout(()=>el.remove(),2200)}
 function viewURL(){const u=new URL(location.href);u.search=period?"?p="+period:"";u.hash=GOV?GOV+(SELD?"/"+encodeURIComponent(SELD):""):"";return u.toString()}
 document.getElementById("t-link").addEventListener("click",()=>{const u=viewURL();
@@ -1240,8 +1241,10 @@ document.getElementById("t-csv").addEventListener("click",()=>{const {ev}=period
   const q=v=>{v=String(v??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
   const head=["date","time_sanaa","governorate","districts","type","counted_as_incident","air_strikes","attributed_to","civilians_killed","civilians_injured","summary"];
   const lines=[head.join(",")].concat(rows.map(e=>[e.date,e.time,D.gov[e.gov],e.dist.map(d=>distTxt(e.gov,d)).join("; "),e.cat,INC.has(e.cat)?"yes":"no",e.cat==="Air strike"?(e.n==null?"1+":e.n):"",INC.has(e.cat)?ATTL[att(e.cat)][0]:"",e.k,e.i,cleanS(e.s).t].map(q).join(",")));
-  const blob=new Blob(["﻿"+lines.join("\n")],{type:"text/csv;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);
-  a.download=`yemen-incidents-${GOV||"all"}-${LAST}.csv`;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast(`${rows.length} rows downloaded`)});
+  const fname=`yemen-incidents-${GOV||"all"}-${LAST}.csv`,body="\ufeff"+lines.join("\n");
+  if(DLCAP){DLCAP.save({filename:fname,data:body}).then(()=>toast(`${rows.length} rows saved`)).catch(e=>toast(e&&e.code==="declined"?"Download cancelled":"Download is not available in this view"));return}
+  const blob=new Blob([body],{type:"text/csv;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);
+  a.download=fname;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast(`${rows.length} rows downloaded`)});
 // section nav: hide on governorate view, highlight the section in view
 (()=>{const nav=document.getElementById("secnav");const links=[...nav.querySelectorAll("a")];
   links.forEach(a=>a.addEventListener("click",e=>{e.preventDefault();document.querySelector(a.getAttribute("href")).scrollIntoView({behavior:"smooth",block:"start"})}));
