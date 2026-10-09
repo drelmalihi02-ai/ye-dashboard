@@ -1,11 +1,24 @@
-🇾🇪 <b>Yemen update | 9 Oct 2026, 05:14 (Aden)</b>
+🇾🇪 <b>Yemen update | 9 Oct 2026, 16:44 (Aden)</b>
 
-<b>🛠️ Dashboard update (test post)</b>
-🗺️ The Yemen district map now has zoom in and out, with governorate and district names.
-🇸🇦 New map of strike sites inside KSA claimed by AA/Houthis, with a table by province and site.
-🚀 AA/Houthi operations map redesigned in the same style, with Region and Yemen views.
-📈 New last 24 hours strip, 7-day trends on every headline figure and a filter for the latest reports.
+<b>⚔️ Taiz and Bab al-Mandab fronts</b>
+⚔️ AA/Houthis say they drove IRG/PLC forces out of all of Jabal Habashi district (Taiz).
+📍 AA/Houthi forces reportedly reach Al-Misrakh (Taiz) on the road to Taiz city. Heavy clashes, town not taken.
+🚀 AA/Houthis say ballistic missiles broke an IRG/PLC push from Lahj at Ras al-Arah toward Dhubab, south of Bab al-Mandab. IRG/PLC forces reportedly still pressing there.
 
-📊 Since 1 Sep: 349 incidents, 106 civilians killed, 159 injured
+<b>💥 KSA strikes</b>
+💥 3 KSA air strikes on Jabal Attan (Sana'a city) and 6 on Fanadhakh, Bani Hushaysh (Sana'a governorate).
+📡 KSA air strikes on telecom networks in Bilad ar-Rus and Arhab (Sana'a), Kitaf (2) and Sahar (2) in Sa'dah. No casualties reported.
+
+<b>✈️ Riyadh airport</b>
+🩸 KSA says 3 Saudi citizens were killed in the AA/Houthi attack on King Khalid airport (Riyadh).
+✈️ Pakistan International Airlines suspends Riyadh flights. Flight tracking shows traffic halted at King Khalid airport.
+
+<b>🏛️ Politics and statements</b>
+🇸🇦 KSA reportedly rejects any ceasefire with AA/Houthis until IRG/PLC forces retake all lost territory.
+📢 AA/Houthi mass rallies in Sana'a and Sa'dah declare general mobilisation to protect Bab al-Mandab. AA/Houthi foreign ministry tells all to keep away from declared targets.
+
+📊 Since 1 Sep: 356 incidents, 106 civilians killed, 159 injured
+
+<i>Pending review: Al-Misrakh, Jabal Habashi and Bab al-Mandab gains are AA/Houthi-side claims. KSA death toll at Riyadh airport is a single report. Kitaf telecom strike site (Jabal Anm) assumed.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
