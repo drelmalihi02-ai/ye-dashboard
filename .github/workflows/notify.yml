@@ -9,13 +9,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Send text-only digest
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Render the day-by-day motion clip
+        # A failed render never blocks the text notice.
+        continue-on-error: true
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null)
+          pip install -q matplotlib numpy
+          python3 tools/video.py escalation.mp4 index.html
+      - name: Send clip and notice
         env:
           TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT: ${{ secrets.CHANNEL_ID }}
         run: |
           API="https://api.telegram.org/bot${TOKEN}"
-          # Text only: no images, maps or link previews.
+          LEN=$(wc -m < notice.txt)
+          if [ -f escalation.mp4 ] && [ "$LEN" -le 1000 ]; then
+            # One post: the clip with the notice as its caption.
+            curl -sS --fail "$API/sendVideo" \
+              --form-string "chat_id=${CHAT}" \
+              -F "video=@escalation.mp4" -F "width=1080" -F "height=1080" -F "supports_streaming=true" \
+              -F "caption=<notice.txt" -F "parse_mode=HTML" > /dev/null && exit 0
+          fi
+          if [ -f escalation.mp4 ]; then
+            curl -sS --fail "$API/sendVideo" --form-string "chat_id=${CHAT}" \
+              -F "video=@escalation.mp4" -F "width=1080" -F "height=1080" -F "supports_streaming=true" > /dev/null || echo "clip not sent"
+          fi
           curl -sS --fail "$API/sendMessage" \
             --data-urlencode "chat_id=${CHAT}" \
             --data-urlencode "text@notice.txt" \

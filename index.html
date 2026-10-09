@@ -345,7 +345,15 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 .ksat tr.site td:first-child{padding-left:12px;font:400 12.5px var(--f-body);color:var(--ink2)}
 .ksat tr.site td i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:0}
 .ksat tr{cursor:default}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* motion */
+.rv{opacity:0;transform:translateY(16px)}
+.rv.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.mapbox svg circle.pop,.gmap svg circle.pop{transform-box:fill-box;transform-origin:center;animation:yePop .6s cubic-bezier(.2,.9,.3,1.35) both}
+@keyframes yePop{0%{transform:scale(0);opacity:0}60%{opacity:1}100%{transform:scale(1);opacity:1}}
+.kpi .v.tick{color:var(--accent);transition:color .4s}
+.replay.on{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;width:min(760px,calc(100% - 32px));background:var(--surface);box-shadow:0 12px 32px -10px rgba(0,0,0,.35);padding:10px 14px}
+.rp-ph{height:52px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
 </style>
 
 </head>
@@ -389,7 +397,7 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
   <div class="block span12" id="sec-1"><span class="bn">1</span><div><h2 class="bh">Inside Yemen: where attacks hit</h2><p class="bs">Incidents itemised by the channel across all 22 governorates.</p></div></div>
   <section class="panel span12">
     <div class="mtools"><div><h2>Where incidents hit, by district</h2><p class="sub">Circle area grows with the chosen measure. Colour shows the civilian toll. Use + and − (or double-click) to zoom: district names appear as you zoom in. Hover a circle for detail, click it to open the governorate.</p></div><div class="seg sm" data-metric role="group" aria-label="Circle size"></div></div>
-    <div class="replay" id="replay"><button class="rp-btn" id="rp-play" aria-label="Play the timeline">▶</button><input type="range" id="rp-day" min="0" max="0" value="0" aria-label="Show incidents up to this day"><span class="rp-lab" id="rp-lab">Timeline replay: press play or drag</span><button class="rp-x" id="rp-x" hidden>Show all</button></div>
+    <div class="replay" id="replay"><button class="rp-btn" id="rp-play" aria-label="Play the timeline">▶</button><input type="range" id="rp-day" min="0" max="0" value="0" aria-label="Show incidents up to this day"><span class="rp-lab" id="rp-lab">Replay every chart day by day: press play or drag</span><button class="rp-x" id="rp-x" hidden>Show all</button></div>
     <div class="lgrow"><div class="legend gravlg" data-gravlg></div><div class="sizekey" data-sizekey></div></div>
     <div class="mapgrid">
       <div style="display:flex;flex-direction:column;gap:8px;min-width:0"><div class="gmap" id="nmap-box"><svg id="nmap" role="img" aria-label="Map of incidents by district, all Yemen"></svg><div class="mtip" hidden></div></div><div class="ctlkey"><span><i style="background:var(--t-aa);opacity:.4"></i>Held by AA (Sana'a)</span><span><i style="background:var(--t-plc);opacity:.4"></i>Held by PLC-aligned forces</span></div></div>
@@ -675,7 +683,7 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
       var fb=", system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif";
       if(C.defaults.font.family&&C.defaults.font.family.indexOf(",")<0)C.defaults.font.family+=fb;
       ["titleFont","bodyFont","footerFont"].forEach(function(k){if(t[k]&&t[k].family&&t[k].family.indexOf(",")<0)t[k].family+=fb});
-      if(o.animation===false&&!reduce)o.animation={duration:600,easing:"easeOutQuart"};
+      if(window.YE_TICK){o.animation=false}else if(o.animation===false&&!reduce)o.animation={duration:600,easing:"easeOutQuart"};
     },
     /* spotlight: on hover the hovered column/row keeps full colour, the rest fade back */
     afterLayout:function(ch){
@@ -748,22 +756,43 @@ function base(){return {grid:css("--line2"),tick:css("--muted"),ink:css("--ink")
 function tip(B){return {backgroundColor:B.surf,titleColor:B.ink,bodyColor:B.ink,borderColor:css("--line"),borderWidth:1,padding:10,boxPadding:4,usePointStyle:true,titleFont:{family:"IBM Plex Sans",weight:"600"},bodyFont:{family:"IBM Plex Sans"}}}
 const barEnd={borderRadius:{topLeft:4,topRight:4},borderSkipped:"start"};
 
+/* ===== motion: count-up numbers, scroll reveal, chart replay on view ===== */
+const RMQ=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+const FULLMAX={};
+function replayMode(on){const r=document.getElementById("replay");if(on&&!r.classList.contains("on")){const ph=document.createElement("div");ph.className="rp-ph";ph.id="rp-ph";r.after(ph);r.classList.add("on")}
+  if(!on&&r.classList.contains("on")){r.classList.remove("on");const ph=document.getElementById("rp-ph");if(ph)ph.remove()}}
+function countUp(el,dur){const txt=el.textContent;if(RMQ||!/\d/.test(txt)){el.dataset.v=txt;return}
+  const nums=(txt.match(/\d[\d,]*/g)||[]).map(x=>+x.replace(/,/g,"")),prev=((el.dataset.v||"").match(/\d[\d,]*/g)||[]).map(x=>+x.replace(/,/g,""));
+  el.dataset.v=txt;if(nums.every((n,i)=>n===prev[i]))return;
+  const parts=txt.split(/\d[\d,]*/),t0=performance.now(),id=(el._cu=(el._cu||0)+1);
+  const step=t=>{if(el._cu!==id)return;const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);
+    el.textContent=parts.map((p,i)=>p+(i<nums.length?fmt(Math.round((prev[i]||0)+(nums[i]-(prev[i]||0))*e)):"")).join("");
+    if(k<1)requestAnimationFrame(step);else el.textContent=txt};requestAnimationFrame(step)}
+const CHIO="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting||window.YE_TICK)return;const ch=Chart.getChart(en.target);
+  if(ch&&!ch._yeSeen&&!RMQ){ch._yeSeen=1;ch.reset();ch.update()}}),{threshold:.25}):null;
+const RVIO="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");RVIO.unobserve(en.target)}}),{threshold:.08,rootMargin:"0px 0px -40px 0px"}):null;
+function motionAfter(root){const R=document.querySelector(root);if(!R)return;const tick=!!window.YE_TICK;
+  R.querySelectorAll(".kpi .v, #today b, .kpis b").forEach(el=>countUp(el,tick?380:900));
+  R.querySelectorAll("canvas").forEach(cv=>{const ch=Chart.getChart(cv);if(!ch)return;const ax=ch.options.indexAxis==="y"?"x":"y",sc=ch.scales[ax];if(!sc||cv.id.startsWith("sp-"))return;
+    if(!REPLAY){FULLMAX[cv.id]=sc.max}else if(FULLMAX[cv.id]!=null&&sc.max<FULLMAX[cv.id]){ch.options.scales[ax].max=FULLMAX[cv.id];ch.update("none")}
+    if(CHIO&&!tick){CHIO.unobserve(cv);const r=cv.getBoundingClientRect();if(r.top>innerHeight||r.bottom<0)CHIO.observe(cv);else ch._yeSeen=1}})}
+function revealSetup(){if(!RVIO||RMQ)return;document.querySelectorAll(".panel, .kpis, .block, .today").forEach(el=>{const r=el.getBoundingClientRect();if(r.top>innerHeight*.95){el.classList.add("rv");RVIO.observe(el)}})}
 function render(){
   charts.forEach(c=>c.destroy());charts=[];
   const B=base();Chart.defaults.font.family="IBM Plex Sans";Chart.defaults.color=B.tick;
   const {start,days}=win();
   document.getElementById("range").textContent=dLab(start)+" – "+dLab(LAST)+" ("+days.length+" days)";
-  const inP=e=>e.date>=start&&e.date<=LAST;
+  const END=REPLAY||LAST,inP=e=>e.date>=start&&e.date<=END;
   const ev=EV.filter(inP),inc=ev.filter(e=>INC.has(e.cat));
-  const ops=D.ops.filter(o=>period?(o[0]>=start&&o[0]<=LAST):true);
+  const ops=D.ops.filter(o=>(period?o[0]>=start:true)&&o[0]<=END);
   // KPIs
   const air=inc.filter(e=>e.cat==="Air strike"),airN=air.reduce((a,e)=>a+(e.n==null?1:e.n),0),airUn=air.some(e=>e.n==null);
   document.getElementById("k-inc").textContent=fmt(inc.length);
   document.getElementById("k-inc-s").textContent=new Set(inc.map(e=>e.gov)).size+" governorates";
   document.getElementById("k-cas").textContent=fmt(ev.reduce((a,e)=>a+e.k,0))+" / "+fmt(ev.reduce((a,e)=>a+e.i,0));
-  const tSum=days.reduce((a,d)=>a+(D.tally[d]||0),0),tDays=days.filter(d=>D.tally[d]!=null).length;
-  document.getElementById("k-claim").textContent=fmt(period?tSum:D.claimed);
-  document.getElementById("k-claim-s").textContent=period?("sum of "+tDays+" daily tallies"):("since the escalation began, to "+(D.claimedTo||""));
+  const tSum=days.filter(d=>d<=END).reduce((a,d)=>a+(D.tally[d]||0),0),tDays=days.filter(d=>d<=END&&D.tally[d]!=null).length;
+  document.getElementById("k-claim").textContent=fmt(period||REPLAY?tSum:D.claimed);
+  document.getElementById("k-claim-s").textContent=period||REPLAY?("sum of "+tDays+" daily tallies"):("since the escalation began, to "+(D.claimedTo||""));
   document.getElementById("k-air").textContent=(airUn?"≥":"")+fmt(airN);
   document.getElementById("k-air-s").textContent=air.length+" reports";
   const ksa=ops.filter(o=>o[1]==="KSA");
@@ -782,7 +811,7 @@ function render(){
   Object.entries(M).forEach(([k,f])=>{const c=f(cS,LAST),p=f(pS,pE),el=document.getElementById("t-"+k);if(!el)return;
     let t;if(!p&&!c)t="none in the last "+TW+" days";else if(!p)t=fmt(c)+" in the last "+TW+" days, none in the "+TW+" before";else{const d=Math.round((c-p)/p*100);t=(d>0?"▲ ":d<0?"▼ ":"= ")+Math.abs(d)+"% · "+fmt(c)+" vs "+fmt(p)+" ("+TW+"d)"}
     el.textContent=t;el.className="tr"+(p&&c>p*1.1?" up":p&&c<p*.9?" dn":"");
-    const cv=document.getElementById("sp-"+k);if(cv){const ser=days.map(d=>f(d,d));charts.push(new Chart(cv,{type:"line",data:{labels:days,datasets:[{data:ser,borderColor:css(k==="cas"?"--crit":"--ink2"),borderWidth:1.5,pointRadius:0,tension:.35,fill:true,backgroundColor:css(k==="cas"?"--crit-soft":"--line2")}]},options:{maintainAspectRatio:false,animation:false,events:[],plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false,beginAtZero:true}}}}))}});
+    const cv=document.getElementById("sp-"+k);if(cv){const ser=days.map(d=>d<=END?f(d,d):null);charts.push(new Chart(cv,{type:"line",data:{labels:days,datasets:[{data:ser,borderColor:css(k==="cas"?"--crit":"--ink2"),borderWidth:1.5,pointRadius:0,tension:.35,fill:true,backgroundColor:css(k==="cas"?"--crit-soft":"--line2")}]},options:{maintainAspectRatio:false,animation:false,events:[],plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false,beginAtZero:true}}}}))}});
   // last 24 hours strip, measured back from the newest itemised report
   {const ts=(d,t)=>Date.parse(d+"T"+(t||"12:00")+":00Z");const MON={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12},cm=String(D.cut).match(/(\d+) (\w+) (\d+), (\d+:\d+)/);
    const tCut=cm?Date.parse(`${cm[3]}-${String(MON[cm[2].slice(0,3)]).padStart(2,"0")}-${cm[1].padStart(2,"0")}T${cm[4]}:00Z`):0;
@@ -796,11 +825,11 @@ function render(){
   const yT={beginAtZero:true,ticks:{precision:0,color:B.tick},grid:{color:B.grid},border:{display:false}};
   // daily by type
   document.getElementById("lg-type").innerHTML=TYPES.map(([t,c])=>`<span><i style="background:var(${c})"></i>${t}</span>`).join("")+`<span><span class="lgline"></span>7-day average</span>`;
-  const avg7=days.map(d=>+(M.inc(addDays(d,-6),d)/Math.min(7,1+Math.round((new Date(d)-new Date("2026-09-01"))/864e5))).toFixed(2));
+  const avg7=days.map(d=>d>END?null:+(M.inc(addDays(d,-6),d)/Math.min(7,1+Math.round((new Date(d)-new Date("2026-09-01"))/864e5))).toFixed(2));
   charts.push(new Chart(document.getElementById("c-day"),{type:"bar",data:{labels:days.map(dLab),datasets:TYPES.map(([t,c])=>({label:t,data:days.map(d=>inc.filter(e=>e.date===d&&e.cat===t).length),backgroundColor:css(c),borderColor:B.surf,borderWidth:{top:2},borderSkipped:"start",maxBarThickness:28})).concat([{type:"line",label:"7-day average",data:avg7,stack:"avg",borderColor:css("--ink2"),borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.3,order:-1}])},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,itemSort:(a,b)=>b.raw-a.raw,callbacks:{footer:it=>"Total: "+it.filter(i=>i.dataset.type!=="line").reduce((a,i)=>a+i.raw,0)}}},scales:{x:{...xT,stacked:true},y:{...yT,stacked:true}}}}));
   // tally
-  charts.push(new Chart(document.getElementById("c-tally"),{type:"bar",data:{labels:days.map(dLab),datasets:[{label:"Claimed Saudi strikes in 24h",data:days.map(d=>D.tally[d]??null),backgroundColor:css("--c-claim"),...barEnd,maxBarThickness:22}]},
+  charts.push(new Chart(document.getElementById("c-tally"),{type:"bar",data:{labels:days.map(dLab),datasets:[{label:"Claimed Saudi strikes in 24h",data:days.map(d=>d<=END?(D.tally[d]??null):null),backgroundColor:css("--c-claim"),...barEnd,maxBarThickness:22}]},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:tip(B)},scales:{x:xT,y:yT}}}));
   // casualties
   charts.push(new Chart(document.getElementById("c-cas"),{type:"bar",data:{labels:days.map(dLab),datasets:[
@@ -808,7 +837,7 @@ function render(){
     {label:"Injured",data:days.map(d=>ev.filter(e=>e.date===d).reduce((a,e)=>a+e.i,0)),backgroundColor:css("--c-injured"),borderColor:B.surf,borderWidth:{top:2},borderSkipped:"start",maxBarThickness:18},
     ]},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0}},scales:{x:{...xT,stacked:true},y:{...yT,stacked:true}}}}));
-  charts.push(new Chart(document.getElementById("c-cum"),{type:"line",data:{labels:days.map(dLab),datasets:[{label:"Killed since 1 Sep",data:days.map(d=>EV.filter(e=>e.date<=d).reduce((a,e)=>a+e.k,0)),borderColor:css("--c-killed"),backgroundColor:css("--crit-soft"),fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.25}]},
+  charts.push(new Chart(document.getElementById("c-cum"),{type:"line",data:{labels:days.map(dLab),datasets:[{label:"Killed since 1 Sep",data:days.map(d=>d<=END?EV.filter(e=>e.date<=d).reduce((a,e)=>a+e.k,0):null),borderColor:css("--c-killed"),backgroundColor:css("--crit-soft"),fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.25}]},
     options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false}},scales:{x:xT,y:{...yT,ticks:{...yT.ticks,maxTicksLimit:4}}}}}));
   // governorates
   const govs=Object.keys(D.gov).map(g=>{const i=inc.filter(e=>e.gov===g);return {g,l:D.gov[g],n:i.length,s:i.filter(e=>att(e.cat)==="saudi").length,p:i.filter(e=>att(e.cat)==="plc").length,a:i.filter(e=>att(e.cat)==="sanaa").length}});
@@ -843,6 +872,7 @@ function render(){
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,callbacks:{title:it=>"Week of "+it[0].label}}},scales:{x:{...xT,stacked:true,title:{display:true,text:"Week starting",color:B.tick}},y:{...yT,stacked:true}}}}));
   drawOpsMap(ops);drawKsaMap(ops);
   renderFeed();
+  motionAfter("#view-all");
 }
 /* ================= Governorate tabs and gravity maps ================= */
 const GRAV=[["--g0","No civilian casualties"],["--g1","Civilians injured"],["--g2","1 to 4 civilians killed"],["--g3","5 or more killed"]];
@@ -911,6 +941,8 @@ function drawGrav(svgId,opt){
   h+=`<g class="dots">`+pts.slice().reverse().map(p=>`<circle class="gc${p.cls?" "+p.cls:""}" tabindex="0" role="button" aria-label="${p.aria||p.lab}" data-i="${p.i}" cx="${p.x}" cy="${p.y}" r="${p.r}" fill="${p.fill}"/>`).join("")+`</g><g class="labels"></g>`;
   if(!pts.length)h+=`<text class="cl" x="${W/2}" y="${H/2}" text-anchor="middle">${opt.empty||"Nothing in the period"}</text>`;
   svg.innerHTML=h;
+  if(!RMQ){const keys=new Set();let j=0;svg.querySelectorAll("g.dots circle").forEach(c=>{const k=c.getAttribute("cx")+","+c.getAttribute("cy");keys.add(k);
+    if(!S.prev||!S.prev.has(k)){c.classList.add("pop");if(!S.prev)c.style.animationDelay=Math.min(700,j++*14)+"ms"}});S.prev=keys}
   // label candidates
   const C=[];
   (opt.cl||[]).forEach(([t,x,y])=>{const q=P([x,y]);C.push({k:"cl",x:q[0],y:q[1],t,fs:10,cw:7.2})});
@@ -1054,7 +1086,7 @@ function renderNational(inc,ev){const {A:A0}=distAgg(inc);
   if(REPLAY){rd.value=days.indexOf(REPLAY);inc=inc.filter(e=>e.date<=REPLAY);ev=ev.filter(e=>e.date<=REPLAY);
     const nd=inc.filter(e=>e.date===REPLAY).length,kk=ev.reduce((a,e)=>a+e.k,0);
     document.getElementById("rp-lab").textContent=`${dLab(days[0])} to ${dLab(REPLAY)}: ${fmt(inc.length)} incidents (+${nd} that day), ${kk} killed`}
-  else{rd.value=days.length-1;document.getElementById("rp-lab").textContent="Timeline replay: press play or drag"}
+  else{rd.value=days.length-1;document.getElementById("rp-lab").textContent="Replay every chart day by day: press play or drag"}
   document.getElementById("rp-x").hidden=!REPLAY;
   const {A}=distAgg(inc);let bb=pts.length?[Math.min(...pts.map(p=>p[0]))-.5,Math.max(...pts.map(p=>p[0]))+.5,Math.min(...pts.map(p=>p[1]))-.4,Math.max(...pts.map(p=>p[1]))+.4]:[42.4,53.2,12.4,19.0];
   if(bb[1]-bb[0]<5){const c=(bb[0]+bb[1])/2;bb[0]=c-2.5;bb[1]=c+2.5}
@@ -1155,7 +1187,7 @@ function renderKit(g,ev,inc,days,B,xT,yT){
     document.getElementById("kit-tb").innerHTML=rows.map(e=>`<tr class="${INC.has(e.cat)?"":"ctx"}"><td class="nw">${dLab(e.date)}</td><td class="nw">${e.time}</td><td>${esc(dn(e).join(", ")||"–")}</td><td class="nw tchip">${tc[e.cat]?`<i style="background:var(${tc[e.cat]})"></i>`:""}${e.cat}</td><td class="num">${e.cat==="Air strike"?(e.n==null?"≥1":e.n):""}</td><td class="nw">${attTxt(e)}</td><td>${(()=>{const c=cleanS(e.s);return esc(c.t)+badges(e.id,e.cat,c.unc,false)})()}</td><td class="cas">${casTxt(e.k,e.i)}</td></tr>`).join("")||`<tr><td colspan="8" class="empty">No entries match</td></tr>`};
   fd.onchange=fc.onchange=draw;fq.oninput=draw;draw();
 }
-function renderGov(){
+function renderGov(){setTimeout(()=>motionAfter("#view-gov"),0);
   charts.forEach(c=>c.destroy());charts=[];
   const B=base();Chart.defaults.font.family="IBM Plex Sans";Chart.defaults.color=B.tick;
   const g=GOV,{start,days,ev:allEv,inc:allInc}=periodEvents();
@@ -1222,14 +1254,14 @@ function renderAll(){tabs();metricSegs();
   document.getElementById("secnav").style.display=GOV?"none":"flex";
   if(GOV)renderGov();else{render();const {ev,inc}=periodEvents();renderNational(inc,ev);renderCompare()}}
 (()=>{const h=decodeURIComponent(location.hash.slice(1));if(!h)return;const [g,d]=h.split("/");if(D.gov[g]){GOV=g;SELD=d||null}})();
-document.querySelectorAll("#period button").forEach(b=>{b.setAttribute("aria-pressed",String(+b.dataset.d===period));b.addEventListener("click",()=>{period=+b.dataset.d;try{localStorage.setItem("ydash-period",period)}catch(e){}document.querySelectorAll("#period button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderAll()})});
+document.querySelectorAll("#period button").forEach(b=>{b.setAttribute("aria-pressed",String(+b.dataset.d===period));b.addEventListener("click",()=>{period=+b.dataset.d;try{localStorage.setItem("ydash-period",period)}catch(e){}document.querySelectorAll("#period button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));if(RPT)document.getElementById("rp-play").click();REPLAY=null;replayMode(false);renderAll()})});
 (()=>{const rd=document.getElementById("rp-day"),pl=document.getElementById("rp-play");
   const stop=()=>{clearInterval(RPT);RPT=null;pl.textContent="▶";pl.setAttribute("aria-label","Play the timeline")};
-  const go=i=>{const {days}=win();REPLAY=days[Math.max(0,Math.min(days.length-1,i))];const {ev,inc}=periodEvents();renderNational(inc,ev)};
+  const go=i=>{const {days}=win();REPLAY=days[Math.max(0,Math.min(days.length-1,i))];replayMode(true);window.YE_TICK=1;try{render();const {ev,inc}=periodEvents();renderNational(inc,ev)}finally{window.YE_TICK=0}};
   rd.addEventListener("input",()=>{stop();go(+rd.value)});
   pl.addEventListener("click",()=>{if(RPT){stop();return}const {days}=win();let i=REPLAY?days.indexOf(REPLAY):-1;if(i>=days.length-1)i=-1;
-    pl.textContent="❚❚";pl.setAttribute("aria-label","Pause");RPT=setInterval(()=>{i++;if(i>=days.length){stop();return}go(i)},days.length>20?450:700)});
-  document.getElementById("rp-x").addEventListener("click",()=>{stop();REPLAY=null;const {ev,inc}=periodEvents();renderNational(inc,ev)})})();
+    pl.textContent="❚❚";pl.setAttribute("aria-label","Pause");RPT=setInterval(()=>{i++;if(i>=days.length){stop();return}go(i)},days.length>20?520:750)});
+  document.getElementById("rp-x").addEventListener("click",()=>{stop();REPLAY=null;replayMode(false);render();const {ev,inc}=periodEvents();renderNational(inc,ev)})})();
 /* section nav, share/export/print, compare mode */
 let DLCAP=null;try{if(window.claude&&typeof window.claude.use==="function")window.claude.use("downloads").then(d=>{DLCAP=d}).catch(()=>{})}catch(e){}
 function toast(t){const el=document.createElement("div");el.className="toast";el.textContent=t;document.body.appendChild(el);setTimeout(()=>el.remove(),2200)}
@@ -1276,7 +1308,7 @@ function renderCompare(){if(GOV)return;
   const B0=base();const c0=charts.findIndex(c=>c.canvas&&c.canvas.id==="cmp-c");if(c0>=0){charts[c0].destroy();charts.splice(c0,1)}
   charts.push(new Chart(document.getElementById("cmp-c"),{type:"line",data:{labels:xs,datasets:[{label:la,data:ser(A),borderColor:css("--accent"),backgroundColor:css("--accent"),borderWidth:2.5,pointRadius:2,cubicInterpolationMode:"monotone"},{label:lb,data:ser(Bv),borderColor:css("--c-dist"),backgroundColor:css("--c-dist"),borderWidth:2.5,pointRadius:2,cubicInterpolationMode:"monotone"}]},
     options:{maintainAspectRatio:false,interaction:{mode:"index",intersect:false},plugins:{legend:{display:false},tooltip:{...tip(B0),mode:"index",intersect:false}},scales:{x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,autoSkipPadding:10,color:B0.tick},border:{color:B0.grid}},y:{beginAtZero:true,title:{display:true,text:"Incidents per day",color:B0.tick},ticks:{precision:0,color:B0.tick},grid:{color:B0.grid},border:{display:false}}}}}))}
-renderAll();
+renderAll();revealSetup();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",renderAll);
 new MutationObserver(renderAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 addEventListener("hashchange",()=>{const h=decodeURIComponent(location.hash.slice(1));const [g,d]=h.split("/");GOV=D.gov[g]?g:null;SELD=GOV&&d?d:null;renderAll()});
