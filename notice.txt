@@ -1,14 +1,23 @@
-🇾🇪 <b>Yemen update | 8 Oct 2026, 19:49 (Aden)</b>
+🇾🇪 <b>Yemen update | 9 Oct 2026, 05:14 (Aden)</b>
 
-<b>✈️ Riyadh airport disruption</b>
-✈️ About 300 flights to and from King Khalid airport (Riyadh, KSA) cancelled today after AA/Houthi strikes, nearly half of departures.
-⚠️ 31 more cancellations expected Friday across KSA airports.
+<b>💥 KSA strikes</b>
+🩸 KSA air strikes hit a sponge factory in Shamlan and a building materials factory at Al-Jumnah (Sana'a). A man and a woman seriously injured, a mosque and homes damaged.
+💥 2 KSA air strikes on Haradh district (Hajjah).
+💥 KSA air strikes on Al-Zakirah, Al-Masahin and Al-Za'azi' in Ash-Shamayatayn (Taiz).
+🚀 KSA rocket fire on Kitaf wa al-Boqe' (Sa'dah) overnight.
+📍 AA/Houthis count 59 KSA strikes and missiles in 24 hours on 11 governorates, 1,857 since the escalation began.
 
-<b>🩸 Civilian casualties</b>
-🔻 A Yemeni rights group demands an investigation into the KSA air strikes on a passenger bus on the Shar'jab to Al-Turbah road (Taiz). Toll unchanged: 2 killed, 7 injured.
+<b>⚔️ Fronts and missile claims</b>
+⚔️ AA/Houthis release footage they say shows IRG/PLC forces driven out of Ash-Shamayatayn (Taiz).
+🚀 Reports say AA/Houthi ballistic missiles hit the Aramco Abqaiq facility (eastern KSA). No AA/Houthi claim yet.
 
-📊 Since 1 Sep: 344 incidents, 106 civilians killed, 157 injured
+<b>✈️ KSA airspace</b>
+🛡️ AA/Houthis declare KSA airspace a missile operations zone except Mecca and Medina, and tell airlines to avoid KSA airports and oil workers to leave declared targets.
+✈️ King Khalid airport (Riyadh, KSA) cancellations reach 335 for Thursday, traffic halted overnight. Philippine and 3 Indian airlines suspend Riyadh flights.
+⚠️ US, UK, Canada, India and Australia warn citizens in KSA of airspace closures. UK advises against non-essential travel to Riyadh, Asir, Najran and Jizan.
 
-<i>Pending review: flight cancellation figures are third-party estimates. Bus strike district assumed (Ash-Shamayatayn).</i>
+📊 Since 1 Sep: 349 incidents, 106 civilians killed, 159 injured
+
+<i>Pending review: Abqaiq hit unconfirmed. Ash-Shamayatayn gains are AA/Houthi claims. Sana'a strike districts not stated.</i>
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
