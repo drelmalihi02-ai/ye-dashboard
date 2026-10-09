@@ -142,10 +142,10 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .locbar h3{font:600 14px var(--f-display);margin:0}
 .zero{font-size:12px;color:var(--muted);margin:0}
 .feed{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;align-items:start}
+.feed{display:grid;grid-template-columns:minmax(0,1fr);column-gap:28px;align-items:start}
 .feed li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:2px 12px;align-items:baseline;align-content:start;padding:10px 0;border-top:1px solid var(--line2)}
 .feed li .txt{grid-column:1/-1}
-.feed li:nth-child(-n+2){border-top:0}
+.feed li:first-child{border-top:0}
 .feed time{font:400 12px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink2);min-width:0}
 .chip i{flex:none}
@@ -336,8 +336,11 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 @media (max-width:700px){.finds{grid-template-columns:1fr}.glog li{grid-template-columns:1fr}}
 
 /* ---- latest day strip, KPI trends, feed filter (9 Oct 2026) ---- */
-.today{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 16px;font-size:13.5px;color:var(--ink2)}
-.today b{font:600 17px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);margin-right:3px}
+.today{display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr));gap:6px 18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 16px;font-size:13.5px;color:var(--ink2)}
+.today b{display:block;font:600 19px/1.15 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.today>span{min-width:0;line-height:1.3}
+.today .avg{display:block}
+@media (max-width:900px){.today{grid-template-columns:repeat(2,minmax(0,1fr))}.today .tl{grid-column:1/-1}}
 .today .tl{font:500 11.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .today .c b{color:var(--crit)}
 .today .avg{color:var(--muted);font-size:12px;margin-left:4px}
@@ -379,6 +382,12 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 .kpi .v.tick{color:var(--accent);transition:color .4s}
 .replay.on{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;width:min(760px,calc(100% - 32px));background:var(--surface);box-shadow:0 12px 32px -10px rgba(0,0,0,.35);padding:10px 14px}
 .rp-ph{height:52px}
+.glance{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:10px 18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.glance .gt{font:600 11.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding-top:3px;white-space:nowrap}
+.glance .gi{font-size:13px;color:var(--ink2);line-height:1.4;border-left:2px solid var(--line);padding-left:10px;min-width:0}
+.glance .gi b{color:var(--ink);font-weight:600}.glance .up{color:var(--crit);font-weight:600}.glance .dn{color:var(--t-plc);font-weight:600}
+@media (max-width:900px){.glance{grid-template-columns:1fr}}
+.chart.h420{height:420px}
 .clcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .clc{border:1px solid var(--line);border-radius:10px;padding:12px 14px;border-top:4px solid var(--cc);display:flex;flex-direction:column;gap:4px;min-width:0}
 .clc h3{margin:0;font:600 15px var(--f-display)}.clc .n{font:700 28px/1.1 var(--f-display)}.clc .s{font-size:12.5px;color:var(--muted)}
@@ -404,7 +413,7 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 .clockgrid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px;align-items:center}
 .clockbox{height:340px}
 .clockside{display:flex;flex-direction:column;gap:10px;min-width:0}
-.clockfacts,.gapfacts{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:var(--ink2)}
+.clockfacts,.gapfacts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink2)}
 .clockfacts b,.gapfacts b{display:block;font:700 22px/1.1 var(--f-display);color:var(--ink)}
 .gapfacts b.hot{color:var(--c-claim)}
 .chart.h220{height:220px}
@@ -447,6 +456,7 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
 
 <div id="view-all" style="display:flex;flex-direction:column;gap:18px">
 <div class="today" id="today" aria-live="polite"></div>
+<section class="glance" id="glance" aria-label="This week at a glance"></section>
 <section class="kpis" aria-label="Headline figures">
   <div class="kpi"><span class="v" id="k-inc"></span><span class="l">Security incidents itemised</span><span class="s" id="k-inc-s"></span><span class="tr" id="t-inc"></span><canvas id="sp-inc" aria-hidden="true"></canvas></div>
   <div class="kpi crit"><span class="v" id="k-cas"></span><span class="l">Civilians killed / injured in itemised reports</span><span class="s">combatants excluded</span><span class="tr" id="t-cas"></span><canvas id="sp-cas" aria-hidden="true"></canvas></div>
@@ -482,8 +492,8 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
   </section>
   <section class="panel span5">
     <h2>Most-hit districts</h2>
-    <p class="sub">Top 10 by incidents. An incident naming two districts counts for each.</p>
-    <div class="chart h300"><canvas id="c-dist" role="img" aria-label="Top districts"></canvas></div>
+    <p class="sub">Top 15 by incidents. An incident naming two districts counts for each.</p>
+    <div class="chart h420"><canvas id="c-dist" role="img" aria-label="Top districts"></canvas></div>
   </section>
   <section class="panel span12">
     <h2>Heat calendar: incidents by governorate and day</h2>
@@ -516,42 +526,29 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
     <div class="chart" id="cg-box"><canvas id="c-casgov" role="img" aria-label="Casualties by governorate"></canvas></div>
   </section>
 
-  <div class="block span12" id="sec-3"><span class="bn">3</span><div><h2 class="bh">The Saudi air campaign</h2><p class="bs">What the Armed Forces claim against what reports itemise district by district.</p></div></div>
+  <div class="block span12" id="sec-3"><span class="bn">3</span><div><h2 class="bh">The Saudi air campaign</h2><p class="bs">The Armed Forces' daily claims against the strikes posts itemise, and where the itemised strikes fell.</p></div></div>
   <section class="panel span7">
-    <h2>Saudi strikes per day, as claimed by the Armed Forces</h2>
-    <p class="sub">Spokesman's 24-hour tallies. Days without a tally are blank, not zero.</p>
-    <div class="chart h260"><canvas id="c-tally" role="img" aria-label="Claimed Saudi strikes per day"></canvas></div>
+    <h2>The claim gap: strikes claimed against strikes the posts itemise</h2>
+    <p class="sub">Bars: the Armed Forces' daily tally of Saudi strikes beside the Saudi strikes and attacks the posts name one by one. Line: running share of the claim that posts itemise.</p>
+    <div class="gapfacts" id="gap-facts"></div>
+    <div class="legend"><span><i style="background:var(--c-claim)"></i>Claimed in the daily tally</span><span><i style="background:var(--c-saudi)"></i>Itemised in posts</span><span><span class="lgline"></span>Share itemised, running (right axis)</span></div>
+    <div class="chart h300"><canvas id="c-gap" role="img" aria-label="Claimed against itemised Saudi strikes per day"></canvas></div>
   </section>
   <section class="panel span5">
     <h2>Air strikes counted in posts, by governorate</h2>
     <p class="sub">Strike numbers given in itemised posts. A post with no number counts as 1.</p>
     <div class="chart" id="ag-box"><canvas id="c-airgov" role="img" aria-label="Itemised air strikes by governorate"></canvas></div>
   </section>
-  <section class="panel span12">
-    <h2>The claim gap: strikes claimed against strikes the posts itemise</h2>
-    <p class="sub">On days with an Armed Forces tally, the claimed number of Saudi strikes beside the Saudi strikes and attacks the reports name one by one (air strikes at their stated count, other attacks as 1).</p>
-    <div class="gapfacts" id="gap-facts"></div>
-    <div class="legend"><span><i style="background:var(--c-claim)"></i>Claimed in the daily tally</span><span><i style="background:var(--c-saudi)"></i>Itemised in posts</span><span><span class="lgline"></span>Share itemised, running (right axis)</span></div>
-    <div class="chart h300"><canvas id="c-gap" role="img" aria-label="Claimed against itemised Saudi strikes per day"></canvas></div>
-  </section>
 
   <div class="block span12" id="sec-4"><span class="bn">4</span><div><h2 class="bh">AA operations</h2><p class="bs">Strikes, ground operations and air defence claims by Ansar Allah forces, as they report them.</p></div></div>
   <section class="panel span12">
-    <div class="mtools"><div><h2>Where AA operations hit</h2><p class="sub">Circle area grows with the number of operations at a place. Colour shows the main type. Zoom with + and −, drag to pan. Coordinates are approximate, set at the named site or area.</p></div><div class="seg sm" id="opview" role="group" aria-label="Map view"><button data-v="region">Region</button><button data-v="yemen">Yemen</button></div></div>
-    <div class="lgrow"><div class="legend gravlg"><span><i style="background:var(--c-ksa)"></i>Strike on Saudi territory</span><span><i style="background:var(--c-ground)"></i>Operation vs PLC forces</span><span><i style="background:var(--c-ad)"></i>Air defence claim</span><span><i style="background:var(--c-sea)"></i>Attack on shipping</span></div><div class="sizekey" data-sizekey></div></div>
+    <div class="mtools"><div><h2>Where AA operations hit</h2><p class="sub">Circle area grows with the number of operations at a place. Colour shows the main type. Zoom with + and −, drag to pan. Coordinates are approximate, set at the named site or area.</p></div><div class="seg sm" id="opview" role="group" aria-label="Map view"><button data-v="region">Region</button><button data-v="yemen">Yemen</button><button data-v="ksa">Saudi sites</button></div></div>
+    <div class="lgrow"><div class="legend gravlg" id="op-lg"><span><i style="background:var(--c-ksa)"></i>Strike on Saudi territory</span><span><i style="background:var(--c-ground)"></i>Operation vs PLC forces</span><span><i style="background:var(--c-ad)"></i>Air defence claim</span><span><i style="background:var(--c-sea)"></i>Attack on shipping</span></div><div class="sizekey" data-sizekey></div></div>
     <div class="mapgrid">
       <div style="display:flex;flex-direction:column;gap:8px;min-width:0"><div class="gmap" id="opbox"><svg id="opmap" role="img" aria-label="Map of AA operation locations"></svg><div class="mtip" hidden></div></div><div class="ctlkey"><span><i style="background:var(--t-aa);opacity:.4"></i>Held by AA (Sana'a)</span><span><i style="background:var(--t-plc);opacity:.4"></i>Held by PLC-aligned forces</span></div></div>
-      <div class="locbar"><h3>Operations by location</h3><p class="sub">Top 15 locations in the period.</p><div class="chart" id="loc-box"><canvas id="c-loc" role="img" aria-label="AA operations by location"></canvas></div><p class="zero" id="loc-more"></p></div>
+      <div class="locbar" id="op-loc"><h3>Operations by location</h3><p class="sub">Top 15 locations in the period.</p><div class="chart" id="loc-box"><canvas id="c-loc" role="img" aria-label="AA operations by location"></canvas></div><p class="zero" id="loc-more"></p></div>
+      <div class="locbar" id="op-ksa" style="display:none"><h3>Saudi sites, by province</h3><p class="sub" id="ksa-sub"></p><div class="dscroll"><table class="dtable ksat"><thead><tr><th>Province / site</th><th>Hits</th><th>Latest</th></tr></thead><tbody id="ksa-tab"></tbody></table></div><p class="zero">Target hits claimed by AA, one per target named. Colour shows how recently a site was hit.</p></div>
     </div>
-  </section>
-  <section class="panel span12">
-    <div class="mtools"><div><h2>Strikes reported inside Saudi Arabia</h2><p class="sub" id="ksa-sub"></p></div></div>
-    <div class="lgrow"><div class="legend gravlg" id="ksa-lg"></div><div class="sizekey" data-sizekey></div></div>
-    <div class="mapgrid">
-      <div class="gmap" id="ksabox"><svg id="ksamap" role="img" aria-label="Map of AA strike sites in Saudi Arabia"></svg><div class="mtip" hidden></div></div>
-      <div class="locbar"><h3>By province and site</h3><p class="sub">Target hits claimed by AA. Colour shows how recently a site was hit.</p><div class="dscroll"><table class="dtable ksat"><thead><tr><th>Province / site</th><th>Hits</th><th>Latest</th></tr></thead><tbody id="ksa-tab"></tbody></table></div></div>
-    </div>
-    <p class="zero">Sites and hits as claimed by AA, one per target named. Province borders are approximate.</p>
   </section>
   <section class="panel span12">
     <h2>AA operations per week</h2>
@@ -572,9 +569,9 @@ footer{color:var(--muted);font-size:12px;line-height:1.5;display:flex;flex-direc
     <div class="chart h260"><canvas id="c-clday" role="img" aria-label="Claims per day by side"></canvas></div>
   </section>
   <section class="panel span5">
-    <h2>Blame against own operations</h2>
-    <p class="sub">Attacks each side blames on the other, beside the operations it says it carried out itself.</p>
-    <div class="legend"><span><i style="background:var(--crit)"></i>Attacks blamed on the other side</span><span><i style="background:var(--ink2)"></i>Own operations claimed</span></div>
+    <h2>What each side talks about</h2>
+    <p class="sub">Share of each side's claims: attacks it blames on the other side, operations it says it carried out, and general statements. Hover for counts.</p>
+    <div class="legend"><span><i style="background:var(--crit)"></i>Blames the other side</span><span><i style="background:var(--ink2)"></i>Own operations</span><span><i style="background:var(--line)"></i>Statements</span></div>
     <div class="chart h260"><canvas id="c-clblame" role="img" aria-label="Blame against own operations by side"></canvas></div>
   </section>
   <section class="panel span7">
@@ -922,7 +919,7 @@ function render(){
   Object.entries(M).forEach(([k,f])=>{const c=f(cS,LAST),p=f(pS,pE),el=document.getElementById("t-"+k);if(!el)return;
     let t;if(!p&&!c)t="none in the last "+TW+" days";else if(!p)t=fmt(c)+" in the last "+TW+" days, none in the "+TW+" before";else{const d=Math.round((c-p)/p*100);t=(d>0?"▲ ":d<0?"▼ ":"= ")+Math.abs(d)+"% · "+fmt(c)+" vs "+fmt(p)+" ("+TW+"d)"}
     el.textContent=t;el.className="tr"+(p&&c>p*1.1?" up":p&&c<p*.9?" dn":"");
-    const cv=document.getElementById("sp-"+k);if(cv){const ser=days.map(d=>d<=END?f(d,d):null);charts.push(new Chart(cv,{type:"line",data:{labels:days,datasets:[{data:ser,borderColor:css(k==="cas"?"--crit":"--ink2"),borderWidth:1.5,pointRadius:0,tension:.35,fill:true,backgroundColor:css(k==="cas"?"--crit-soft":"--line2")}]},options:{maintainAspectRatio:false,animation:false,events:[],plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false,beginAtZero:true}}}}))}});
+    const cv=document.getElementById("sp-"+k);if(cv){const ser=days.map(d=>d<=END?+(f(addDays(d,-6),d)/7).toFixed(2):null);charts.push(new Chart(cv,{type:"line",data:{labels:days,datasets:[{data:ser,borderColor:css(k==="cas"?"--crit":"--ink2"),borderWidth:1.5,pointRadius:0,tension:.35,fill:true,backgroundColor:css(k==="cas"?"--crit-soft":"--line2")}]},options:{maintainAspectRatio:false,animation:false,events:[],plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false,beginAtZero:true}}}}))}});
   // last 24 hours strip, measured back from the newest itemised report
   {const ts=(d,t)=>Date.parse(d+"T"+(t||"12:00")+":00Z");const MON={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12},cm=String(D.cut).match(/(\d+) (\w+) (\d+), (\d+:\d+)/);
    const tCut=cm?Date.parse(`${cm[3]}-${String(MON[cm[2].slice(0,3)]).padStart(2,"0")}-${cm[1].padStart(2,"0")}T${cm[4]}:00Z`):0;
@@ -930,7 +927,7 @@ function render(){
    const ev24=EV.filter(e=>in24(e.date,e.time)),ti=ev24.filter(e=>INC.has(e.cat)),tk=ev24.reduce((x,e)=>x+e.k,0),tj=ev24.reduce((x,e)=>x+e.i,0),tks=D.ops.filter(o=>o[1]==="KSA"&&in24(o[0],o[5])).length;
    let prev=0;for(let b=1;b<=7;b++)prev+=EV.filter(e=>INC.has(e.cat)&&in24(e.date,e.time,b)).length;
    const tl=Object.keys(D.tally).sort().pop(),endD=new Date(tEnd),endL=endD.getUTCDate()+" "+endD.toLocaleString("en-GB",{month:"short",timeZone:"UTC"})+", "+endD.toISOString().slice(11,16);
-   document.getElementById("today").innerHTML=`<span class="tl">Last 24 hours · to ${endL}</span><span><b>${fmt(ti.length)}</b>incidents<span class="avg">(daily avg ${(prev/7).toFixed(1)} over the 7 days before)</span></span><span class="c"><b>${tk}</b>civilians killed · <b>${tj}</b>injured</span><span><b>${tks}</b>AA strikes on Saudi targets</span><span><b>${new Set(ti.map(e=>e.gov)).size}</b>governorates hit</span>${tl?`<span><b>${fmt(D.tally[tl])}</b>Saudi strikes claimed on ${dLab(tl)}</span>`:""}`}
+   document.getElementById("today").innerHTML=`<span class="tl">Last 24 hours · to ${endL}</span><span><b>${fmt(ti.length)}</b>incidents<span class="avg">7-day daily avg ${(prev/7).toFixed(1)}</span></span><span class="c"><b>${tk} / ${tj}</b>civilians killed / injured</span><span><b>${tks}</b>AA strikes on Saudi targets</span><span><b>${new Set(ti.map(e=>e.gov)).size}</b>governorates hit</span>${tl?`<span><b>${fmt(D.tally[tl])}</b>Saudi strikes claimed, ${dLab(tl)}</span>`:""}`}
 
   const xT={grid:{display:false},ticks:{maxRotation:0,autoSkip:true,autoSkipPadding:10,color:B.tick},border:{color:B.grid}};
   const yT={beginAtZero:true,ticks:{precision:0,color:B.tick},grid:{color:B.grid},border:{display:false}};
@@ -940,7 +937,7 @@ function render(){
   charts.push(new Chart(document.getElementById("c-day"),{type:"bar",data:{labels:days.map(dLab),datasets:TYPES.map(([t,c])=>({label:t,data:days.map(d=>inc.filter(e=>e.date===d&&e.cat===t).length),backgroundColor:css(c),borderColor:B.surf,borderWidth:{top:2},borderSkipped:"start",maxBarThickness:28})).concat([{type:"line",label:"7-day average",data:avg7,stack:"avg",borderColor:css("--ink2"),borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.3,order:-1}])},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,itemSort:(a,b)=>b.raw-a.raw,callbacks:{footer:it=>"Total: "+it.filter(i=>i.dataset.type!=="line").reduce((a,i)=>a+i.raw,0)}}},scales:{x:{...xT,stacked:true},y:{...yT,stacked:true}}}}));
   // tally
-  charts.push(new Chart(document.getElementById("c-tally"),{type:"bar",data:{labels:days.map(dLab),datasets:[{label:"Claimed Saudi strikes in 24h",data:days.map(d=>d<=END?(D.tally[d]??null):null),backgroundColor:css("--c-claim"),...barEnd,maxBarThickness:22}]},
+  if(document.getElementById("c-tally"))charts.push(new Chart(document.getElementById("c-tally"),{type:"bar",data:{labels:days.map(dLab),datasets:[{label:"Claimed Saudi strikes in 24h",data:days.map(d=>d<=END?(D.tally[d]??null):null),backgroundColor:css("--c-claim"),...barEnd,maxBarThickness:22}]},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:tip(B)},scales:{x:xT,y:yT}}}));
   // casualties
   charts.push(new Chart(document.getElementById("c-cas"),{type:"bar",data:{labels:days.map(dLab),datasets:[
@@ -973,7 +970,7 @@ function render(){
     options:{indexAxis:"y",maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),callbacks:{label:it=>`${it.raw} strikes in ${ag[it.dataIndex].r} reports`}}},scales:{x:{beginAtZero:true,ticks:{precision:0,color:B.tick},grid:{color:B.grid},border:{display:false}},y:{grid:{display:false},ticks:{autoSkip:false,color:B.ink},border:{color:B.grid}}}}}));
   // districts
   const dc={};inc.forEach(e=>[...new Set(e.dist.map(normD))].forEach(d=>{if(/\(|unspecified/i.test(d))return;const k=d+"|"+D.gov[e.gov];dc[k]=(dc[k]||0)+1}));
-  const top=Object.entries(dc).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const top=Object.entries(dc).sort((a,b)=>b[1]-a[1]).slice(0,15);
   charts.push(new Chart(document.getElementById("c-dist"),{type:"bar",data:{labels:top.map(([k])=>{const [d,g]=k.split("|");return d+" ("+g+")"}),datasets:[{label:"Incidents",data:top.map(x=>x[1]),backgroundColor:css("--c-dist"),borderRadius:{topRight:4,bottomRight:4},borderSkipped:"start",maxBarThickness:18}]},
     options:{indexAxis:"y",maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:tip(B)},scales:{x:{beginAtZero:true,ticks:{precision:0,color:B.tick},grid:{color:B.grid},border:{display:false}},y:{grid:{display:false},ticks:{autoSkip:false,color:B.ink},border:{color:B.grid}}}}}));
   // ops per week (Monday start)
@@ -981,9 +978,9 @@ function render(){
   const o0=period?wk(start):wk(D.ops.reduce((m,o)=>o[0]<m?o[0]:m,"9999"));const weeks=[];for(let w=o0;w<=LAST;w=addDays(w,7))weeks.push(w);
   charts.push(new Chart(document.getElementById("c-ops"),{type:"bar",data:{labels:weeks.map(dLab),datasets:KINDS.map(([k,c,l])=>({label:l,data:weeks.map(w=>ops.filter(o=>o[1]===k&&wk(o[0])===w).length),backgroundColor:css(c),borderColor:B.surf,borderWidth:{top:2},borderSkipped:"start",maxBarThickness:30}))},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,callbacks:{title:it=>"Week of "+it[0].label}}},scales:{x:{...xT,stacked:true,title:{display:true,text:"Week starting",color:B.tick}},y:{...yT,stacked:true}}}}));
-  drawOpsMap(ops);drawKsaMap(ops);
+  drawOpsMap(ops);
   renderFeed();
-  renderGap(days,END,inc,B,xT,yT);renderClaims(start,days,END,inc,ops,B,xT,yT);renderClock(inc,B);renderHeat(days,END,inc);
+  renderGlance();renderGap(days,END,inc,B,xT,yT);renderClaims(start,days,END,inc,ops,B,xT,yT);renderClock(inc,B);renderHeat(days,END,inc);
   motionAfter("#view-all");
 }
 /* ================= Governorate tabs and gravity maps ================= */
@@ -1133,18 +1130,22 @@ function distPoints(items,gov){return items.map(a=>{const tt=TYPES.filter(([t])=
 function opGroups(ops){const groups={};ops.filter(o=>o[6]!=null).forEach(o=>{const key=o[6]+","+o[7];(groups[key]=groups[key]||{lon:o[6],lat:o[7],list:[]}).list.push(o)});
   return Object.values(groups).map(g=>{const c={};g.list.forEach(o=>c[o[1]]=(c[o[1]]||0)+1);const main=Object.entries(c).sort((a,b)=>b[1]-a[1])[0][0];const name=g.list.map(o=>o[2]).sort((a,b)=>a.length-b.length)[0];const dates=g.list.map(o=>o[0]).sort();return {...g,c,main,name,n:g.list.length,first:dates[0],last:dates[dates.length-1],ctry:g.list[0][9]||""}}).sort((a,b)=>b.n-a.n)}
 const shortName=n=>{const s=n.replace(/^Red Sea: /,"");return s.length>26?s.slice(0,25)+"…":s};
-const OPVIEWS={region:[[35.6,55.2,11.6,26.4],640],yemen:[[42.3,53.6,12.1,19.1],560]};
+const OPVIEWS={region:[[35.6,55.2,11.6,26.4],640],yemen:[[42.3,53.6,12.1,19.1],560],ksa:[[35.8,51.6,15.9,27.0],640]};
 let OPVIEW="region";
 try{const v=localStorage.getItem("ydash-opview");if(OPVIEWS[v])OPVIEW=v}catch(e){}
 function drawOpsMap(ops){
   const kc=Object.fromEntries(KINDS.map(x=>[x[0],x]));const G=opGroups(ops);
   document.querySelectorAll("#opview button").forEach(b=>{b.setAttribute("aria-pressed",String(b.dataset.v===OPVIEW));b.onclick=()=>{OPVIEW=b.dataset.v;try{localStorage.setItem("ydash-opview",OPVIEW)}catch(e){}drawOpsMap(ops)}});
   const [bb,H]=OPVIEWS[OPVIEW];
+  const isK=OPVIEW==="ksa";document.getElementById("op-loc").style.display=isK?"none":"";document.getElementById("op-ksa").style.display=isK?"":"none";
+  document.getElementById("op-lg").innerHTML=isK?RECENCY.map(([t,l])=>`<span><i style="background:var(${t})"></i>${l}</span>`).join(""):KINDS.map(([k,c,l])=>`<span><i style="background:var(${c})"></i>${l}</span>`).join("");
+  drawKsaMap(ops,isK);
+  if(isK)return;
   drawGrav("opmap",{key:"ops-"+OPVIEW,bbox:bb,H,clip:YE_CLIP,ksa:true,govLabels:OPVIEW==="yemen",RM:OPVIEW==="yemen"?30:26,rmin:4,maxLab:OPVIEW==="yemen"?9:10,empty:"No located operations in the period",
     cl:OPVIEW==="region"?[["Saudi Arabia",44.6,22.4],["Yemen",47.6,15.9],["Eritrea",38.6,15.6],["Sudan",36.4,18.4],["Oman",52.6,19.2],["Red Sea",38.9,20.2],["Gulf of Aden",47.6,12.3],["Ethiopia",39.6,12.0]]:[["Saudi Arabia",47.8,18.4],["Red Sea",41.4,15.2],["Gulf of Aden",47.2,12.5],["Arabian Sea",52.2,14.0],["Eritrea",39.8,14.6]],
     points:G.map(g=>({lon:g.lon,lat:g.lat,v:g.n,fill:css(kc[g.main][1]),lab:shortName(g.name),num:" "+g.n,aria:`${g.name}: ${g.n} operations`,
       tip:`<b>${g.name}${g.ctry&&!g.name.includes(g.ctry)?", "+g.ctry:""}</b>`+KINDS.filter(x=>g.c[x[0]]).map(x=>`<div class="row"><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(${x[1]});margin-right:6px"></i>${x[2]}: ${g.c[x[0]]}</div>`).join("")+`<div class="row">${g.n>1?dLab(g.first)+" to "+dLab(g.last):dLab(g.last)}</div>`}))});
-  const byName={};G.forEach(g=>{const nm=g.name+(g.ctry&&!g.name.includes(g.ctry)?", "+g.ctry:"");const b=byName[nm]=byName[nm]||{name:nm,c:{},n:0};b.n+=g.n;Object.entries(g.c).forEach(([k,v])=>b.c[k]=(b.c[k]||0)+v)});const NG=Object.values(byName).sort((a,b)=>b.n-a.n);
+  const byName={};G.forEach(g=>{const nm=g.name+(g.ctry&&!g.name.includes(g.ctry)&&g.ctry!=="Yemen"?(g.ctry==="Saudi Arabia"?" (KSA)":", "+g.ctry):"");const b=byName[nm]=byName[nm]||{name:nm,c:{},n:0};b.n+=g.n;Object.entries(g.c).forEach(([k,v])=>b.c[k]=(b.c[k]||0)+v)});const NG=Object.values(byName).sort((a,b)=>b.n-a.n);
   const topL=NG.slice(0,15),short=n=>n.length>34?n.slice(0,32).trim()+"…":n;
   document.getElementById("loc-box").style.height=Math.max(140,topL.length*26+40)+"px";
   document.getElementById("loc-more").textContent=NG.length>15?(NG.length-15)+" more locations on the map.":(NG.length?"":"No located operations in the period.");
@@ -1156,11 +1157,10 @@ function drawOpsMap(ops){
 const RECENCY=[["--g3","Hit in the last 2 days",2],["--g2","3 to 7 days ago",7],["--g1","8 to 30 days ago",30],["--g0","Earlier",1e9]];
 const ageDays=d=>Math.round((new Date(LAST+"T12:00:00Z")-new Date(d+"T12:00:00Z"))/864e5);
 const recCls=d=>{const a=ageDays(d);return a<=1?0:a<=6?1:a<=29?2:3};
-function drawKsaMap(ops){
+function drawKsaMap(ops,draw){
   const ks=ops.filter(o=>o[1]==="KSA"&&o[6]!=null);const G=opGroups(ks);
   G.forEach(g=>{g.prov=ksaProv(g.lon,g.lat)||"Unplaced";g.w=[...new Set(g.list.map(o=>o[8]).filter(Boolean))]});
-  document.getElementById("ksa-lg").innerHTML=RECENCY.map(([t,l])=>`<span><i style="background:var(${t})"></i>${l}</span>`).join("");
-  drawGrav("ksamap",{key:"ksa",bbox:[35.8,51.6,15.9,27.0],H:640,clip:YE_CLIP,ksa:true,RM:34,rmin:5,maxLab:10,empty:"No strikes on Saudi territory in the period",
+  if(draw)drawGrav("opmap",{key:"ops-ksa",bbox:[35.8,51.6,15.9,27.0],H:640,clip:YE_CLIP,ksa:true,RM:34,rmin:5,maxLab:10,empty:"No strikes on Saudi territory in the period",
     cl:[["Red Sea",38.4,20.6],["Yemen",46.4,15.9],["Persian Gulf",50.9,26.6],["Rub' al Khali",50.0,20.2]],
     points:G.map(g=>({lon:g.lon,lat:g.lat,v:g.n,fill:css(RECENCY[recCls(g.last)][0]),lab:shortName(g.name),num:" "+g.n,aria:`${g.name}: ${g.n} strikes`,
       tip:`<b>${g.name}</b><div class="row">${g.prov} Province</div><div class="row">${g.n} target hit${g.n>1?"s":""} claimed${g.n>1?", "+dLab(g.first)+" to "+dLab(g.last):", "+dLab(g.last)}</div>${g.w.length?`<div class="row">${g.w.join(" · ")}</div>`:""}`}))});
@@ -1171,6 +1171,22 @@ function drawKsaMap(ops){
 }
 
 let FEEDF="all",FEEDITEMS=[];
+/* ===== this week at a glance (always the last 7 days against the 7 before) ===== */
+function renderGlance(){const el=document.getElementById("glance");if(!el)return;const E=REPLAY||LAST;
+  const a=addDays(E,-6),pa=addDays(E,-13),pb=addDays(E,-7),inR=(x,lo,hi)=>x>=lo&&x<=hi;
+  const ci=EV.filter(e=>INC.has(e.cat)&&inR(e.date,a,E)),pi=EV.filter(e=>INC.has(e.cat)&&inR(e.date,pa,pb));
+  const ch=pi.length?Math.round((ci.length-pi.length)/pi.length*100):0;
+  const byG={};ci.forEach(e=>byG[e.gov]=(byG[e.gov]||0)+1);const tg=Object.entries(byG).sort((x,y)=>y[1]-x[1]);
+  const kE=EV.filter(e=>inR(e.date,a,E)),k=kE.reduce((s,e)=>s+e.k,0),inj=kE.reduce((s,e)=>s+e.i,0);
+  const kg={};kE.forEach(e=>kg[e.gov]=(kg[e.gov]||0)+e.k);const tk=Object.entries(kg).sort((x,y)=>y[1]-x[1])[0];
+  let tc=0,it=0;for(let d=a;d<=E;d=addDays(d,1)){if(D.tally[d]!=null){tc+=D.tally[d];it+=ci.filter(e=>e.date===d&&att(e.cat)==="saudi").reduce((s,e)=>s+(e.cat==="Air strike"?(e.n==null?1:e.n):1),0)}}
+  const ks=D.ops.filter(o=>o[1]==="KSA"&&inR(o[0],a,E));const ksite={};ks.forEach(o=>ksite[o[2]]=(ksite[o[2]]||0)+1);const topS=Object.entries(ksite).sort((x,y)=>y[1]-x[1])[0];
+  const pc=CLAIMS.filter(c=>c.src==="PLC"&&inR(c.date,a,E)&&/operation/i.test(c.cat)).length,kc=CLAIMS.filter(c=>c.src==="KSA"&&inR(c.date,a,E)).length;
+  el.innerHTML=`<span class="gt">Last 7 days<br><span style="color:var(--muted);font-weight:500">${dLab(a)} – ${dLab(E)}</span></span>
+  <span class="gi"><b>${fmt(ci.length)} incidents</b>, <span class="${ch>10?"up":ch<-10?"dn":""}">${ch>0?"+":""}${ch}%</span> on the week before. ${tg[0]?`Most in <b>${D.gov[tg[0][0]]}</b> (${tg[0][1]})${tg[1]?`, then ${D.gov[tg[1][0]]} (${tg[1][1]})`:""}.`:""}</span>
+  <span class="gi"><b>${k} civilians killed, ${inj} injured</b> in itemised reports.${tk&&tk[1]?` Deadliest: <b>${D.gov[tk[0]]}</b> (${tk[1]} killed).`:""}</span>
+  <span class="gi">${tc?`Armed Forces claimed <b>${fmt(tc)} Saudi strikes</b>; posts itemise ${fmt(it)} (<b>${Math.round(it/tc*100)}%</b>).`:"No daily strike tallies this week."}</span>
+  <span class="gi"><b>${ks.length} AA strikes</b> on Saudi territory${topS?`, most on ${topS[0]} (${topS[1]})`:""}. PLC forces claim <b>${pc} operations</b>, the coalition <b>${kc} claims</b>.</span>`}
 /* ===== three claimants ===== */
 const CLAIMS=(D.claims||[]).map(c=>({...c,src:c.src||"PLC"}));
 const SIDES=[["AA","Sana'a (AA)","--c-sanaa"],["PLC","PLC forces (Yemeni army)","--c-plcf"],["KSA","KSA (Saudi-led coalition)","--c-saudi"]];
@@ -1191,8 +1207,12 @@ function renderClaims(start,days,END,inc,ops,B,xT,yT){
   const ser={AA:days.map(d=>d<=END?inc.filter(e=>e.date===d).length+aaOps.filter(o=>o[0]===d).length:null),PLC:days.map(d=>d<=END?cl.filter(c=>c.src==="PLC"&&c.date===d).length:null),KSA:days.map(d=>d<=END?cl.filter(c=>c.src==="KSA"&&c.date===d).length:null)};
   charts.push(new Chart(document.getElementById("c-clday"),{type:"line",data:{labels:days.map(dLab),datasets:SIDES.map(([s,l,c])=>({label:l,data:ser[s],borderColor:css(c),backgroundColor:css(c),borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.3}))},
     options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false}},scales:{x:xT,y:yT}}}));
-  charts.push(new Chart(document.getElementById("c-clblame"),{type:"bar",data:{labels:SIDES.map(x=>x[1].split(" (")[0]),datasets:[{label:"Blamed on the other side",data:SIDES.map(([s])=>per[s].blame),backgroundColor:css("--crit"),borderRadius:4,maxBarThickness:34},{label:"Own operations",data:SIDES.map(([s])=>per[s].own),backgroundColor:css("--ink2"),borderRadius:4,maxBarThickness:34}]},
-    options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false}},scales:{x:{grid:{display:false},ticks:{color:B.ink},border:{color:B.grid}},y:yT}}}));
+  const tot=s=>s==="AA"?per.AA.n:CLAIMS.filter(c=>c.src===s&&c.date>=start&&c.date<=END).length;
+  const shr=(s,k)=>{const t=tot(s)||1;return Math.round((k==="st"?Math.max(0,tot(s)-per[s].blame-per[s].own):per[s][k])/t*1000)/10};
+  const cnt=(s,k)=>k==="st"?Math.max(0,tot(s)-per[s].blame-per[s].own):per[s][k];
+  charts.push(new Chart(document.getElementById("c-clblame"),{type:"bar",data:{labels:SIDES.map(x=>x[1].split(" (")[0]),datasets:[["blame","Blames the other side","--crit"],["own","Own operations","--ink2"],["st","Statements","--line"]].map(([k,l,c])=>({label:l,_k:k,data:SIDES.map(([s])=>shr(s,k)),backgroundColor:css(c),borderColor:B.surf,borderWidth:{right:2},borderSkipped:"start",maxBarThickness:30}))},
+    options:{indexAxis:"y",maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,callbacks:{label:it=>` ${it.dataset.label}: ${it.raw}% (${fmt(cnt(SIDES[it.dataIndex][0],it.dataset._k))})`}}},
+      scales:{x:{stacked:true,min:0,max:100,ticks:{color:B.tick,callback:v=>v+"%"},grid:{color:B.grid},border:{display:false}},y:{stacked:true,grid:{display:false},ticks:{color:B.ink},border:{color:B.grid}}}}}));
   const gs=Object.keys(D.gov).map(g=>({g,AA:inc.filter(e=>e.gov===g).length+aaOps.filter(o=>(o[2]||"").includes(D.gov[g])).length,PLC:cl.filter(c=>c.src==="PLC"&&c.gov===g).length,KSA:cl.filter(c=>c.src==="KSA"&&c.gov===g).length})).filter(r=>r.AA+r.PLC+r.KSA).sort((a,b)=>(b.AA+b.PLC+b.KSA)-(a.AA+a.PLC+a.KSA)).slice(0,14);
   const mx=Math.max(1,...gs.flatMap(r=>[r.AA,r.PLC,r.KSA]));
   document.getElementById("cl-fronts").innerHTML=`<tr><th>Governorate</th>${SIDES.map(x=>`<th>${x[1].split(" (")[0]}</th>`).join("")}</tr>`+gs.map(r=>`<tr><td>${D.gov[r.g]}</td>${SIDES.map(([s,,c])=>`<td>${r[s]?`<i style="width:${Math.max(3,Math.round(r[s]/mx*60))}px;background:var(${c})"></i>${fmt(r[s])}`:""}</td>`).join("")}</tr>`).join("");
