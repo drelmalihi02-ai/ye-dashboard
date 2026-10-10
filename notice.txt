@@ -1,10 +1,21 @@
-🇾🇪 <b>Yemen update | 10 Oct 2026, 01:39 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 10 Oct 2026, 07:32 (Sana'a)</b>
+
+<b>📍 Taiz</b>
+💥 KSA air strikes hit the government complex in Sami' district. A woman was killed when 2 strikes hit a judge's house, AA/Houthis say.
+⚔️ AA/Houthis claim new advances west of Taiz city from Jabal Habashi district toward Al-Misrakh and Najd Qasim.
+
+<b>📍 Hajjah</b>
+✈️ 6 KSA air strikes on Bani Hatab villages in Abs district injure 3 civilians. AA/Houthis say cluster bombs were used.
+
+<b>📍 Hodeidah</b>
+💥 KSA attack hits the oil company station in Bajil district, AA/Houthis say.
+
+<b>📍 Sa'dah</b>
+🚀 KSA missiles hit a town and the telecom network in Al-Safra district, AA/Houthis say. No casualties reported.
 
 <b>🇸🇦 Saudi Arabia</b>
-✈️ 171 flights cancelled at King Khalid airport (Riyadh) on Friday after AA/Houthi strikes, flight tracking shows.
-🩸 KSA tells the UN Security Council AA/Houthi attacks on Abha and Riyadh airports on 6 and 7 Oct killed 3 civilians and injured 36.
-🔻 KSA also says AA/Houthi attacks on Abha, Khamis Mushait, Jazan and Najran in September injured 73 civilians.
+✈️ AA/Houthi media report fresh disruption at King Khalid airport (Riyadh), with 81 flights cancelled early Saturday.
 
-📊 Since 1 Sep: 363 incidents, 108 civilians killed, 161 injured
+📊 Since 1 Sep: 367 incidents, 109 civilians killed, 164 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
