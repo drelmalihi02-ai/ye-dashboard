@@ -1,21 +1,34 @@
-🇾🇪 <b>Yemen update | 10 Oct 2026, 07:32 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 10 Oct 2026, 20:02 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-💥 KSA air strikes hit the government complex in Sami' district. A woman was killed when 2 strikes hit a judge's house, AA/Houthis say.
-⚔️ AA/Houthis claim new advances west of Taiz city from Jabal Habashi district toward Al-Misrakh and Najd Qasim.
+✈️ 4 KSA air strikes hit Bab al-Mandab, Dhubab district, AA/Houthis say.
+💥 KSA strikes the judge's house in Sami' district again and hits Naqil Hawrah, AA/Houthis say.
+🔻 IRG/PLC mortar fire kills a girl in Al-Armah village, Sabir al-Mawadim, and hits Al-Jamalah in Salah district, AA/Houthis say.
+⚔️ AA/Houthis claim the rest of Sami', As-Silw and Al-Mawasit districts secured, with IRG/PLC fighters surrendering under amnesty.
+⚔️ IRG/PLC says it repelled an AA/Houthi attack at Al-Shaqab, Sabir al-Mawadim, and struck AA/Houthi positions in Sami'.
+
+<b>📍 Lahj</b>
+⚔️ AA/Houthis claim drone strikes on IRG/PLC forces in Kahbub, Al-Madaribah district. IRG/PLC says it holds the Kahbub mountains.
+
+<b>📍 Sana'a</b>
+✈️ 4 KSA air strikes hit Sana'a airport, Bani al-Harith district, a day after 2 staff were killed there.
 
 <b>📍 Hajjah</b>
-✈️ 6 KSA air strikes on Bani Hatab villages in Abs district injure 3 civilians. AA/Houthis say cluster bombs were used.
+✈️ 3 KSA air strikes hit the telecom network in Al-Mahabishah district.
 
-<b>📍 Hodeidah</b>
-💥 KSA attack hits the oil company station in Bajil district, AA/Houthis say.
+<b>📍 Amran</b>
+🚀 KSA fires 4 missiles at Harf Sufyan district, AA/Houthis say.
 
 <b>📍 Sa'dah</b>
-🚀 KSA missiles hit a town and the telecom network in Al-Safra district, AA/Houthis say. No casualties reported.
+🚀 KSA rockets hit populated villages in Razih district.
+
+<b>📍 Al-Jawf</b>
+💥 KSA attack hits the Al-Yatamah to Al-Hazm road, Khab wa ash Sha'af district.
 
 <b>🇸🇦 Saudi Arabia</b>
-✈️ AA/Houthi media report fresh disruption at King Khalid airport (Riyadh), with 81 flights cancelled early Saturday.
+🚀 A reported AA/Houthi missile hits King Khalid airport, Riyadh. KSA confirms the attack and suspends flights. Several casualties reported.
+🛢️ Reported AA/Houthi missile and drone strikes hit the Ghawar oil field, Eastern Province.
 
-📊 Since 1 Sep: 367 incidents, 109 civilians killed, 164 injured
+📊 Since 1 Sep: 378 incidents, 110 civilians killed, 164 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
