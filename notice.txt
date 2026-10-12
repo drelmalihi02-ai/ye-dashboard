@@ -1,38 +1,25 @@
-🇾🇪 <b>Yemen update | 11 Oct 2026, 19:39 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 12 Oct 2026, 05:28 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-✈️ A KSA air strike hits the New Generation school in Al-Armah village, Sabir al-Mawadim district.
-✈️ 5 KSA air strikes hit Al-Wazi'iyah district and the Sufitel area of Salah district. IRG/PLC says its own jets hit AA/Houthi positions there.
-⚔️ AA/Houthis claim they repelled an IRG/PLC push from Lahj on the Al-Wazi'iyah heights and took Al-Hanjar checkpoint west of Taiz city.
-🔻 IRG/PLC says its forces took Dhubab district and cut the Dhubab to Mokha road on the way to Bab al-Mandab.
+⚔️ AA/Houthis claim IRG/PLC forces were driven out of Al-Misrakh district and say clashes reached the central prison in western Taiz city.
+✈️ A KSA air strike on a house in Wadi Arsh, Salah district, injures 3 civilians incl. a woman.
+✈️ KSA air strikes hit a residential building in central Al-Turbah, Ash-Shamayatayn district, and the Al-Zurbi road in Hayfan district (2).
+⚠️ AA/Houthis say a mine left by IRG/PLC forces in a house in Al-Afirah, Jabal Habashi district, injured 7 children.
 
 <b>📍 Sana'a</b>
-🔻 A KSA strike on a house in Bab Shu'ub, Shu'ub district, kills a child and injures 6, incl. a woman and a child.
-✈️ KSA air strikes hit Nihm district (2) and Sana'a airport in Bani al-Harith (1).
-
-<b>📍 Amran</b>
-✈️ 7 KSA air strikes on farms in Harf Sufyan district destroy a poultry farm.
+💥 Late-night KSA attacks hit a residential area on Airport Line, Ath-Thawrah district, injuring civilians, and Hamdan district.
 
 <b>📍 Sa'dah</b>
-✈️ A KSA air strike hits Al-Safra district.
-
-<b>📍 Ibb</b>
-💥 A KSA attack hits the telecom network in Al-Naqilayn, As-Sayyani district.
-
-<b>📍 Lahj</b>
-🚀 AA/Houthis claim 6 ballistic missiles and 2 drones hit IRG/PLC forces at Ras al-Arah, Al-Madaribah district.
-
-<b>📍 Aden</b>
-🚀 IRG/PLC says an AA/Houthi missile and drone attack targeted Aden airport, Khor Maksar, diverting a Cairo flight to Jeddah.
+🚀 KSA rocket fire hits Al-Dhaher border district.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthis claim 4 operations: King Khalid airport in Riyadh, Aramco's Shedgum gas plant and Tanajib oil site, and King Fahd airport in Dammam.
-🔻 KSA says a projectile hit Terminal 4 at King Khalid airport, Riyadh, causing a fire and injuries. It says a cruise missile was intercepted.
+🚀 KSA says a ballistic missile struck King Fahd airport in Dammam, the second attack in 24 hours. Flights halted. No AA/Houthi claim yet.
+🔻 KSA puts the toll at King Khalid airport Terminal 4, Riyadh, at 1 killed and 11 injured. The airport stays closed another day.
+🛡️ KSA says it intercepted a drone over the Eastern Province and a ballistic missile fired at Khamis Mushait.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis say KSA made 124 air strikes in 24 hours and 2,058 since the escalation began.
-🏛️ The IRG/PLC cabinet approves a draft law designating AA/Houthis a terrorist organisation.
+📊 IRG/PLC says it made 1,732 strikes on AA/Houthi targets in its "Fajr al-Yaman" offensive, claiming 900 fighters neutralised.
 
-📊 Since 1 Sep: 396 incidents, 115 civilians killed, 171 injured
+📊 Since 1 Sep: 403 incidents, 115 civilians killed, 181 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
