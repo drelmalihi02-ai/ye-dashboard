@@ -1,25 +1,32 @@
-🇾🇪 <b>Yemen update | 12 Oct 2026, 05:28 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 12 Oct 2026, 19:34 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-⚔️ AA/Houthis claim IRG/PLC forces were driven out of Al-Misrakh district and say clashes reached the central prison in western Taiz city.
-✈️ A KSA air strike on a house in Wadi Arsh, Salah district, injures 3 civilians incl. a woman.
-✈️ KSA air strikes hit a residential building in central Al-Turbah, Ash-Shamayatayn district, and the Al-Zurbi road in Hayfan district (2).
-⚠️ AA/Houthis say a mine left by IRG/PLC forces in a house in Al-Afirah, Jabal Habashi district, injured 7 children.
-
-<b>📍 Sana'a</b>
-💥 Late-night KSA attacks hit a residential area on Airport Line, Ath-Thawrah district, injuring civilians, and Hamdan district.
+🔻 IRG/PLC shelling kills a boy and injures his mother in Al-Mikh'af, Al-Misrakh, and kills a girl and injures an elderly man in Al-Sharafi, Sabir al-Mawadim.
+⚔️ AA/Houthis claim Najd Qusaym, Bir Basha, the Al-Hanjar gate and Jabal Habashi peak in southwest Taiz city, and push into Jabal Sabr.
+⚠️ Heavy clashes west of Taiz city as IRG/PLC forces reportedly retake Al-Hamraa heights. City internet down.
 
 <b>📍 Sa'dah</b>
-🚀 KSA rocket fire hits Al-Dhaher border district.
+🚀 KSA rockets and an air strike on a house hit Baqim. A KSA drone drops a shell on Shada amid artillery fire.
+
+<b>📍 Al-Jawf</b>
+💥 KSA air strikes on the government complex and homes in Wadi Uben, Khab wa ash Sha'af, kill 9 civilians incl. 2 children and a woman, injure 4.
+
+<b>📍 Al-Mahwit</b>
+✈️ KSA air strike on Shibam Kawkaban damages homes, the first reported in the governorate.
+
+<b>📍 Marib</b>
+⚔️ AA/Houthis show strikes on an IRG/PLC armoured push at the Al-Fulayha front, south Marib, claiming vehicles destroyed.
+
+<b>📍 Lahj</b>
+⚔️ AA/Houthis reportedly take Hawab and Harooz mountains, threatening IRG/PLC forces at Ras al-Arah.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 KSA says a ballistic missile struck King Fahd airport in Dammam, the second attack in 24 hours. Flights halted. No AA/Houthi claim yet.
-🔻 KSA puts the toll at King Khalid airport Terminal 4, Riyadh, at 1 killed and 11 injured. The airport stays closed another day.
-🛡️ KSA says it intercepted a drone over the Eastern Province and a ballistic missile fired at Khamis Mushait.
+🚀 Missiles reported hitting Abha in the morning. KSA says it is tracking a drone and cruise missile threat. No AA/Houthi claim yet.
+✈️ King Khalid airport, Riyadh, stays closed until at least 17 Oct.
 
 <b>🏛️ Nationwide</b>
-📊 IRG/PLC says it made 1,732 strikes on AA/Houthi targets in its "Fajr al-Yaman" offensive, claiming 900 fighters neutralised.
+📊 IRG/PLC says its "Fajr al-Yaman" strikes reach 1,879 (from 1,732), incl. on AA/Houthi reinforcements in Taiz.
 
-📊 Since 1 Sep: 403 incidents, 115 civilians killed, 181 injured
+📊 Since 1 Sep: 411 incidents, 126 civilians killed, 187 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
