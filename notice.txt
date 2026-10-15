@@ -1,28 +1,33 @@
-🇾🇪 <b>Yemen update | 14 Oct 2026, 07:25 (Sana'a)</b>
-
-<b>📍 Sa'dah</b>
-💥 KSA shelling on villages in Shada kills 2 civilians and injures 2.
-🔻 KSA fire injures 3 civilians and 2 African migrants in Qahr Bani al-Harith, Baqim.
-✈️ KSA air strikes hit Marran, the Ghamr telecom network (2) and Bani Mu'in and Bakil in Razih (3).
+🇾🇪 <b>Yemen update | 15 Oct 2026, 05:01 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-⚔️ AA/Houthis take the Al-Hanjar checkpoint at Taiz city's western entrance, with footage, and claim advances in Jabal Sabr.
-✈️ KSA air strike on a house in Milat al-Dabab, Jabal Habashi, injures a woman.
+🔻 KSA air strike on Bani Amer, Ash-Shamayatayn, kills a woman and injures 4 incl. a girl. IRG/PLC blames an AA/Houthi landmine.
+💥 IRG/PLC shelling on a house in Al-Ram al-A'la, Hayfan, kills a man and injures his wife.
+⚔️ AA/Houthis reportedly launch a wide offensive on Taiz city from the west, north and east after their surrender deadline expired.
+⚔️ AA/Houthis claim IRG/PLC forces driven out of Bab al-Mandab and Dhubab airport, with footage of captives.
+
+<b>📍 Sa'dah</b>
+🔻 KSA fire injures 4 civilians incl. 2 African migrants in Munabbih, Baqim and Qatabir. KSA artillery hits Shada and Qatabir.
+🛡️ AA/Houthis claim a missile hit a KSA Typhoon jet over Sa'dah.
+
+<b>📍 Marib</b>
+✈️ 4 KSA air strikes hit Harib district.
 
 <b>📍 Hodeidah</b>
-💥 KSA strikes on Ras Isa port (As-Salif) and a fuel station in Bajil kill 2 and injure 3. KSA says it hit fuel tanks and piers.
-⚠️ A KSA war remnant kills 3 civilians in Hays district.
+✈️ KSA air strike hits a house in Al-Qutay', Al-Marawi'ah.
+
+<b>📍 Lahj</b>
+🚀 AA/Houthis claim 3 ballistic missiles on IRG/PLC forces in Ras al-Arah, Al-Madaribah.
 
 <b>📍 Sana'a</b>
-✈️ KSA strikes the Al-Subahah fuel station in Bani Matar after an evacuation warning. AA/Houthis say it held no fuel.
+💥 KSA attack on Sana'a city after midnight, target not stated.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 Aramco headquarters in Dhahran hit and on fire hours after AA/Houthis named it a target. KSA says it intercepted a missile, debris fell on homes, no injuries.
-🛡️ KSA says it intercepted 5 cruise missiles, 6 drones and a missile toward Haradh, Hajjah. Blasts heard in Riyadh.
+🚀 AA/Houthis claim missiles and drones hit Aramco in Dhahran and Riyadh and King Khalid airport, then another missile on the airport at night. KSA says it intercepted a missile over Riyadh and a drone over the Eastern Province.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 104 KSA strikes in 24h and 2,281 since the escalation began. IRG/PLC claims 2,200 strikes in its offensive.
+📊 AA/Houthis count 42 KSA strikes in 24h, incl. Mayun island, and 2,323 in total. IRG/PLC claims 2,309 strikes in its offensive.
 
-📊 Since 1 Sep: 430 incidents, 139 civilians killed, 216 injured
+📊 Since 1 Sep: 439 incidents, 141 civilians killed, 225 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
