@@ -867,7 +867,9 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
     ".ye-popb:hover{background:#c8553d;transform:translateY(-1px);box-shadow:0 10px 22px -6px rgba(0,0,0,.5)}",
     ".ye-popb:active{transform:translateY(0)}",
     ".ye-popb:focus-visible{outline:3px solid #f2a65a;outline-offset:2px}",
-    ".ye-popb svg{width:16px;height:16px;flex:none}",
+    ".ye-popb svg{width:16px!important;height:16px!important;flex:none}",
+    ".ye-popb,.ye-full .ye-popb{width:auto!important;max-width:none!important;min-width:0!important;white-space:nowrap!important;left:auto!important;top:auto!important;right:16px!important;bottom:16px!important;flex:none!important}",
+    ".ye-popb span{display:inline;white-space:nowrap}",
     ".ye-full .ye-popb{background:#c8553d}.ye-full .ye-popb:hover{background:#a8432f}",
     "@media (max-width:560px){.ye-popb{height:34px;padding:0 12px;font-size:12px;right:8px;bottom:8px}.ye-popb .l{display:none}.ye-popb .s{display:inline}}",
     ".ye-popb .s{display:none}",
@@ -880,10 +882,10 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
   function aspect(s){var vb=s.viewBox&&s.viewBox.baseVal;return vb&&vb.width&&vb.height?vb.width/vb.height:(s.clientWidth/(s.clientHeight||1)||1.5)}
   function fit(box){var s=mapSvg(box);if(!s)return;var a=aspect(s),w=Math.min(innerWidth,innerHeight*a);s.style.width=Math.floor(w)+"px";s.style.height=Math.floor(w/a)+"px"}
   var cur=null,saved=[],svgCss="",obs=null;
-  function setBtn(box,full){var b=box.querySelector(":scope>.ye-popb");if(!b)return;b.innerHTML=full?ICO_X+"<span>"+(SOLO>=0?"Close window":"Close full screen")+"</span>":OPEN;b.title=full?"Close the full-screen map (Esc)":"Open this map in its own window"}
+  function setBtn(box,full){var b=box.querySelector(":scope>.ye-popb");if(!b)return;b.innerHTML=full?"<span>"+(SOLO>=0?"Close window":"Close full screen")+"</span>":OPEN;b.title=full?"Close the full-screen map (Esc)":"Open this map in its own window"}
   function enter(box){if(cur)exit();cur=box;saved=[];
     for(var a=box.parentElement;a&&a!==document.body&&a!==document.documentElement;a=a.parentElement){var cs=getComputedStyle(a);
-      if(cs.transform!=="none"||cs.filter!=="none"||(cs.contain&&cs.contain!=="none")||(cs.willChange||"").indexOf("transform")>=0||cs.backdropFilter&&cs.backdropFilter!=="none"){saved.push([a,a.style.cssText]);a.style.transform="none";a.style.filter="none";a.style.contain="none";a.style.willChange="auto";a.style.backdropFilter="none"}}
+      if(cs.transform!=="none"||cs.filter!=="none"||(cs.contain&&cs.contain!=="none")||(cs.willChange||"").indexOf("transform")>=0||cs.backdropFilter&&cs.backdropFilter!=="none"||cs.opacity!=="1"||cs.visibility!=="visible"||(cs.contentVisibility&&cs.contentVisibility!=="visible")){saved.push([a,a.style.cssText]);a.style.transform="none";a.style.filter="none";a.style.contain="none";a.style.willChange="auto";a.style.backdropFilter="none";a.style.opacity="1";a.style.visibility="visible";a.style.transition="none";a.style.contentVisibility="visible"}}
     var s=mapSvg(box);svgCss=s?s.style.cssText:"";
     box.classList.add("ye-full");document.documentElement.classList.add("ye-popping");setBtn(box,true);fit(box);
     if(s&&window.MutationObserver){obs=new MutationObserver(function(){fit(box)});obs.observe(s,{attributes:true,attributeFilter:["viewBox"]})}}
