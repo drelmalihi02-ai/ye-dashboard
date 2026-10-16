@@ -158,6 +158,11 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .adn .ad-t tfoot td{border-bottom:0;font-weight:600}
 .adn .ad-al{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:13px;color:var(--ad-mute)}
 .adn .ad-al b{color:var(--ad-fg);font-family:var(--ad-mono);font-weight:500;margin-right:6px}
+.adn svg .t-badge{fill:var(--ad-panel);font-family:var(--ad-body);font-size:11px;font-weight:700}
+.adn .ad-keys b{color:var(--ad-fg);font-weight:600;margin-right:2px}
+.adn .ad-att i{background:var(--ad-fg);color:var(--ad-panel);border-radius:50%}
+.adn .ad-keys{align-items:center}
+.adn .ad-u+.ad-lg{margin-top:8px}
 
 .span12{grid-column:span 12}.span7{grid-column:span 7}.span5{grid-column:span 5}.span6{grid-column:span 6}
 .panel h2{font:600 16px/1.2 var(--f-display);margin:0;letter-spacing:.005em}
@@ -1959,6 +1964,7 @@ function drawCity(host,cities,asof,opt){
   ${opt.log?`<div class="ad-c"><h3>Incident log</h3><p class="s">Aden time, newest first</p><div class="ad-log">${L.slice().reverse().map(e=>`<div><div class="d">${fmt(e.d)}<small>${e.t?"~"+e.t:"time not reported"}</small></div><div><h4>${esc(e.title)} <span class="chip ${e.st}">${CHIP[e.st]}</span></h4><p>${esc(e.note)}</p></div></div>`).join("")}</div></div>`:""}`;
   host.querySelectorAll(".ad-sel button").forEach(b=>b.addEventListener("click",()=>{opt.city=b.dataset.k;drawCity(host,cities,asof,opt)}));
   const Q=k=>host.querySelector(`[data-c="${k}"]`);
+  const LEGS=`<div class="ad-lg sm"><span><i class="sw-hit"></i>Hit, confirmed</span><span><i class="sw-int"></i>Intercepted</span><span><i class="sw-unc"></i>Not confirmed</span></div>`;
   const tipBox=box=>{const t=document.createElement("div");t.className="ad-tip";t.hidden=true;box.appendChild(t);return t};
   const hover=(g,box,tip,html,yfn)=>{const show=()=>{const br=box.getBoundingClientRect(),gr=g.getBoundingClientRect();tip.innerHTML=html;tip.hidden=false;tip.style.left=(gr.left-br.left+gr.width/2)+"px";tip.style.top=(yfn?yfn(br):gr.top-br.top)+"px"};
     ["mouseenter","focus","click"].forEach(ev=>g.addEventListener(ev,show));["mouseleave","blur"].forEach(ev=>g.addEventListener(ev,()=>tip.hidden=true))};
@@ -1988,6 +1994,7 @@ function drawCity(host,cities,asof,opt){
       const lf=px>W*0.62;el("text",{x:lf?px-r-8:px+r+8,y:py+4,"text-anchor":lf?"end":"start",class:"t-b"},gg,n);
       hover(gg,box,tip,`<b>${esc(n)}</b>`+a.map(e=>fmt(e.d)+(e.t?" "+e.t:"")+": "+esc(e.w)).join("<br>"),br=>gg.getBoundingClientRect().top-br.top);
     });
+    box.insertAdjacentHTML("beforeend",LEGS.replace('</div>','<span>Number = strikes at the site</span></div>'));
     const un=L.filter(e=>e.lon==null).length;
     if(un)box.insertAdjacentHTML("beforeend",`<p class="s ad-note">${un} attack${un>1?"s":""} with no site named ${un>1?"are":"is"} not on the map.</p>`);
   })();
@@ -2022,7 +2029,7 @@ function drawCity(host,cities,asof,opt){
     const o0=dnum("2026-10-01"),nd=Math.round(dnum(asof)-o0)+1;
     const by={};L.forEach(e=>(by[e.d]=by[e.d]||[]).push(e));
     const max=Math.max(2,...Object.values(by).map(a=>a.length));
-    const cw=Math.max(380,box.clientWidth||600),SEP=cw<560?66:92,PL=34,GAP=14,R=cw<560?44:70,T=64,H=cw<560?130:160,B=66;
+    const cw=Math.max(380,box.clientWidth||600),SEP=cw<560?66:92,PL=34,GAP=14,R=cw<560?44:70,T=34,H=cw<560?140:160,B=66;
     const slot=Math.min(48,(cw-PL-SEP-GAP-R)/nd),W=PL+SEP+GAP+nd*slot+R;
     const s=el("svg",{viewBox:`0 0 ${W} ${T+H+B}`,role:"img","aria-label":"Daily attacks on "+C.name},box);const hid=pat(s);
     const Y=v=>T+H-v/max*H,X0=PL+SEP+GAP,X=i=>X0+i*slot;
@@ -2032,7 +2039,7 @@ function drawCity(host,cities,asof,opt){
     el("text",{x:PL+SEP/2,y:T+H/2+16,"text-anchor":"middle",class:"t-s"},s,"all of Sep");
     el("text",{x:PL+SEP/2,y:T+H+18,"text-anchor":"middle"},s,"1\u201330 Sep");
     [X0-GAP/2-3,X0-GAP/2+3].forEach(x=>el("line",{x1:x-3,x2:x+3,y1:T+H+6,y2:T+H-6,stroke:"var(--ad-mute)","stroke-width":1.5},s));
-    const under=el("g",{},s);let cum=0;const steps=[];
+    const under=el("g",{},s);let cum=0;const steps=[];const ticks=[];
     for(let i=0;i<nd;i++){
       const d=dstr(o0+i),a=by[d]||[],x=X(i)+3,bw=slot-6;
       const g=el("g",a.length?{class:"hv",tabindex:0,role:"button","aria-label":`${fmt(d)}: ${a.length} attack(s)`}:{},s);
@@ -2044,23 +2051,21 @@ function drawCity(host,cities,asof,opt){
         cum+=a.length;steps.push([X(i)+slot/2,cum,i,d,a]);
       }
       const day=+d.slice(8);
-      if(a.length||day===1||i===nd-1)el("text",{x:X(i)+slot/2,y:T+H+18,"text-anchor":"middle",class:a.length?"t-fg":""},s,day);
+      if(a.length||day===1||i===nd-1)ticks.push([X(i)+slot/2,day,!!a.length]);
       if(day===1)el("text",{x:X(i)+slot/2,y:T+H+33,"text-anchor":"middle"},s,MO[+d.slice(5,7)-1].toUpperCase());
     }
+    {let lx=-1e9;ticks.forEach(([x,day,hot],k)=>{const nx=ticks[k+1];if(x-lx<20)return;if(!hot&&nx&&nx[2]&&nx[0]-x<20)return;
+      el("text",{x,y:T+H+18,"text-anchor":"middle",class:hot?"t-fg":""},s,day);lx=x})}
     const YC=v=>T+H-v/Math.max(cum,1)*(H-8);
     let p=`M${PL} ${YC(0)}`;steps.forEach(([x,v])=>{p+=` H${x} V${YC(v)}`});p+=` H${W-R}`;
     el("path",{d:p,fill:"none",stroke:"var(--ad-fg)","stroke-width":2,"stroke-linejoin":"round",opacity:.7},under);
     steps.forEach(([x,v],k)=>{const last=k===steps.length-1;el("circle",{cx:x,cy:YC(v),r:last?5:3.5,fill:"var(--ad-fg)",stroke:"var(--ad-panel)","stroke-width":1.5},s);
       if(last)el("text",{x:x+9,y:YC(v)+5,class:"t-b"},s,v+" total")});
-    let lastX=-1e9,row=0;
-    steps.forEach(([x,v,i,d,a])=>{
-      const txt=[...new Set(a.map(e=>e.short))].join(" + ");
-      row=(x-lastX<150)?1-row:0;lastX=x;
-      const ty=row?T-28:T-46,right=x+90>W;
-      const tx=right?Math.min(x+slot/2,W-4):x,anc=right?"end":"middle";
-      el("line",{x1:x,x2:x,y1:ty+6,y2:Y(a.length)-3,stroke:"var(--ad-mute)","stroke-dasharray":"2 3"},s);
-      const t=el("text",{x:tx,y:ty,"text-anchor":anc,class:"t-b"},s);el("tspan",{class:"t-s",style:"font-weight:400;fill:var(--ad-mute)"},t,fmt(d)+"  ");el("tspan",{},t,txt);
-    });
+    // lettered badge above each attack day; the names go in a list under the chart so they never overlap
+    const AL=[];steps.forEach(([x,v,i,d,a],n)=>{const L=String.fromCharCode(65+n),by0=T-16,top=Y(a.length);
+      el("line",{x1:x,x2:x,y1:by0+9,y2:top-3,stroke:"var(--ad-mute)","stroke-dasharray":"2 3"},s);
+      el("circle",{cx:x,cy:by0,r:9,fill:"var(--ad-fg)"},s);el("text",{x,y:by0+4,"text-anchor":"middle",class:"t-badge"},s,L);
+      AL.push(`<span><i>${L}</i>${fmt(d)}: ${esc([...new Set(a.map(e=>e.short))].join(" + "))}</span>`)});
     // key events: diamonds under the axis, numbered; September events sit in the compressed block
     const kl=[];KE.forEach((ke,n)=>{const inSep=ke.d<"2026-10-01";const x=inSep?PL+12+n*22:X(Math.round(dnum(ke.d)-o0))+slot/2,y=T+H+48;
       const g=el("g",{class:"hv",tabindex:0,role:"button","aria-label":fmt(ke.d)+": "+ke.t},s);
@@ -2068,7 +2073,7 @@ function drawCity(host,cities,asof,opt){
       el("text",{x,y:y+4,"text-anchor":"middle",class:"t-key"},g,n+1);
       if(!inSep)el("line",{x1:x,x2:x,y1:T,y2:T+H,stroke:"var(--ad-key)","stroke-width":1,opacity:.35},under);
       hover(g,box,tip,`<b>${fmt(ke.d)}</b>${esc(ke.t)}`);kl.push(`<span><i>${n+1}</i>${fmt(ke.d)}: ${esc(ke.t)}</span>`)});
-    if(kl.length)box.insertAdjacentHTML("beforeend",`<div class="ad-keys">${kl.join("")}</div>`);
+    box.insertAdjacentHTML("beforeend",`<div class="ad-keys ad-att"><b>Attacks</b>${AL.join("")}</div>`+(kl.length?`<div class="ad-keys"><b>Key events</b>${kl.join("")}</div>`:""));
   })();
 
   /* Projectiles */
@@ -2095,6 +2100,7 @@ function drawCity(host,cities,asof,opt){
       el("rect",{x:PL,y:y+9,width:Math.max(4,X(x.v)-PL),height:20,rx:3,fill:x.v<2?"var(--ad-hit)":"var(--ad-int)"},s);
       el("text",{x:Math.max(PL+4,X(x.v))+7,y:y+24,class:"t-fg"},s,x.v<1?Math.round(x.v*24)+" h":x.v.toFixed(1)+" d");
     });
+    box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i style="background:var(--ad-hit)"></i>Gap under 2 days</span><span><i style="background:var(--ad-int)"></i>2 days or more</span><span>d = days, h = hours</span></div>`);
   })();
 
   /* Time of day */
@@ -2112,12 +2118,13 @@ function drawCity(host,cities,asof,opt){
       const left=cx>X(19);el("text",{x:left?cx-14:cx+14,y:cy+4,"text-anchor":left?"end":"start",class:"t-b"},s,e.t);
     });
     const night=pts.filter(e=>{const h=hr(e.t);return h>=18||h<6}).length;
-    el("text",{x:PL,y:T+H+36,class:"t-s"},s,`${night} of ${pts.length} timed attacks came after dark`+(miss?`. ${miss} had no reported time.`:"."));
+    s.setAttribute("viewBox",`0 0 ${W} ${T+H+24}`);
+    box.insertAdjacentHTML("beforeend",LEGS.replace('</div>','<span><i style="background:var(--ad-band);box-shadow:inset 0 0 0 1px var(--ad-rule)"></i>Night</span></div>')+`<p class="s ad-note">${night} of ${pts.length} timed attacks came after dark.${miss?` ${miss} had no reported time.`:""}</p>`);
   })();
 
   /* Unit charts */
   [["tg","tg"],["w","w"]].forEach(([c,k])=>{const box=Q(c),gr={};L.forEach(e=>(gr[e[k]]=gr[e[k]]||[]).push(e));
-    box.innerHTML=Object.entries(gr).sort((a,b)=>b[1].length-a[1].length).map(([n,a])=>`<div><span>${esc(n)}</span><span class="sq">${a.map(e=>`<i class="sw-${e.st}" title="${fmt(e.d)}: ${esc(e.title)}"></i>`).join("")}<em>${a.length}</em></span></div>`).join("")});
+    box.insertAdjacentHTML("afterend",LEGS);box.innerHTML=Object.entries(gr).sort((a,b)=>b[1].length-a[1].length).map(([n,a])=>`<div><span>${esc(n)}</span><span class="sq">${a.map(e=>`<i class="sw-${e.st}" title="${fmt(e.d)}: ${esc(e.title)}"></i>`).join("")}<em>${a.length}</em></span></div>`).join("")});
 }
 function drawAden(host,list,asof,opt){drawCity(host,{aden:{name:"Aden",gov:"aden",strikes:list}},asof,opt)}
 
