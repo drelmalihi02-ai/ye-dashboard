@@ -1,29 +1,32 @@
-🇾🇪 <b>Yemen update | 16 Oct 2026, 06:04 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 16 Oct 2026, 21:23 (Sana'a)</b>
 
 <b>📍 Sa'dah</b>
-🚀 KSA fires 5 missiles at Kitaf wa al-Boqe', then missiles hit Sahar and Al Salem.
-💥 KSA artillery shells Al-Dhaher before dawn.
+💥 KSA artillery hits a market in Shada. A man is seriously injured and later dies.
+🔻 KSA fire injures 3 African migrants in Baqim and Munabbih. KSA artillery shells villages in Razih.
 
-<b>📍 Aden</b>
-💥 Explosions reported in Aden during a new AA/Houthi attack (unconfirmed).
-⚠️ AA/Houthis claim Saudi officers were killed and injured in the Maashiq palace strike, Crater. Saudi deaths there are also reported by international media.
+<b>📍 Taiz</b>
+✈️ KSA air strike on a health centre in Al-Mashawilah, Al-Wazi'iyah, kills a civilian and injures a woman.
+✈️ KSA air strike hits Al-Sharaf school in Al-Farawish, Sabir al-Mawadim.
 
-<b>📍 Amran</b>
-🚀 KSA attack with 2 missiles hits Harf Sufyan.
+<b>📍 Dhamar</b>
+💥 KSA cluster bomb strikes on houses in Qa' al-Haql, Dawran Anis, kill 2 and injure 12, incl. 5 children.
+
+<b>📍 Hodeidah</b>
+✈️ 2 KSA air strikes hit the Al-Taif area, Ad-Durayhimi.
 
 <b>📍 Marib</b>
-🛡️ AA/Houthis claim they shot down a KSA Wing Loong 2 drone over Marib.
-
-<b>📍 Sana'a</b>
-🔻 AA/Houthis say they broke up a cell linked to KSA and blamed for 4 bombings in Sana'a city.
+⚠️ IRG/PLC forces say they made new gains in Marib and took several sites.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted a drone launched toward the Eastern Province. Sirens sound in Jazan.
+🚀 AA/Houthi missiles reportedly hit Sipchem in Jubail, with a large fire. Blasts in Dammam halt flights. Riyadh attacked.
+🛡️ KSA says it intercepted 3 drones over Riyadh and the south and a ballistic missile toward Yanbu.
+
+<b>🌊 Red Sea</b>
+🛡️ KSA says it intercepted 2 AA/Houthi cruise missiles over the Red Sea.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis report 65 KSA strikes and missiles in 24h on 7 governorates. Their health ministry counts 120 civilians killed and 307 injured since 3 Sep.
-🇺🇳 The UN Security Council condemns the AA/Houthi escalation and attacks on KSA.
+📊 AA/Houthis report 101 KSA strikes and missiles in 24h on 10 governorates, 2,489 in total. Their health ministry counts 114 killed and 305 injured since 3 Sep.
 
-📊 Since 1 Sep: 455 incidents, 141 civilians killed, 229 injured
+📊 Since 1 Sep: 462 incidents, 145 civilians killed, 245 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
