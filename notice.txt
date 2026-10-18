@@ -1,28 +1,30 @@
-🇾🇪 <b>Yemen update | 18 Oct 2026, 06:51 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 18 Oct 2026, 20:18 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-💥 4 air strikes on houses in Humayr al-Jabal, Maqbanah, kill 9 civilians incl. women and children and injure 16. AA/Houthis blame KSA, IRG/PLC blames AA/Houthi shelling.
-🇾🇪 AA/Houthis launch an offensive on western Taiz city and claim Jabal Han and areas near the Old Airport. IRG/PLC says it repelled the attack.
-✈️ KSA air strike kills 3 civilians in Al-Ardi, Dhubab. KSA strikes also hit telecom sites in Al-Ma'afer and Jabal Habashi.
-💥 IRG/PLC mortar and sniper fire injures 8 civilians, incl. 3 children, in Al-Ta'iziyah and Al-Misrakh, AA/Houthis say.
-⚠️ IRG/PLC says AA/Houthi shelling killed a woman and injured 3 civilians in Taiz city.
+✈️ 2 KSA air strikes hit the Al-Masahin area of Ash-Shamayatayn.
+🔻 IRG/PLC sniper fire injures a woman in Sanamat, Al-Misrakh, AA/Houthis say.
+🇾🇪 AA/Houthis reportedly take Al-Jabali, Al-Jabalayn and the 35th Armoured Brigade camp in western Taiz city. IRG/PLC claims gains in Sanamat and Sarari, Sabir.
 
 <b>📍 Sa'dah</b>
-✈️ KSA air strike injures a child and a teenager in Kitaf wa al-Boqe'. KSA fire injures 2 civilians in Shada.
+💥 2 KSA air strikes on a family house in Al-Tawilah, Sahar, kill 10 civilians incl. 5 children and 3 women and injure 23.
+💥 KSA artillery shells border areas of Shada.
 
-<b>📍 Al-Jawf</b>
-🚀 AA/Houthis claim strikes on IRG/PLC gatherings in Al-Yatamah, Khab wa ash Sha'af.
+<b>📍 Ibb</b>
+⚠️ KSA attack on Al-Wadi, Dhi as-Sufal, kills a woman and injures a man and a woman, AA/Houthis say.
 
 <b>📍 Hodeidah</b>
-✈️ 2 KSA air strikes hit Al-Khawkhah.
+✈️ KSA air strike hits a farm in Dayr Muflih, Al-Munirah, killing cattle.
+
+<b>📍 Marib</b>
+🚀 IRG/PLC says AA/Houthis fired 8 ballistic missiles at Marib city today, 24 missiles and shells in 72 hours.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ AA/Houthis claim a KSA Apache shot down near Najran. KSA says a National Guard helicopter crashed there from a technical fault.
-🛡️ KSA says it intercepted 2 ballistic missiles toward Khamis Mushait and drones over Riyadh and the east. Dammam airport halts flights.
+🇪🇬 Egypt's defence council approves military support for KSA against AA/Houthis. Egyptian transport aircraft reportedly land in Taif.
+⚠️ AA/Houthis warn people away from Saudi oil sites, call Saudi airspace unsafe except over Mecca and Medina, and release footage of the Najran helicopter shoot-down.
 
 <b>🏛️ Nationwide</b>
-🇾🇪 AA/Houthis count 53 KSA air strikes in 24h and 2,542 since the escalation began. IRG/PLC claims 1,417 strikes of its own in 24h.
+🇾🇪 IRG/PLC claims 1,326 strikes in 24h. AA/Houthi negotiator says KSA stalled an Omani 5-day truce proposal.
 
-📊 Since 1 Sep: 487 incidents, 159 civilians killed, 278 injured
+📊 Since 1 Sep: 493 incidents, 170 civilians killed, 304 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
