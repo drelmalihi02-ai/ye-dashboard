@@ -1,30 +1,21 @@
-🇾🇪 <b>Yemen update | 18 Oct 2026, 20:18 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 19 Oct 2026, 06:32 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-✈️ 2 KSA air strikes hit the Al-Masahin area of Ash-Shamayatayn.
-🔻 IRG/PLC sniper fire injures a woman in Sanamat, Al-Misrakh, AA/Houthis say.
-🇾🇪 AA/Houthis reportedly take Al-Jabali, Al-Jabalayn and the 35th Armoured Brigade camp in western Taiz city. IRG/PLC claims gains in Sanamat and Sarari, Sabir.
+✈️ KSA air strike hits a house in Habajir, Al-Zukayrah, Ash-Shamayatayn, with no casualties reported, AA/Houthis say.
+🔻 IRG/PLC says AA/Houthi sniper fire and shelling killed 2 women and injured 9 civilians in Taiz city and nearby districts on 17 and 18 Oct.
+⚠️ IRG/PLC says AA/Houthis struck a culvert on the Hayjat al-Abd road linking Taiz and Lahj.
 
-<b>📍 Sa'dah</b>
-💥 2 KSA air strikes on a family house in Al-Tawilah, Sahar, kill 10 civilians incl. 5 children and 3 women and injure 23.
-💥 KSA artillery shells border areas of Shada.
-
-<b>📍 Ibb</b>
-⚠️ KSA attack on Al-Wadi, Dhi as-Sufal, kills a woman and injures a man and a woman, AA/Houthis say.
-
-<b>📍 Hodeidah</b>
-✈️ KSA air strike hits a farm in Dayr Muflih, Al-Munirah, killing cattle.
-
-<b>📍 Marib</b>
-🚀 IRG/PLC says AA/Houthis fired 8 ballistic missiles at Marib city today, 24 missiles and shells in 72 hours.
+<b>📍 Al-Dhale</b>
+✈️ KSA air strike hits a water tank in Al-Qabil, Al-Ahdhuf, Al-Husha district, AA/Houthis say.
 
 <b>🇸🇦 Saudi Arabia</b>
-🇪🇬 Egypt's defence council approves military support for KSA against AA/Houthis. Egyptian transport aircraft reportedly land in Taif.
-⚠️ AA/Houthis warn people away from Saudi oil sites, call Saudi airspace unsafe except over Mecca and Medina, and release footage of the Najran helicopter shoot-down.
+⚠️ KSA media report sirens in Abha and Jazan. No attack claimed.
 
 <b>🏛️ Nationwide</b>
-🇾🇪 IRG/PLC claims 1,326 strikes in 24h. AA/Houthi negotiator says KSA stalled an Omani 5-day truce proposal.
+🇾🇪 AA/Houthis say KSA carried out 110 air strikes and missiles in 24h on 9 governorates, 2,652 since the escalation began.
+🏥 AA/Houthi health ministry: 536 civilians killed and injured since the escalation, 117 of them on 16 to 18 Oct in Taiz, Sa'dah, Al-Jawf and Dhamar.
+🇺🇸 US embassies across the region issue security alerts over possible escalation in Yemen and Iran.
 
-📊 Since 1 Sep: 493 incidents, 170 civilians killed, 304 injured
+📊 Since 1 Sep: 495 incidents, 170 civilians killed, 304 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
