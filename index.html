@@ -554,6 +554,19 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
 .ck-drill .cas{font:500 11.5px var(--f-mono);color:var(--crit);background:var(--crit-soft);padding:1px 5px;border-radius:4px;white-space:nowrap;margin-left:4px}
 .ck-drill .tx{color:var(--ink2)}
 .tblmode .ck-x{display:none}
+.ck-views{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media (max-width:760px){.ck-views{grid-template-columns:1fr}}
+.ck-views button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:3px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-width:0}
+.ck-views button b{font:600 15px var(--f-display);color:var(--ink);display:flex;justify-content:space-between;gap:8px}
+.ck-views button b em{font:500 12px var(--f-mono);font-style:normal;color:var(--muted)}
+.ck-views button span{font-size:12.5px;color:var(--muted);line-height:1.35}
+.ck-views button:hover{border-color:var(--ink2)}
+.ck-views button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ck-views button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent);background:var(--accent-soft)}
+.ck-views button[aria-pressed="true"] b em{color:var(--accent)}
+.ck-key2{font-size:13.5px;color:var(--ink2);border-left:3px solid var(--accent);padding:2px 0 2px 12px}
+.ck-key2 b{color:var(--ink)}
+.ck-bar .seg button:disabled{opacity:.45;cursor:not-allowed}
 .clockside{display:flex;flex-direction:column;gap:10px;min-width:0}
 .clockfacts,.gapfacts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink2)}
 .clockfacts b,.gapfacts b{display:block;font:700 22px/1.1 var(--f-display);color:var(--ink)}
@@ -663,21 +676,23 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
   </section>
   <section class="panel span12" id="clock-panel">
     <h2>Strike clock: when attacks happen</h2>
-    <p class="sub">What time of day each side strikes, by the hour of the report in Sana'a time (UTC+3). Pick a side or switch to civilian casualties. Click any hour to read its reports.</p>
-    <div class="ck-bar ck-x"><span class="lbl">Side</span><div class="seg sm" id="ck-side" role="group" aria-label="Side"></div><span class="lbl">Count</span><div class="seg sm" id="ck-metric" role="group" aria-label="What to count"></div></div>
+    <p class="sub">What time of day attacks happen, by the hour of the report in Sana'a time (UTC+3). Look at it three ways: who fired, what weapon was used, or AA attacks outside Yemen. Click any hour to read its reports.</p>
+    <div class="ck-views ck-x" id="ck-views" role="group" aria-label="View"></div>
+    <div class="ck-bar ck-x"><span class="lbl" id="ck-flbl">Attacker</span><div class="seg sm" id="ck-side" role="group" aria-label="Filter"></div><span class="lbl">Count</span><div class="seg sm" id="ck-metric" role="group" aria-label="What to count"></div></div>
+    <div class="ck-key2 ck-x" id="ck-key2"></div>
     <div class="ck-how ck-x" id="ck-how">
       <div><b><span class="nb">1</span>The dial</b>A 24-hour clock with midnight at the top and noon at the bottom. Each wedge is one hour. The longer and darker the wedge, the more reports in that hour. The grey half is night (18:00 to 06:00).</div>
-      <div><b><span class="nb">2</span>The hour bars</b>The same 24 hours laid flat, split by type of attack, so you can see which weapons drive each peak. Grey columns are night hours.</div>
-      <div><b><span class="nb">3</span>Who strikes when</b>One strip per side. Each cell is an hour, shaded against that side's own busiest hour, so you can compare patterns even when one side has far more reports.</div>
-      <div><b><span class="nb">4</span>Read with care</b>The time is when the report came out, not always when the attack happened. Night attacks are often reported in the morning. Reports with no time are left out.</div>
+      <div><b><span class="nb">2</span>The hour bars</b><span id="ck-how2">The same 24 hours laid flat. Each colour is one attacker, so you can see who drives each peak. Grey columns are night hours.</span></div>
+      <div><b><span class="nb">3</span><span id="ck-how3t">Strips</span></b><span id="ck-how3">One strip per attacker. Each cell is an hour, shaded against that row's own busiest hour, so you can compare patterns even when one row has far more reports.</span></div>
+      <div><b><span class="nb">4</span>Read with care</b><span id="ck-how4">The time is when the report came out, not always when the attack happened. Night attacks are often reported in the morning. Reports with no time are left out.</span></div>
     </div>
     <div class="clockgrid">
       <div class="ck-dialwrap"><div class="chart clockbox"><canvas id="c-clock" data-notable="1" role="img" aria-label="Incidents by hour, as a 24-hour clock"></canvas></div><div class="ck-parts ck-x" id="ck-parts"></div></div>
       <div class="clockside"><div class="clockfacts" id="clock-facts"></div><div class="legend" id="lg-hour"></div><div class="chart h220"><canvas id="c-hour" role="img" aria-label="Incidents by hour and type"></canvas></div></div>
     </div>
     <div class="ck-two ck-x">
-      <div><h3>Who strikes when</h3><p class="sub">Each row is shaded against its own busiest hour. Click a side to filter the whole panel.</p><div class="ck-grid" id="ck-who"></div></div>
-      <div><h3>Has the timing shifted?</h3><p class="sub">The same hours week by week, for the side picked above. A pattern that drifts left or right means attacks moved earlier or later.</p><div class="ck-grid" id="ck-week"></div><div class="ck-scale" id="ck-scale"></div></div>
+      <div><h3 id="ck-whoh">Who strikes when</h3><p class="sub" id="ck-whos">Each row is shaded against its own busiest hour. Click a row name to filter the whole panel.</p><div class="ck-grid" id="ck-who"></div></div>
+      <div><h3>Has the timing shifted?</h3><p class="sub">The same hours week by week, for the choice above. A pattern that drifts left or right means attacks moved earlier or later.</p><div class="ck-grid" id="ck-week"></div><div class="ck-scale" id="ck-scale"></div></div>
     </div>
     <div class="ck-drill ck-x" id="ck-drill"></div>
   </section>
@@ -1313,7 +1328,7 @@ function render(){
   renderPerCap(inc);renderWoW();renderConf(start,END);
   drawOpsMap(ops);
   renderFeed();
-  renderGlance();renderFronts(B);renderGap(days,END,inc,B,xT,yT);renderClaims(start,days,END,inc,ops,B,xT,yT);renderClock(inc,B);renderHeat(days,END,inc);
+  renderGlance();renderFronts(B);renderGap(days,END,inc,B,xT,yT);renderClaims(start,days,END,inc,ops,B,xT,yT);renderClock(inc,B,ops);renderHeat(days,END,inc);
   motionAfter("#view-all");
 }
 /* ================= Governorate tabs and gravity maps ================= */
@@ -1595,88 +1610,131 @@ function renderGap(days,END,inc,B,xT,yT){
     {type:"line",label:"Share itemised, running",data:share,borderColor:css("--ink2"),borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.3,yAxisID:"y2"}]},
     options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,callbacks:{label:it=>it.dataset.yAxisID==="y2"?` Running share itemised: ${it.raw}%`:` ${it.dataset.label}: ${fmt(it.raw)}`}}},
       scales:{x:xT,y:yT,y2:{position:"right",min:0,max:100,grid:{display:false},border:{display:false},ticks:{color:B.tick,callback:v=>v+"%",maxTicksLimit:5}}}}}))}
-/* Strike clock (expanded 19 Oct 2026): side filter, incidents or civilian casualties, dial + day parts,
-   hour bars by type, per-side hour strips, week-by-hour grid and click-to-read drill-down. */
-const CKG=[["all","All sides",null],["air","Saudi air and drone",["Air strike","Drone"]],["fire","Saudi artillery and rockets",["Artillery","Rockets","Unspecified attack"]],["plc","PLC forces",["PLC shelling","PLC sniper fire"]],["aa","AA ground operations",["Ground operation"]]];
-let CKF="all",CKM="inc",CKH=null,CKINC=[],CKB=null;
+/* Strike clock (expanded 19 Oct 2026, views added the same day): three views (by attacker, by weapon, AA attacks outside Yemen),
+   a filter per view, incidents or civilian casualties, dial + day parts, stacked hour bars, per-row hour strips,
+   week-by-hour grid and click-to-read drill-down. */
+let CKV="att",CKF="all",CKM="inc",CKH=null,CKINC=[],CKOPS=[],CKB=null;
 const ckHH=h=>String(h).padStart(2,"0")+":00",ckNight=h=>h>=18||h<6;
 function ckMix(a,b,t){const p=x=>{x=x.replace("#","");if(x.length===3)x=x.split("").map(c=>c+c).join("");return[0,2,4].map(i=>parseInt(x.slice(i,i+2),16))};
   try{const A=p(a),C=p(b);return "#"+A.map((v,i)=>Math.round(C[i]+(v-C[i])*t).toString(16).padStart(2,"0")).join("")}catch(e){return a}}
-function renderClock(inc,B){CKINC=inc;CKB=B;drawClock()}
+const CK_ATT=[["saudi","Saudi forces","--c-saudi","Air strikes, drones, artillery, rockets"],["plc","PLC forces","--c-plcf","Shelling and sniper fire"],["sanaa","AA forces in Yemen","--c-sanaa","Ground operations vs PLC forces"]];
+const CK_TATT={"Ground operation":"AA","PLC shelling":"PLC","PLC sniper fire":"PLC"};
+const ckWcls=w=>{w=String(w||"").toLowerCase();const m=/missile/.test(w),d=/drone/.test(w);return m&&d?"Missiles and drones":/cruise/.test(w)?"Cruise missiles":m?"Ballistic and other missiles":d?"Drones":"Weapon not stated"};
+const CK_W=[["Missiles and drones","--c-ksa"],["Ballistic and other missiles","--c-rkt"],["Cruise missiles","--c-claim"],["Drones","--c-drn"],["Weapon not stated","--c-dist"]];
+const ckArea=o=>{const t=o[2]+" "+(o[3]||"");if(o[1]==="SEA")return "sea";if(/Riyadh|Kharj/i.test(o[2]))return "riyadh";if(/Dammam|Dhahran|Eastern|Khurais|Shedgum|Tanajib|Jubail|Abqaiq/i.test(o[2]))return "east";if(/Yanbu|Rabigh|Jeddah|Taif|Medina/i.test(o[2]))return "west";return "south"};
+const CK_AREA=[["south","Border south: Jizan, Najran, Asir","Khamis Mushait, Abha, Najran, Jizan, Sharurah"],["riyadh","Riyadh","King Khalid airport, Aramco sites"],["east","Eastern Province","Dammam, Dhahran, Khurais"],["west","West coast","Yanbu, Rabigh"],["sea","At sea","Ships in the Red Sea and Gulf of Aden"]];
+function renderClock(inc,B,ops){CKINC=inc;CKOPS=(ops||[]).filter(o=>o[1]==="KSA"||o[1]==="SEA");CKB=B;drawClock()}
+function ckView(){
+  const tm=x=>/^\d{1,2}:\d{2}/.test(x||"");
+  if(CKV==="out"){
+    const it=CKOPS.map(o=>({date:o[0],time:o[5]||"",g:ckArea(o),st:ckWcls(o[8]),k:0,i:0,o}));
+    return {it,timed:it.filter(x=>tm(x.time)),noun:"AA attacks",flbl:"Target area",
+      G:CK_AREA.map(([k,l,d])=>({k,l,d})),S:CK_W.map(([l,c])=>({k:l,l,c})),cas:false,
+      how2:"The same 24 hours laid flat. Each colour is a weapon type as AA describes it, so you can see what drives each peak. Grey columns are night hours.",
+      how3t:"Where AA strikes when",how3:"One strip per target area in Saudi Arabia, plus attacks at sea. Each cell is an hour, shaded against that row's own busiest hour.",
+      how4:"These are AA claims and outside reports of attacks, timed by when they were announced or reported, often hours after launch. Many were reported as intercepted. Civilian casualties are not counted here.",
+      whoh:"Where AA strikes when"}}
+  const it=CKINC.map(e=>({date:e.date,time:e.time||"",g:CKV==="att"?att(e.cat):e.cat,st:CKV==="att"?att(e.cat):e.cat,k:e.k||0,i:e.i||0,e}));
+  if(CKV==="att")return {it,timed:it.filter(x=>tm(x.time)),noun:"incidents",flbl:"Attacker",
+    G:CK_ATT.map(([k,l,c,d])=>({k,l,c,d})),S:CK_ATT.map(([k,l,c])=>({k,l,c})),cas:true,
+    how2:"The same 24 hours laid flat. Each colour is one attacker, so you can see who drives each peak. Grey columns are night hours.",
+    how3t:"Who strikes when",how3:"One strip per attacker. Each cell is an hour, shaded against that row's own busiest hour, so you can compare patterns even when one side has far more reports.",
+    how4:"The time is when the report came out, not always when the attack happened. Night attacks are often reported in the morning. Reports with no time are left out.",whoh:"Who strikes when"};
+  const used=TYPES.filter(([t])=>CKINC.some(e=>e.cat===t));
+  return {it,timed:it.filter(x=>tm(x.time)),noun:"incidents",flbl:"Weapon",
+    G:used.map(([t,c])=>({k:t,l:t+" ("+(CK_TATT[t]||"KSA")+")",c})),S:used.map(([t,c])=>({k:t,l:t,c})),cas:true,
+    how2:"The same 24 hours laid flat. Each colour is one weapon or type of attack, so you can see what drives each peak. Grey columns are night hours.",
+    how3t:"Which weapon when",how3:"One strip per weapon. The label in brackets names the attacker (KSA, PLC or AA). Each cell is an hour, shaded against that row's own busiest hour.",
+    how4:"The time is when the report came out, not always when the attack happened. Night attacks are often reported in the morning. Reports with no time are left out.",whoh:"Which weapon when"}}
 function drawClock(){
-  const B=CKB,g=CKG.find(x=>x[0]===CKF)||CKG[0],inG=e=>!g[2]||g[2].includes(e.cat);
-  const val=e=>CKM==="cas"?(e.k||0)+(e.i||0):1,unit=CKM==="cas"?"civilians killed or injured":"incidents";
-  const all=CKINC.filter(inG),ti=all.filter(e=>/^\d{1,2}:\d{2}/.test(e.time||"")),hr=e=>+e.time.split(":")[0];
-  const H=Array.from({length:24},(_,h)=>ti.filter(e=>hr(e)===h)),n=H.map(a=>a.reduce((x,e)=>x+val(e),0));
+  const B=CKB,V=ckView();if(!V.cas&&CKM==="cas")CKM="inc";
+  if(CKF!=="all"&&!V.G.some(x=>x.k===CKF))CKF="all";
+  const g=V.G.find(x=>x.k===CKF),inG=x=>!g||x.g===g.k;
+  const val=x=>CKM==="cas"?x.k+x.i:1,unit=CKM==="cas"?"civilians killed or injured":V.noun;
+  const all=V.it.filter(inG),ti=V.timed.filter(inG),hr=x=>+x.time.split(":")[0];
+  const H=Array.from({length:24},(_,h)=>ti.filter(x=>hr(x)===h)),n=H.map(a=>a.reduce((s,x)=>s+val(x),0));
   const tot=n.reduce((a,b)=>a+b,0),mx=Math.max(1,...n),pk=n.indexOf(Math.max(...n));
-  const night=n.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0);
+  const night=n.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0),pc=v=>tot?Math.round(v/tot*100):0;
   const P=[["Overnight","00–06",0,6],["Morning","06–12",6,12],["Afternoon","12–18",12,18],["Evening","18–24",18,24]].map(([l,r,a,b])=>({l,r,a,v:n.slice(a,b).reduce((x,y)=>x+y,0)}));
-  const top=[...P].sort((a,b)=>b.v-a.v)[0],pc=v=>tot?Math.round(v/tot*100):0;
-  // controls
-  const side=document.getElementById("ck-side"),met=document.getElementById("ck-metric");
-  side.innerHTML=CKG.map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===CKF}">${l}</button>`).join("");
+  const top=[...P].sort((a,b)=>b.v-a.v)[0];
+  // view cards
+  const cnt=k=>k==="out"?CKOPS.length:CKINC.length;
+  const VW=[["att","By attacker","Who fired: Saudi forces, PLC forces or AA forces inside Yemen"],["wpn","By weapon","What was used: air strikes, drones, artillery, rockets, shelling, sniper fire"],["out","AA attacks outside Yemen","Missiles and drones AA says it fired at Saudi Arabia and at ships"]];
+  const vw=document.getElementById("ck-views");
+  vw.innerHTML=VW.map(([k,l,d])=>`<button type="button" data-v="${k}" aria-pressed="${k===CKV}"><b>${l}<em>${fmt(cnt(k))}</em></b><span>${d}</span></button>`).join("");
+  vw.querySelectorAll("button").forEach(x=>x.onclick=()=>{if(CKV!==x.dataset.v){CKV=x.dataset.v;CKF="all";CKH=null;drawClock()}});
+  // filter + metric
+  document.getElementById("ck-flbl").textContent=V.flbl;
+  const side=document.getElementById("ck-side");
+  side.innerHTML=[{k:"all",l:"All"},...V.G].map(x=>`<button type="button" data-k="${x.k}" aria-pressed="${x.k===CKF}"${x.d?` title="${x.d}"`:""}>${x.l}</button>`).join("");
   side.querySelectorAll("button").forEach(x=>x.onclick=()=>{CKF=x.dataset.k;CKH=null;drawClock()});
-  met.innerHTML=[["inc","Incidents"],["cas","Civilian casualties"]].map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===CKM}">${l}</button>`).join("");
-  met.querySelectorAll("button").forEach(x=>x.onclick=()=>{CKM=x.dataset.k;drawClock()});
+  const met=document.getElementById("ck-metric");
+  met.innerHTML=[["inc",V.noun==="incidents"?"Incidents":"Attacks"],["cas","Civilian casualties"]].map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===CKM}"${k==="cas"&&!V.cas?' disabled title="Civilian casualties are not counted for AA attacks outside Yemen"':""}>${l}</button>`).join("");
+  met.querySelectorAll("button:not(:disabled)").forEach(x=>x.onclick=()=>{CKM=x.dataset.k;drawClock()});
+  ["how2","how3t","how3","how4"].forEach(k=>{const el=document.getElementById("ck-"+k);if(el)el.textContent=V[k]});
+  document.getElementById("ck-whoh").textContent=V.whoh;
+  // per-row stats (used by the key line and the strips)
+  const rows=V.G.map(r=>{const ev=V.timed.filter(x=>x.g===r.k),c=Array.from({length:24},(_,h)=>ev.filter(x=>hr(x)===h).reduce((s,x)=>s+val(x),0));
+    const t=c.reduce((a,b)=>a+b,0),nt=c.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0);return {...r,cn:c,t,m:Math.max(1,...c),p:c.indexOf(Math.max(...c)),ns:t?Math.round(nt/t*100):0}});
+  const big=rows.filter(r=>r.t>=10).sort((a,b)=>b.ns-a.ns);
+  const nm=r=>r.l.replace(/:.*/,"");
+  document.getElementById("ck-key2").innerHTML=big.length>=2?`<b>Key pattern:</b> ${nm(big[0])} ${big[0].ns>=50?"mostly after dark":"partly after dark"} (${big[0].ns}% at night, peak ${ckHH(big[0].p)}). ${nm(big[big.length-1])} mostly by day (${big[big.length-1].ns}% at night, peak ${ckHH(big[big.length-1].p)}).${CKV==="out"?" Times are AA claims or outside reports.":""}`:big.length?`<b>Key pattern:</b> ${nm(big[0])} peak at ${ckHH(big[0].p)}, ${big[0].ns}% at night.`:"Too few timed reports for a pattern in this period.";
   // facts
   const untimed=all.length-ti.length;
-  document.getElementById("clock-facts").innerHTML=tot?`<span><b>${ckHH(pk)}–${ckHH((pk+1)%24)}</b>busiest hour (${fmt(n[pk])} ${unit})</span><span><b>${pc(night)}%</b>at night, 18:00 to 06:00</span><span><b>${top.l}</b>busiest part of the day (${pc(top.v)}%)</span><span><b>${fmt(ti.length)} of ${fmt(all.length)}</b>reports carry a time${untimed?` (${fmt(untimed)} left out)`:""}</span>`:`<span>No timed ${CKM==="cas"?"reports with civilian casualties":"reports"} for this side in the period.</span>`;
-  // day parts
+  document.getElementById("clock-facts").innerHTML=tot?`<span><b>${ckHH(pk)}–${ckHH((pk+1)%24)}</b>busiest hour (${fmt(n[pk])} ${unit})</span><span><b>${pc(night)}%</b>at night, 18:00 to 06:00</span><span><b>${top.l}</b>busiest part of the day (${pc(top.v)}%)</span><span><b>${fmt(ti.length)} of ${fmt(all.length)}</b>reports carry a time${untimed?` (${fmt(untimed)} left out)`:""}</span>`:`<span>No timed reports for this choice in the period.</span>`;
   const pm=Math.max(1,...P.map(x=>x.v));
   document.getElementById("ck-parts").innerHTML=P.map(x=>`<div class="${x.a===0||x.a===18?"nt":""}" title="${x.l} ${x.r}: ${fmt(x.v)} ${unit}">${x.l} ${x.r}<b>${pc(x.v)}%</b><i style="width:${Math.round(x.v/pm*100)}%"></i></div>`).join("");
   // dial
   const acc=css("--accent"),surf=B.surf||css("--surface"),ink=css("--ink"),shade=css("--ink");
-  const col=n.map(v=>ckMix(acc,surf,v?0.28+0.72*v/mx:0.12));
-  [ "c-clock","c-hour"].forEach(id=>{const c=Chart.getChart(document.getElementById(id));if(c){c.destroy();charts=charts.filter(x=>x!==c)}});
+  ["c-clock","c-hour"].forEach(id=>{const c=Chart.getChart(document.getElementById(id));if(c){c.destroy();charts=charts.filter(x=>x!==c)}});
   const nightBg={id:"ckNight",beforeDatasetsDraw(ch){const r=ch.scales.r;if(!r)return;const c=ch.ctx,R=r.drawingArea,rad=d=>(d-90)*Math.PI/180;
     c.save();c.globalAlpha=.07;c.fillStyle=shade;c.beginPath();c.moveTo(r.xCenter,r.yCenter);c.arc(r.xCenter,r.yCenter,R,rad(262.5),rad(442.5));c.closePath();c.fill();c.restore();
     c.save();c.font="500 10.5px IBM Plex Mono";c.fillStyle=css("--muted");c.textAlign="center";c.fillText("NIGHT",r.xCenter-R*.62,r.yCenter-R*.62);c.fillText("DAY",r.xCenter+R*.62,r.yCenter+R*.66);c.restore()}};
   const pick=h=>{CKH=(CKH===h?null:h);drawClock();const d=document.getElementById("ck-drill");if(CKH!=null&&d)d.scrollIntoView({block:"nearest",behavior:"smooth"})};
-  const dial=new Chart(document.getElementById("c-clock"),{type:"polarArea",plugins:[nightBg],data:{labels:n.map((_,h)=>ckHH(h)),datasets:[{label:CKM==="cas"?"Civilian casualties":"Incidents",data:n,backgroundColor:col,borderColor:n.map((_,h)=>h===CKH?ink:surf),borderWidth:n.map((_,h)=>h===CKH?2.5:1.5)}]},
+  const ttl=it=>ckHH(it[0].dataIndex)+"–"+ckHH((it[0].dataIndex+1)%24)+(ckNight(it[0].dataIndex)?" (night)":"");
+  charts.push(new Chart(document.getElementById("c-clock"),{type:"polarArea",plugins:[nightBg],data:{labels:n.map((_,h)=>ckHH(h)),datasets:[{label:CKM==="cas"?"Civilian casualties":V.noun,data:n,backgroundColor:n.map(v=>ckMix(acc,surf,v?0.28+0.72*v/mx:0.12)),borderColor:n.map((_,h)=>h===CKH?ink:surf),borderWidth:n.map((_,h)=>h===CKH?2.5:1.5)}]},
     options:{maintainAspectRatio:false,animation:false,startAngle:-7.5,onClick:(e,el)=>{if(el.length)pick(el[0].index)},onHover:(e,el)=>{e.native.target.style.cursor=el.length?"pointer":"default"},
-      plugins:{legend:{display:false},tooltip:{...tip(B),callbacks:{title:it=>ckHH(it[0].dataIndex)+"–"+ckHH((it[0].dataIndex+1)%24)+(ckNight(it[0].dataIndex)?" (night)":""),label:it=>` ${fmt(it.raw)} ${unit} (${pc(it.raw)}%)`,footer:()=>"Click to read the reports"}}},
-      scales:{r:{grid:{color:B.grid},angleLines:{color:B.grid},ticks:{display:false},pointLabels:{display:true,centerPointLabels:true,color:B.tick,font:{size:10.5},callback:(l,i)=>i%3===0?l.slice(0,2):""}}}}});
-  charts.push(dial);
-  // hour bars
-  let DS;
-  if(CKM==="cas")DS=[["Killed","--c-killed","k"],["Injured","--c-injured","i"]].map(([l,c,f])=>({label:l,data:H.map(a=>a.reduce((x,e)=>x+(e[f]||0),0)),backgroundColor:css(c)}));
-  else DS=TYPES.filter(([t])=>ti.some(e=>e.cat===t)).map(([t,c])=>({label:t,data:H.map(a=>a.filter(e=>e.cat===t).length),backgroundColor:css(c)}));
-  DS.forEach(d=>Object.assign(d,{borderColor:B.surf,borderWidth:{top:1.5},borderSkipped:"start",maxBarThickness:22}));
-  document.getElementById("lg-hour").innerHTML=(CKM==="cas"?[["Killed","--c-killed"],["Injured","--c-injured"]]:TYPES.filter(([t])=>ti.some(e=>e.cat===t))).map(([t,c])=>`<span><i style="background:var(${c})"></i>${t}</span>`).join("")+`<span><i style="background:color-mix(in srgb,var(--ink) 8%,transparent);outline:1px solid var(--line)"></i>Night hours</span>`;
+      plugins:{legend:{display:false},tooltip:{...tip(B),callbacks:{title:ttl,label:it=>` ${fmt(it.raw)} ${unit} (${pc(it.raw)}%)`,footer:()=>"Click to read the reports"}}},
+      scales:{r:{grid:{color:B.grid},angleLines:{color:B.grid},ticks:{display:false},pointLabels:{display:true,centerPointLabels:true,color:B.tick,font:{size:10.5},callback:(l,i)=>i%3===0?l.slice(0,2):""}}}}}));
+  // hour bars, stacked by attacker / weapon / weapon class
+  const SU=V.S.filter(sx=>ti.some(x=>x.st===sx.k));
+  const DS=SU.map(sx=>({label:sx.l,data:H.map(a=>a.filter(x=>x.st===sx.k).reduce((s,x)=>s+val(x),0)),backgroundColor:css(sx.c),borderColor:B.surf,borderWidth:{top:1.5},borderSkipped:"start",maxBarThickness:22}));
+  document.getElementById("lg-hour").innerHTML=SU.map(sx=>`<span><i style="background:var(${sx.c})"></i>${sx.l}</span>`).join("")+`<span><i style="background:color-mix(in srgb,var(--ink) 8%,transparent);outline:1px solid var(--line)"></i>Night hours</span>`;
   const bands={id:"ckBands",beforeDatasetsDraw(ch){const x=ch.scales.x,a=ch.chartArea;if(!x)return;const c=ch.ctx,w=(x.getPixelForValue(1)-x.getPixelForValue(0));
     c.save();for(let h=0;h<24;h++){if(ckNight(h)){c.fillStyle=shade;c.globalAlpha=.05;c.fillRect(x.getPixelForValue(h)-w/2,a.top,w,a.bottom-a.top)}
       if(h===CKH){c.globalAlpha=1;c.strokeStyle=ink;c.lineWidth=1.5;c.strokeRect(x.getPixelForValue(h)-w/2+1,a.top+1,w-2,a.bottom-a.top-2)}}
     c.globalAlpha=1;c.font="500 10px IBM Plex Mono";c.fillStyle=css("--muted");c.textAlign="center";
     [["OVERNIGHT",3],["MORNING",9],["AFTERNOON",15],["EVENING",21]].forEach(([t,h])=>c.fillText(t,x.getPixelForValue(h-.5),a.top+10));c.restore()}};
   charts.push(new Chart(document.getElementById("c-hour"),{type:"bar",plugins:[bands],data:{labels:n.map((_,h)=>String(h).padStart(2,"0")),datasets:DS},
-    options:{maintainAspectRatio:false,animation:false,layout:{padding:{top:14}},onClick:(e,el,ch)=>{const x=ch.scales.x.getValueForPixel(e.x);if(x!=null&&x>=0&&x<24)pick(Math.round(x))},onHover:(e)=>{e.native.target.style.cursor="pointer"},
-      plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,callbacks:{title:it=>ckHH(it[0].dataIndex)+"–"+ckHH((it[0].dataIndex+1)%24)+(ckNight(it[0].dataIndex)?" (night)":""),footer:it=>`Total ${fmt(n[it[0].dataIndex])} ${unit} · click to read`}}},
+    options:{maintainAspectRatio:false,animation:false,layout:{padding:{top:14}},onClick:(e,el,ch)=>{const x=ch.scales.x.getValueForPixel(e.x);if(x!=null&&x>=0&&x<24)pick(Math.round(x))},onHover:e=>{e.native.target.style.cursor="pointer"},
+      plugins:{legend:{display:false},tooltip:{...tip(B),mode:"index",intersect:false,filter:i=>i.raw>0,callbacks:{title:ttl,footer:it=>`Total ${fmt(n[it[0].dataIndex])} ${unit} · click to read`}}},
       scales:{x:{stacked:true,grid:{display:false},ticks:{color:B.tick,maxRotation:0,autoSkip:true},border:{color:B.grid}},y:{stacked:true,beginAtZero:true,ticks:{precision:0,color:B.tick,maxTicksLimit:5},grid:{color:B.grid},border:{display:false}}}}}));
-  // who strikes when
+  // strips
   const lvl=(v,m)=>v?`background:${ckMix(acc,surf,0.22+0.78*v/m)}`:"";
-  const cols=`grid-template-columns:minmax(110px,170px) repeat(24,minmax(6px,1fr)) auto`;
+  const cols=`grid-template-columns:minmax(120px,200px) repeat(24,minmax(6px,1fr)) auto`;
   const hdr=`<span></span>`+Array.from({length:24},(_,h)=>`<span class="hd">${h%6===0?String(h).padStart(2,"0"):""}</span>`).join("")+`<span></span>`;
   const who=document.getElementById("ck-who");who.style.cssText=cols;
-  who.innerHTML=hdr+CKG.slice(1).map(([k,l,ts])=>{const ev=CKINC.filter(e=>ts.includes(e.cat)&&/^\d{1,2}:\d{2}/.test(e.time||""));const c=Array.from({length:24},(_,h)=>ev.filter(e=>hr(e)===h).reduce((x,e)=>x+val(e),0));
-    const m=Math.max(1,...c),t=c.reduce((a,b)=>a+b,0),p=c.indexOf(Math.max(...c)),nt=c.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0);
-    return `<button type="button" class="rl${k===CKF?" on":""}" data-k="${k}" title="Filter the panel to ${l}">${l}</button>`+c.map((v,h)=>`<span class="c${ckNight(h)?" nt":""}${k===CKF&&h===CKH?" sel":""}" data-k="${k}" data-h="${h}" title="${l}, ${ckHH(h)}–${ckHH((h+1)%24)}: ${fmt(v)} ${unit}" style="${lvl(v,m)}"></span>`).join("")+`<span class="rt">${t?`peak <b>${String(p).padStart(2,"0")}h</b> · ${Math.round(nt/t*100)}% night`:"none"}</span>`}).join("");
+  who.innerHTML=hdr+rows.map(r=>`<button type="button" class="rl${r.k===CKF?" on":""}" data-k="${r.k}" title="${r.d?r.d+". ":""}Filter the panel to ${r.l}">${r.c?`<i style="display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;background:var(${r.c})"></i>`:""}${r.l}</button>`+r.cn.map((v,h)=>`<span class="c${ckNight(h)?" nt":""}${r.k===CKF&&h===CKH?" sel":""}" data-k="${r.k}" data-h="${h}" title="${r.l}, ${ckHH(h)}–${ckHH((h+1)%24)}: ${fmt(v)} ${unit}" style="${lvl(v,r.m)}"></span>`).join("")+`<span class="rt">${r.t?`<b>${fmt(r.t)}</b> · peak <b>${String(r.p).padStart(2,"0")}h</b> · ${r.ns}% night`:"none"}</span>`).join("");
   who.querySelectorAll("button.rl").forEach(x=>x.onclick=()=>{CKF=x.dataset.k;CKH=null;drawClock()});
   who.querySelectorAll(".c").forEach(x=>x.onclick=()=>{CKF=x.dataset.k;pick(+x.dataset.h)});
   // week by hour
   const wk=d=>{const t=new Date(d+"T12:00:00Z"),dw=(t.getUTCDay()+6)%7;t.setUTCDate(t.getUTCDate()-dw);return t.toISOString().slice(0,10)};
-  const W={};ti.forEach(e=>{const k=wk(e.date);(W[k]=W[k]||Array(24).fill(0))[hr(e)]+=val(e)});
+  const W={};ti.forEach(x=>{const k=wk(x.date);(W[k]=W[k]||Array(24).fill(0))[hr(x)]+=val(x)});
   const ks=Object.keys(W).sort().slice(-8),wm=Math.max(1,...ks.flatMap(k=>W[k]));
-  const week=document.getElementById("ck-week");week.style.cssText=cols.replace("minmax(110px,170px)","minmax(80px,110px)");
+  const week=document.getElementById("ck-week");week.style.cssText=cols.replace("minmax(120px,200px)","minmax(80px,110px)");
   week.innerHTML=ks.length?hdr+ks.map(k=>{const c=W[k],t=c.reduce((a,b)=>a+b,0),nt=c.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0);
-    return `<span class="rl">w/c ${dLab(k)}</span>`+c.map((v,h)=>`<span class="c${ckNight(h)?" nt":""}" data-h="${h}" title="Week of ${dLab(k)}, ${ckHH(h)}–${ckHH((h+1)%24)}: ${fmt(v)} ${unit}" style="${lvl(v,wm)}"></span>`).join("")+`<span class="rt"><b>${fmt(t)}</b> · ${t?Math.round(nt/t*100):0}% night</span>`}).join(""):`<span class="rl" style="color:var(--muted)">No timed reports for this side.</span>`;
+    return `<span class="rl">w/c ${dLab(k)}</span>`+c.map((v,h)=>`<span class="c${ckNight(h)?" nt":""}" data-h="${h}" title="Week of ${dLab(k)}, ${ckHH(h)}–${ckHH((h+1)%24)}: ${fmt(v)} ${unit}" style="${lvl(v,wm)}"></span>`).join("")+`<span class="rt"><b>${fmt(t)}</b> · ${t?Math.round(nt/t*100):0}% night</span>`}).join(""):`<span class="rl" style="color:var(--muted)">No timed reports for this choice.</span>`;
   week.querySelectorAll(".c").forEach(x=>x.onclick=()=>pick(+x.dataset.h));
   document.getElementById("ck-scale").innerHTML=`<span>Fewer</span>`+[.22,.48,.74,1].map(t=>`<i style="background:${ckMix(acc,surf,t)}"></i>`).join("")+`<span>More ${unit}</span><span style="margin-left:10px"><i style="background:var(--line2);box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--ink) 22%,transparent)"></i>night hour</span>`;
   // drill-down
   const dr=document.getElementById("ck-drill");
-  if(CKH==null){dr.innerHTML=`<div class="hint">Click an hour on the dial, the bars or a strip to read the reports from that hour.</div>`}
-  else{const tc=Object.fromEntries(TYPES),L=H[CKH].filter(e=>CKM!=="cas"||val(e)>0).sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
-    dr.innerHTML=`<div class="dh"><b>${ckHH(CKH)}–${ckHH((CKH+1)%24)}</b><span>${g[1]} · ${fmt(n[CKH])} ${unit}${ckNight(CKH)?" · night hour":""} · ${L.length>12?"latest 12 of "+fmt(L.length)+" reports":fmt(L.length)+" report"+(L.length===1?"":"s")}</span><button type="button" id="ck-clear">Clear</button></div>`+
-      (L.length?`<ul>${L.slice(0,12).map(e=>{const c=cleanS(e.s),cs=casTxt(e.k,e.i);return `<li><time>${dLab(e.date)} ${e.time}</time><span><span class="chip"><i style="background:var(${tc[e.cat]})"></i>${e.cat}</span>${cs?`<span class="cas">${cs}</span>`:""}<br><b>${D.gov[e.gov]||""}${e.dist&&e.dist.length?" · "+e.dist.map(d=>distTxt(e.gov,d)).join(", "):""}.</b> <span class="tx">${c.t}</span></span></li>`}).join("")}</ul>`:`<div class="hint">No reports in this hour for this choice.</div>`);
+  if(CKH==null){dr.innerHTML=`<div class="hint">Click an hour on the dial, the bars or a strip to read the reports from that hour.</div>`;}
+  else{const tc=Object.fromEntries(TYPES),L=H[CKH].filter(x=>CKM!=="cas"||val(x)>0).sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+    const sc=Object.fromEntries(V.S.map(sx=>[sx.k,sx]));
+    const li=x=>{if(x.o){const o=x.o,c=cleanS(o[3]),ar=CK_AREA.find(a=>a[0]===x.g);return `<li><time>${dLab(o[0])} ${o[5]}</time><span><span class="chip"><i style="background:var(${sc[x.st].c})"></i>${o[8]||"Weapon not stated"}</span><span class="bdg cl">Claim</span><br><b>${o[2]}${ar&&!o[2].includes(ar[1].replace(/:.*/,""))?" · "+ar[1].replace(/:.*/,""):""}.</b> <span class="tx">${c.t}</span></span></li>`}
+      const e=x.e,c=cleanS(e.s),cs=casTxt(e.k,e.i);return `<li><time>${dLab(e.date)} ${e.time}</time><span><span class="chip"><i style="background:var(${tc[e.cat]})"></i>${e.cat} · ${({saudi:"KSA",plc:"PLC",sanaa:"AA"})[att(e.cat)]}</span>${cs?`<span class="cas">${cs}</span>`:""}<br><b>${D.gov[e.gov]||""}${e.dist&&e.dist.length?" · "+e.dist.map(d=>distTxt(e.gov,d)).join(", "):""}.</b> <span class="tx">${c.t}</span></span></li>`};
+    dr.innerHTML=`<div class="dh"><b>${ckHH(CKH)}–${ckHH((CKH+1)%24)}</b><span>${g?g.l:"All"} · ${fmt(n[CKH])} ${unit}${ckNight(CKH)?" · night hour":""} · ${L.length>12?"latest 12 of "+fmt(L.length)+" reports":fmt(L.length)+" report"+(L.length===1?"":"s")}</span><button type="button" id="ck-clear">Clear</button></div>`+
+      (L.length?`<ul>${L.slice(0,12).map(li).join("")}</ul>`:`<div class="hint">No reports in this hour for this choice.</div>`);
     document.getElementById("ck-clear").onclick=()=>{CKH=null;drawClock()}}
   try{refreshTables()}catch(e){}
 }
