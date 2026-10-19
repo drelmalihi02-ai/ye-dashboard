@@ -567,6 +567,10 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
 .ck-key2{font-size:13.5px;color:var(--ink2);border-left:3px solid var(--accent);padding:2px 0 2px 12px}
 .ck-key2 b{color:var(--ink)}
 .ck-bar .seg button:disabled{opacity:.45;cursor:not-allowed}
+.ck-bar select{font:inherit;font-size:12.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:5px 8px}
+.ck-bar select.on{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.ck-bar .seg button em{font:500 11px var(--f-mono);font-style:normal;opacity:.7;margin-left:5px}
+.ck-bar .note{font-size:12.5px;color:var(--muted)}
 .clockside{display:flex;flex-direction:column;gap:10px;min-width:0}
 .clockfacts,.gapfacts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink2)}
 .clockfacts b,.gapfacts b{display:block;font:700 22px/1.1 var(--f-display);color:var(--ink)}
@@ -678,6 +682,7 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
     <h2>Strike clock: when attacks happen</h2>
     <p class="sub">What time of day attacks happen, by the hour of the report in Sana'a time (UTC+3). Look at it three ways: who fired, what weapon was used, or AA attacks outside Yemen. Click any hour to read its reports.</p>
     <div class="ck-views ck-x" id="ck-views" role="group" aria-label="View"></div>
+    <div class="ck-bar ck-x" id="ck-govbar"><span class="lbl">Governorate</span><div class="seg sm" id="ck-gov" role="group" aria-label="Governorate"></div><select id="ck-gov2" aria-label="Other governorates"></select></div>
     <div class="ck-bar ck-x"><span class="lbl" id="ck-flbl">Attacker</span><div class="seg sm" id="ck-side" role="group" aria-label="Filter"></div><span class="lbl">Count</span><div class="seg sm" id="ck-metric" role="group" aria-label="What to count"></div></div>
     <div class="ck-key2 ck-x" id="ck-key2"></div>
     <div class="ck-how ck-x" id="ck-how">
@@ -1613,7 +1618,7 @@ function renderGap(days,END,inc,B,xT,yT){
 /* Strike clock (expanded 19 Oct 2026, views added the same day): three views (by attacker, by weapon, AA attacks outside Yemen),
    a filter per view, incidents or civilian casualties, dial + day parts, stacked hour bars, per-row hour strips,
    week-by-hour grid and click-to-read drill-down. */
-let CKV="att",CKF="all",CKM="inc",CKH=null,CKINC=[],CKOPS=[],CKB=null;
+let CKV="att",CKF="all",CKM="inc",CKH=null,CKGOV="",CKINC=[],CKOPS=[],CKB=null;
 const ckHH=h=>String(h).padStart(2,"0")+":00",ckNight=h=>h>=18||h<6;
 function ckMix(a,b,t){const p=x=>{x=x.replace("#","");if(x.length===3)x=x.split("").map(c=>c+c).join("");return[0,2,4].map(i=>parseInt(x.slice(i,i+2),16))};
   try{const A=p(a),C=p(b);return "#"+A.map((v,i)=>Math.round(C[i]+(v-C[i])*t).toString(16).padStart(2,"0")).join("")}catch(e){return a}}
@@ -1634,13 +1639,13 @@ function ckView(){
       how3t:"Where AA strikes when",how3:"One strip per target area in Saudi Arabia, plus attacks at sea. Each cell is an hour, shaded against that row's own busiest hour.",
       how4:"These are AA claims and outside reports of attacks, timed by when they were announced or reported, often hours after launch. Many were reported as intercepted. Civilian casualties are not counted here.",
       whoh:"Where AA strikes when"}}
-  const it=CKINC.map(e=>({date:e.date,time:e.time||"",g:CKV==="att"?att(e.cat):e.cat,st:CKV==="att"?att(e.cat):e.cat,k:e.k||0,i:e.i||0,e}));
+  const it=CKINC.filter(e=>!CKGOV||e.gov===CKGOV).map(e=>({date:e.date,time:e.time||"",g:CKV==="att"?att(e.cat):e.cat,st:CKV==="att"?att(e.cat):e.cat,k:e.k||0,i:e.i||0,e}));
   if(CKV==="att")return {it,timed:it.filter(x=>tm(x.time)),noun:"incidents",flbl:"Attacker",
     G:CK_ATT.map(([k,l,c,d])=>({k,l,c,d})),S:CK_ATT.map(([k,l,c])=>({k,l,c})),cas:true,
     how2:"The same 24 hours laid flat. Each colour is one attacker, so you can see who drives each peak. Grey columns are night hours.",
     how3t:"Who strikes when",how3:"One strip per attacker. Each cell is an hour, shaded against that row's own busiest hour, so you can compare patterns even when one side has far more reports.",
     how4:"The time is when the report came out, not always when the attack happened. Night attacks are often reported in the morning. Reports with no time are left out.",whoh:"Who strikes when"};
-  const used=TYPES.filter(([t])=>CKINC.some(e=>e.cat===t));
+  const used=TYPES.filter(([t])=>CKINC.some(e=>e.cat===t&&(!CKGOV||e.gov===CKGOV)));
   return {it,timed:it.filter(x=>tm(x.time)),noun:"incidents",flbl:"Weapon",
     G:used.map(([t,c])=>({k:t,l:t+" ("+(CK_TATT[t]||"KSA")+")",c})),S:used.map(([t,c])=>({k:t,l:t,c})),cas:true,
     how2:"The same 24 hours laid flat. Each colour is one weapon or type of attack, so you can see what drives each peak. Grey columns are night hours.",
@@ -1658,11 +1663,24 @@ function drawClock(){
   const P=[["Overnight","00–06",0,6],["Morning","06–12",6,12],["Afternoon","12–18",12,18],["Evening","18–24",18,24]].map(([l,r,a,b])=>({l,r,a,v:n.slice(a,b).reduce((x,y)=>x+y,0)}));
   const top=[...P].sort((a,b)=>b.v-a.v)[0];
   // view cards
-  const cnt=k=>k==="out"?CKOPS.length:CKINC.length;
+  const cnt=k=>k==="out"?CKOPS.length:CKINC.filter(e=>!CKGOV||e.gov===CKGOV).length;
   const VW=[["att","By attacker","Who fired: Saudi forces, PLC forces or AA forces inside Yemen"],["wpn","By weapon","What was used: air strikes, drones, artillery, rockets, shelling, sniper fire"],["out","AA attacks outside Yemen","Missiles and drones AA says it fired at Saudi Arabia and at ships"]];
   const vw=document.getElementById("ck-views");
   vw.innerHTML=VW.map(([k,l,d])=>`<button type="button" data-v="${k}" aria-pressed="${k===CKV}"><b>${l}<em>${fmt(cnt(k))}</em></b><span>${d}</span></button>`).join("");
   vw.querySelectorAll("button").forEach(x=>x.onclick=()=>{if(CKV!==x.dataset.v){CKV=x.dataset.v;CKF="all";CKH=null;drawClock()}});
+  // governorate filter (inside-Yemen views only)
+  const gc={};CKINC.forEach(e=>gc[e.gov]=(gc[e.gov]||0)+1);
+  const gk=Object.keys(gc).sort((a,b)=>gc[b]-gc[a]),gtop=gk.slice(0,6),grest=gk.slice(6);
+  if(CKGOV&&!gc[CKGOV])CKGOV="";
+  const gseg=document.getElementById("ck-gov"),gsel=document.getElementById("ck-gov2"),gbar=document.getElementById("ck-govbar");
+  if(CKV==="out"){gseg.innerHTML="";gsel.style.display="none";let nt=gbar.querySelector(".note");if(!nt){nt=document.createElement("span");nt.className="note";gbar.appendChild(nt)}nt.textContent="Not used here: these attacks hit targets outside Yemen.";}
+  else{const nt=gbar.querySelector(".note");if(nt)nt.remove();gsel.style.display="";
+    gseg.innerHTML=[["","All Yemen",CKINC.length],...gtop.map(k=>[k,D.gov[k],gc[k]])].map(([k,l,c])=>`<button type="button" data-g="${k}" aria-pressed="${k===CKGOV}">${l}<em>${fmt(c)}</em></button>`).join("");
+    gseg.querySelectorAll("button").forEach(x=>x.onclick=()=>{CKGOV=x.dataset.g;CKH=null;drawClock()});
+    gsel.innerHTML=`<option value="">${grest.length?"Other governorates":"No other governorates"}</option>`+grest.map(k=>`<option value="${k}"${k===CKGOV?" selected":""}>${D.gov[k]} (${gc[k]})</option>`).join("");
+    gsel.disabled=!grest.length;gsel.classList.toggle("on",grest.includes(CKGOV));
+    gsel.onchange=()=>{CKGOV=gsel.value;CKH=null;drawClock()}}
+  const GN=CKV!=="out"&&CKGOV?D.gov[CKGOV]:"";
   // filter + metric
   document.getElementById("ck-flbl").textContent=V.flbl;
   const side=document.getElementById("ck-side");
@@ -1672,13 +1690,13 @@ function drawClock(){
   met.innerHTML=[["inc",V.noun==="incidents"?"Incidents":"Attacks"],["cas","Civilian casualties"]].map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===CKM}"${k==="cas"&&!V.cas?' disabled title="Civilian casualties are not counted for AA attacks outside Yemen"':""}>${l}</button>`).join("");
   met.querySelectorAll("button:not(:disabled)").forEach(x=>x.onclick=()=>{CKM=x.dataset.k;drawClock()});
   ["how2","how3t","how3","how4"].forEach(k=>{const el=document.getElementById("ck-"+k);if(el)el.textContent=V[k]});
-  document.getElementById("ck-whoh").textContent=V.whoh;
+  document.getElementById("ck-whoh").textContent=V.whoh+(CKV!=="out"&&CKGOV?" in "+D.gov[CKGOV]:"");
   // per-row stats (used by the key line and the strips)
   const rows=V.G.map(r=>{const ev=V.timed.filter(x=>x.g===r.k),c=Array.from({length:24},(_,h)=>ev.filter(x=>hr(x)===h).reduce((s,x)=>s+val(x),0));
     const t=c.reduce((a,b)=>a+b,0),nt=c.filter((_,h)=>ckNight(h)).reduce((a,b)=>a+b,0);return {...r,cn:c,t,m:Math.max(1,...c),p:c.indexOf(Math.max(...c)),ns:t?Math.round(nt/t*100):0}});
   const big=rows.filter(r=>r.t>=10).sort((a,b)=>b.ns-a.ns);
   const nm=r=>r.l.replace(/:.*/,"");
-  document.getElementById("ck-key2").innerHTML=big.length>=2?`<b>Key pattern:</b> ${nm(big[0])} ${big[0].ns>=50?"mostly after dark":"partly after dark"} (${big[0].ns}% at night, peak ${ckHH(big[0].p)}). ${nm(big[big.length-1])} mostly by day (${big[big.length-1].ns}% at night, peak ${ckHH(big[big.length-1].p)}).${CKV==="out"?" Times are AA claims or outside reports.":""}`:big.length?`<b>Key pattern:</b> ${nm(big[0])} peak at ${ckHH(big[0].p)}, ${big[0].ns}% at night.`:"Too few timed reports for a pattern in this period.";
+  document.getElementById("ck-key2").innerHTML=(GN?`<b>${GN}.</b> `:"")+(big.length>=2?`<b>Key pattern:</b> ${nm(big[0])} ${big[0].ns>=50?"mostly after dark":"partly after dark"} (${big[0].ns}% at night, peak ${ckHH(big[0].p)}). ${nm(big[big.length-1])} mostly by day (${big[big.length-1].ns}% at night, peak ${ckHH(big[big.length-1].p)}).${CKV==="out"?" Times are AA claims or outside reports.":""}`:big.length?`<b>Key pattern:</b> ${nm(big[0])} peak at ${ckHH(big[0].p)}, ${big[0].ns}% at night.`:"Too few timed reports for a pattern in this period.");
   // facts
   const untimed=all.length-ti.length;
   document.getElementById("clock-facts").innerHTML=tot?`<span><b>${ckHH(pk)}–${ckHH((pk+1)%24)}</b>busiest hour (${fmt(n[pk])} ${unit})</span><span><b>${pc(night)}%</b>at night, 18:00 to 06:00</span><span><b>${top.l}</b>busiest part of the day (${pc(top.v)}%)</span><span><b>${fmt(ti.length)} of ${fmt(all.length)}</b>reports carry a time${untimed?` (${fmt(untimed)} left out)`:""}</span>`:`<span>No timed reports for this choice in the period.</span>`;
@@ -1733,7 +1751,7 @@ function drawClock(){
     const sc=Object.fromEntries(V.S.map(sx=>[sx.k,sx]));
     const li=x=>{if(x.o){const o=x.o,c=cleanS(o[3]),ar=CK_AREA.find(a=>a[0]===x.g);return `<li><time>${dLab(o[0])} ${o[5]}</time><span><span class="chip"><i style="background:var(${sc[x.st].c})"></i>${o[8]||"Weapon not stated"}</span><span class="bdg cl">Claim</span><br><b>${o[2]}${ar&&!o[2].includes(ar[1].replace(/:.*/,""))?" · "+ar[1].replace(/:.*/,""):""}.</b> <span class="tx">${c.t}</span></span></li>`}
       const e=x.e,c=cleanS(e.s),cs=casTxt(e.k,e.i);return `<li><time>${dLab(e.date)} ${e.time}</time><span><span class="chip"><i style="background:var(${tc[e.cat]})"></i>${e.cat} · ${({saudi:"KSA",plc:"PLC",sanaa:"AA"})[att(e.cat)]}</span>${cs?`<span class="cas">${cs}</span>`:""}<br><b>${D.gov[e.gov]||""}${e.dist&&e.dist.length?" · "+e.dist.map(d=>distTxt(e.gov,d)).join(", "):""}.</b> <span class="tx">${c.t}</span></span></li>`};
-    dr.innerHTML=`<div class="dh"><b>${ckHH(CKH)}–${ckHH((CKH+1)%24)}</b><span>${g?g.l:"All"} · ${fmt(n[CKH])} ${unit}${ckNight(CKH)?" · night hour":""} · ${L.length>12?"latest 12 of "+fmt(L.length)+" reports":fmt(L.length)+" report"+(L.length===1?"":"s")}</span><button type="button" id="ck-clear">Clear</button></div>`+
+    dr.innerHTML=`<div class="dh"><b>${ckHH(CKH)}–${ckHH((CKH+1)%24)}</b><span>${GN?GN+" · ":""}${g?g.l:"All"} · ${fmt(n[CKH])} ${unit}${ckNight(CKH)?" · night hour":""} · ${L.length>12?"latest 12 of "+fmt(L.length)+" reports":fmt(L.length)+" report"+(L.length===1?"":"s")}</span><button type="button" id="ck-clear">Clear</button></div>`+
       (L.length?`<ul>${L.slice(0,12).map(li).join("")}</ul>`:`<div class="hint">No reports in this hour for this choice.</div>`);
     document.getElementById("ck-clear").onclick=()=>{CKH=null;drawClock()}}
   try{refreshTables()}catch(e){}
