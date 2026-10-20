@@ -1,33 +1,24 @@
-🇾🇪 <b>Yemen update | 20 Oct 2026, 06:57 (Sana'a)</b>
-
-<b>📍 Sa'dah</b>
-💥 KSA fire kills a civilian and injures another in Shada district, AA/Houthis say.
-💥 KSA artillery injures a civilian in Razih. A KSA air strike hits the Bani Mu'in telecom network, Razih.
-✈️ KSA air strike on Bani Dhahl, Al-Dhaher district.
-💥 KSA artillery shells populated villages in Baqim district.
+🇾🇪 <b>Yemen update | 20 Oct 2026, 22:01 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-✈️ KSA air strike on Al-Janad, Al-Ta'iziyah, kills a girl and injures 2 children, AA/Houthis say.
-🔻 IRG/PLC shell kills a man and his daughter in Al-Hayyar, Sabir al-Mawadim, AA/Houthis say.
+✈️ 2 KSA air strikes on 2 fishing boats off Al-Kadaha, Dhubab district, kill 8 fishermen and injure others, AA/Houthis say.
+⚔️ AA/Houthis claim IRG/PLC forces driven off Jabal Han, west of Taiz city, and release footage. They also report gains in Jabal Sabr.
+🔻 IRG/PLC says an AA/Houthi missile on a housing block in central Taiz city kills a girl and injures 8.
+🔻 IRG/PLC says an AA/Houthi mortar hits an ambulance in Sabr Al-Shaqab, killing 2 incl. a girl and injuring 1.
 
-<b>📍 Ibb</b>
-✈️ KSA air strike on a road in Dharas, As-Sayyani district, kills 2 civilians and injures 1, AA/Houthis say.
-
-<b>📍 Shabwah</b>
-🚀 AA/Houthis claim missile strikes on Al-Alam camp near Ataq. IRG/PLC says 3 ballistic missiles hit a training centre, 53 recruits killed.
-
-<b>📍 Lahj</b>
-🚀 AA/Houthis claim 6 ballistic missiles on IRG/PLC gatherings in Al-Saqya and Ras al-Ara, Al-Madaribah.
+<b>📍 Sa'dah</b>
+✈️ 8 KSA air strikes hit Bani Mu'adh and Al al-Sayfi, Sahar district, overnight and at dawn, AA/Houthis say.
+✈️ KSA air strikes hit the Saqin telecom network (2) and Majz district (2).
+💥 KSA artillery shells Shada district and Al al-Shaykh, Munabbih district.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthis claim 6 operations in 48h on Aramco Yanbu, Shaybah oil field, Riyadh and Abha airports, Khamis Mushait air base and radars.
-⚠️ KSA aviation officials say Riyadh's King Khalid airport stays closed with no reopening date.
+🛡️ KSA says it intercepted a ballistic missile fired at Riyadh and a drone over the Riyadh region, then destroyed the launcher in Yemen.
+🚀 AA/Houthis release footage of drone strikes on KSA troops and vehicles on the Jizan and Asir border fronts.
 
 <b>🏛️ Nationwide</b>
-🇾🇪 AA/Houthis say KSA made 200+ air strikes and missiles in 48h, 2,700+ since the escalation began.
-🇾🇪 IRG/PLC says it made 1,164 strikes in 24h and took new positions on the Taiz front.
-🇮🇷 Iran warns Egypt against sending troops to Yemen or backing KSA air strikes.
+🇾🇪 AA/Houthis say KSA made 93 air strikes and missiles in 24h on 8 governorates, 2,793 since the escalation began.
+🇾🇪 IRG/PLC says it made 744 strikes in 24h and keeps pushing AA/Houthi forces back in Taiz.
 
-📊 Since 1 Sep: 506 incidents, 176 civilians killed, 309 injured
+📊 Since 1 Sep: 514 incidents, 184 civilians killed, 309 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
