@@ -1,31 +1,28 @@
-🇾🇪 <b>Yemen update | 22 Oct 2026, 04:25 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 22 Oct 2026, 16:18 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-💥 IRG/PLC shell on Wadi Hanash, Al-Ta'iziyah district, kills 3 women and injures 3 children, AA/Houthis say.
-✈️ KSA air strike on a house in Dhubab district kills a woman and injures 8, AA/Houthis say.
-🔻 IRG/PLC says AA/Houthi shelling and snipers kill a girl and a man in Kahlan, Jabal Sabr, and injure 8 there and in Taiz city.
+✈️ 3 KSA air strikes hit Al-Sirari, Sabir al-Mawadim district, AA/Houthis say.
+✈️ KSA strikes hit a sports hall in Al-Sinah, Al-Ma'afer district. IRG/PLC says the target was an AA/Houthi arms depot.
+🔻 IRG/PLC says strikes also hit AA/Houthi launchers and radars in Jabal Habashi, Al-Misrakh and near Taiz airport.
+⚠️ An IRG/PLC-aligned rights group says AA/Houthi shelling and snipers killed 23 civilians and injured 29 in Taiz in 24h.
 
-<b>📍 Sa'dah</b>
-💥 KSA artillery kills a civilian on roads in Shada district and hits villages in Shada and Razih, AA/Houthis say.
-✈️ 2 KSA air strikes east of Sa'dah city. KSA rockets hit Bani Dhahl, Al-Dhaher district.
+<b>📍 Hajjah</b>
+✈️ KSA air strikes on houses in Al-Muhjam, Bakil al-Mir district, kill a woman and injure a girl, AA/Houthis say.
 
-<b>📍 Aden</b>
-🚀 AA/Houthis claim a ballistic missile on a KSA operations room at Badr camp, Khor Maksar. IRG/PLC says Aden airport was targeted, flights halted.
-
-<b>📍 Hadramawt</b>
-🚀 AA/Houthis claim a strike on KSA equipment at Al-Rayyan airport, Mukalla. IRG/PLC says 3 drones fell near the runway, no casualties.
-
-<b>📍 Ibb</b>
-✈️ 3 KSA air strikes hit the telecom network in Ba'dan district centre, AA/Houthis say.
+<b>📍 Marib</b>
+💥 AA/Houthis claim drone strikes on IRG/PLC mobilisations and vehicles on the Marib fronts.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 KSA says an AA/Houthi missile hit Dammam airport, killing 1 and injuring 8, and 2 were killed at the Shaybah oilfield. No AA/Houthi claim yet.
-🛡️ KSA says it downed 11 drones, most aimed at the Eastern Province. AA/Houthis deny targeting Medina.
+🚀 AA/Houthis claim 4 operations in 48h: defence ministry in Riyadh, Dammam and Abha airports, Aramco Yanbu. IRG/PLC says 2 killed at Dammam airport.
+🛡️ KSA says it downed 4 drones over the Riyadh and Medina regions. A missile impact was later reported in Riyadh.
+
+<b>🌊 Red Sea</b>
+⚠️ AA/Houthis say KSA targeted an Indian yacht with 14 Indians aboard near Zuqar island and that they are rescuing them.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis say KSA made 62 air strikes in 24h on Sana'a, Marib, Sa'dah, Lahj and Taiz, 2,855 in 100 days.
-🏥 AA/Houthi health ministry: 155 civilians killed, 407 injured in 100 days, a third in Taiz.
+📊 AA/Houthis say KSA strikes and missiles now exceed 2,900 in 100 days.
+🏛️ AA/Houthis warn of "major options" if KSA targets Yemeni tribes. Tribes in Amran and Hajjah declare mobilisation.
 
-📊 Since 1 Sep: 527 incidents, 190 civilians killed, 324 injured
+📊 Since 1 Sep: 532 incidents, 191 civilians killed, 325 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
