@@ -1,22 +1,34 @@
-🇾🇪 <b>Yemen update | 23 Oct 2026, 09:15 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 23 Oct, 22:38 (Sana'a)</b>
 
 <b>📍 Sa'dah</b>
-⚠️ KSA fire injures 2 civilians and an African migrant in the border districts, AA/Houthis say.
-✈️ 2 KSA air strikes hit east of Sa'dah city before dawn, AA/Houthis say.
-
-<b>📍 Amran</b>
-✈️ 4 KSA air strikes hit Harf Sufyan district in two waves before dawn, AA/Houthis say.
-✈️ 2 KSA air strikes hit Uzlat Khiyar, Bani Suraym district, its first reported attack, AA/Houthis say.
+✈️ 14 KSA air strikes hit Sahar, Majz and Al Salem through the day, AA/Houthis say.
+🚀 13 KSA missiles hit Al Salem, Kitaf and Sa'dah city in the evening, AA/Houthis say.
+💥 KSA artillery shells farms in Baqim and several areas of Shada, AA/Houthis say.
 
 <b>📍 Taiz</b>
-✈️ 3 KSA air strikes hit Al-Ta'iziyah district before dawn, AA/Houthis say.
+✈️ At least 9 KSA air strikes hit Al-Mukha port, Dhubab and Al-Wazi'iyah, AA/Houthis say.
+🔻 KSA strike on Al-Za'azi', Ash-Shamayatayn, injures 3 civilians. The 22 Oct toll there rises to 1 killed, 4 injured.
 
-<b>📍 Al-Jawf</b>
-✈️ 2 KSA air strikes hit a water corporation building, district not stated, AA/Houthis say.
+<b>📍 Sana'a</b>
+🔻 KSA strikes on a family home in Uzlat Marhabah, Nihm district, kill 3 civilians incl. a woman and a girl and injure a child, AA/Houthis say.
+
+<b>📍 Hodeidah</b>
+✈️ KSA strikes hit Bajil late on 22 Oct and a farm in Al-Manqam, Ad-Durayhimi, killing livestock, AA/Houthis say.
+
+<b>📍 Hajjah</b>
+✈️ A KSA air strike hits Haradh district, AA/Houthis say.
+
+<b>🌊 Red Sea</b>
+💥 KSA strike hits the Mayun island lighthouse at Bab al-Mandab. AA/Houthis call it a threat to navigation.
+🇮🇳 India says all 14 aboard the yacht hit near Zuqar on 22 Oct are safe.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚨 KSA media report sirens and explosions in Riyadh overnight, and sirens in Najran, Khamis Mushait and Abha. No AA/Houthi claim yet.
+✈️ Dammam airport traffic halts again and airlines extend Riyadh and Dammam flight suspensions. AA/Houthis renew their warning to airlines.
 
-📊 Since 1 Sep: 544 incidents, 192 civilians killed, 329 injured
+<b>🏛️ Nationwide</b>
+📊 AA/Houthis count 124 KSA strikes and missiles in 24 hours on 8 governorates, 3,024 since the escalation began.
+🎥 AA/Houthis release drone footage of strikes on IRG/PLC forces and vehicles on several fronts (claim).
+
+📊 Since 1 Sep: 561 incidents, 195 civilians killed, 336 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
