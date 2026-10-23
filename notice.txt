@@ -1,25 +1,22 @@
-🇾🇪 <b>Yemen update | 22 Oct 2026, 23:01 (Sana'a)</b>
-
-<b>📍 Taiz</b>
-✈️ KSA air strike on houses in Al-Za'azi', Ash-Shamayatayn district, kills a man and injures a girl, AA/Houthis say.
-✈️ 5 more KSA air strikes hit Al-Zukayrah and Al-Masahin in Ash-Shamayatayn district, AA/Houthis say.
-✈️ KSA air strike on Jarah, Al-Misrakh district, kills livestock, AA/Houthis say.
-⚠️ IRG/PLC says AA/Houthi shelling and sniper fire injured 5 civilians incl. 2 children in Taiz city and Mashra'a wa Hadnan, and shells hit a mosque and school in Al-Najd.
+🇾🇪 <b>Yemen update | 23 Oct 2026, 09:15 (Sana'a)</b>
 
 <b>📍 Sa'dah</b>
-🚀 KSA rockets hit Marran district and east of Sa'dah city, AA/Houthis say.
+⚠️ KSA fire injures 2 civilians and an African migrant in the border districts, AA/Houthis say.
+✈️ 2 KSA air strikes hit east of Sa'dah city before dawn, AA/Houthis say.
+
+<b>📍 Amran</b>
+✈️ 4 KSA air strikes hit Harf Sufyan district in two waves before dawn, AA/Houthis say.
+✈️ 2 KSA air strikes hit Uzlat Khiyar, Bani Suraym district, its first reported attack, AA/Houthis say.
+
+<b>📍 Taiz</b>
+✈️ 3 KSA air strikes hit Al-Ta'iziyah district before dawn, AA/Houthis say.
+
+<b>📍 Al-Jawf</b>
+✈️ 2 KSA air strikes hit a water corporation building, district not stated, AA/Houthis say.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 A missile and drone attack is reported on Jazan. Dammam airport is closed and Aramco's Dhahran headquarters evacuated. Sirens sound in Najran.
+🚨 KSA media report sirens and explosions in Riyadh overnight, and sirens in Najran, Khamis Mushait and Abha. No AA/Houthi claim yet.
 
-<b>🌊 Red Sea</b>
-⚠️ AA/Houthis say Yemen poses no threat to shipping and accuse KSA of militarising the Red Sea.
-
-<b>🏛️ Nationwide</b>
-📊 IRG/PLC says it carried out 780 strikes on AA/Houthi positions in 24h (combatant claims not counted).
-🏛️ AA/Houthis call on tribes to mobilise after KSA declared tribal gatherings legitimate targets.
-🇪🇺 The European Parliament calls for listing AA/Houthis as a terrorist organisation. IRG/PLC welcomes it.
-
-📊 Since 1 Sep: 538 incidents, 192 civilians killed, 326 injured
+📊 Since 1 Sep: 544 incidents, 192 civilians killed, 329 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
