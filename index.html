@@ -111,7 +111,7 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .kpi canvas{height:28px!important;width:100%!important;margin-top:2px}
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 16px 12px;min-width:0;display:flex;flex-direction:column;gap:8px}
-.adn{--ad-panel:var(--surface);--ad-fg:var(--ink);--ad-mute:var(--muted);--ad-rule:var(--line);--ad-band:var(--line2);--ad-empty:var(--line2);--ad-hit:var(--crit);--ad-int:var(--c-art);--ad-sea:var(--sea);--ad-land:var(--land-ye);--ad-warn:var(--c-drn);--ad-ok:var(--t-plc);--ad-key:var(--accent);--ap-0:var(--c-saudi);--ap-1:var(--c-sanaa);--ap-dis:var(--c-rkt);--ad-disp:var(--f-display);--ad-body:var(--f-body);--ad-mono:var(--f-mono)}
+.adn{--ad-panel:var(--surface);--ad-fg:var(--ink);--ad-mute:var(--muted);--ad-rule:var(--line);--ad-band:var(--line2);--ad-empty:var(--line2);--ad-hit:var(--crit);--ad-int:var(--muted);--ad-sea:var(--sea);--ad-land:var(--land-ye);--ad-warn:var(--c-drn);--ad-ok:var(--t-plc);--ad-key:var(--accent);--ap-0:var(--c-saudi);--ap-1:var(--c-sanaa);--ap-dis:var(--c-rkt);--ad-disp:var(--f-display);--ad-body:var(--f-body);--ad-mono:var(--f-mono)}
 .adn{--ad-r:var(--ad-rule);display:flex;flex-direction:column;gap:14px;color:var(--ad-fg)}
 .adn .ad-k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--ad-rule);border:1px solid var(--ad-rule);border-radius:6px;overflow:hidden}
 .adn .ad-k div{background:var(--ad-panel);padding:10px 12px}
@@ -140,11 +140,6 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .adn svg .hv:focus .bar{stroke:var(--ad-fg);stroke-width:1.5}
 .adn .ad-tip{position:absolute;z-index:3;pointer-events:none;background:var(--ad-fg);color:var(--ad-panel);font-size:12.5px;line-height:1.35;padding:7px 9px;border-radius:4px;max-width:240px;transform:translate(-50%,calc(-100% - 8px))}
 .adn .ad-tip b{display:block;font:500 11.5px var(--ad-mono);opacity:.8}
-.adn .ad-u{display:grid;gap:9px}
-.adn .ad-u>div{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;font-size:13.5px}
-.adn .ad-u .sq{display:flex;gap:4px;align-items:center}
-.adn .ad-u .sq i{width:24px;height:24px;border-radius:3px;display:block}
-.adn .ad-u .sq em{font:500 13px var(--ad-mono);font-style:normal;margin-left:6px}
 .adn .ad-log{display:grid}
 .adn .ad-log>div{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--ad-rule)}
 .adn .ad-log>div:first-child{border-top:0}
@@ -168,9 +163,6 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .adn svg .t-area{font-family:var(--ad-body);font-size:11px;fill:var(--ad-mute);letter-spacing:.04em;text-transform:uppercase}
 .adn svg .t-pin{fill:#fff;font-family:var(--ad-body);font-size:12px;font-weight:700}
 .adn svg .t-key{fill:#fff;font-family:var(--ad-body);font-size:9px;font-weight:700}
-.adn .ad-keys{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--ad-mute);margin-top:4px}
-.adn .ad-keys i{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:6px;font:700 9px var(--ad-body);font-style:normal;color:#fff;background:var(--ad-key);border-radius:2px;transform:rotate(45deg)}
-.adn .ad-keys i{transform:none;border-radius:50%}
 .adn .ad-tw{overflow-x:auto}
 .adn .ad-t{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
 .adn .ad-t th{text-align:left;font:500 11.5px var(--ad-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ad-mute);padding:6px 10px 6px 0;border-bottom:1px solid var(--ad-rule)}
@@ -180,43 +172,43 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .adn .ad-al{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:13px;color:var(--ad-mute)}
 .adn .ad-al b{color:var(--ad-fg);font-family:var(--ad-mono);font-weight:500;margin-right:6px}
 .adn svg .t-badge{fill:var(--ad-panel);font-family:var(--ad-body);font-size:11px;font-weight:700}
-.adn .ad-keys b{color:var(--ad-fg);font-weight:600;margin-right:2px}
-.adn .ad-att i{background:var(--ad-fg);color:var(--ad-panel);border-radius:50%}
-.adn .ad-keys{align-items:center}
-.adn .ad-u+.ad-lg{margin-top:8px}
 
 .adn .ad-find ul{margin:4px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}
 @media (max-width:760px){.adn .ad-find ul{grid-template-columns:1fr}}
 .adn .ad-find li{font-size:13.5px;line-height:1.45;color:var(--ad-mute);border-left:3px solid var(--ad-key);padding:1px 0 1px 10px}
 .adn .ad-find li b{color:var(--ad-fg);font-weight:600}
-.adn .ad-lad{display:grid;gap:6px;margin:4px 0 12px;max-width:640px}
-.adn .ad-lad>div{display:grid;grid-template-columns:230px 1fr 28px;gap:10px;align-items:center;font-size:13px}
-@media (max-width:560px){.adn .ad-lad>div{grid-template-columns:150px 1fr 24px}}
-.adn .ad-lad .tr{height:12px;border-radius:3px;background:var(--ad-band);overflow:hidden;display:block}
-.adn .ad-lad .tr i{display:block;height:100%;border-radius:0 3px 3px 0}
-.adn .ad-lad b{font:600 14px var(--ad-mono);text-align:right}
 .adn .ad-acc td{white-space:normal;vertical-align:top;font-size:13px;line-height:1.4}
 .adn .ad-acc td:first-child{white-space:nowrap}
 .adn .ad-acc td:nth-child(3),.adn .ad-acc td:nth-child(4){min-width:220px}
 .adn .ad-acc .chip{margin:4px 0 0}
-.apn .ap-duel{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
-@media (max-width:640px){.apn .ap-duel{grid-template-columns:1fr}.apn .ap-vs{display:none}}
-.apn .ap-card{border:1px solid var(--ad-rule);border-top:4px solid var(--c);border-radius:8px;padding:14px 16px;background:var(--ad-panel);min-width:0}
-.apn .ap-nm{font:700 17px/1.2 var(--ad-disp)}
-.apn .ap-by{font-size:12.5px;color:var(--ad-mute);margin-top:2px}
-.apn .ap-big{display:flex;align-items:baseline;gap:8px;margin:10px 0 6px}
-.apn .ap-big b{font:700 44px/1 var(--ad-disp);color:var(--c);font-variant-numeric:tabular-nums}
-.apn .ap-big span{font-size:13px;color:var(--ad-mute)}
-.apn dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;margin:0;font-size:13.5px}
-.apn dt{color:var(--ad-mute)}.apn dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
-.apn dd small{font-weight:400;color:var(--ad-mute);font-size:11.5px}
-.apn .ap-cas{color:var(--ad-hit);font-weight:600}
-.apn .ap-now{margin:10px 0 0;padding-top:8px;border-top:1px dashed var(--ad-rule);font-size:13px;color:var(--ad-fg)}
-.apn .ap-vs{align-self:center;font:700 13px var(--ad-mono);color:var(--ad-mute);letter-spacing:.1em}
-.apn svg .ap-v{font-family:var(--ad-mono);font-size:11.5px;font-weight:500}
-.apn .ap-hx{background:repeating-linear-gradient(135deg,var(--ad-mute) 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px var(--ad-mute)}
-.apn .ap-dot{border-radius:50%!important;background:var(--ad-panel)!important;box-shadow:inset 0 0 0 1.5px var(--ad-fg)}
-.apn .ap-chip{display:inline-block;font:600 11px var(--ad-mono);color:#fff;background:var(--c);border-radius:10px;padding:1px 8px;margin-right:4px;vertical-align:1px}
+.adn .ap-cas{color:var(--ad-hit);font-weight:600}
+.adn svg .ap-v{font-family:var(--ad-mono);font-size:11.5px;font-weight:500}
+.adn .ap-hx{background:repeating-linear-gradient(135deg,var(--ad-mute) 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px var(--ad-mute)}
+.adn .ap-dot{border-radius:50%!important;background:var(--ad-panel)!important;box-shadow:inset 0 0 0 1.5px var(--ad-fg)}
+.adn .ap-chip{display:inline-block;font:600 11px var(--ad-mono);color:#fff;background:var(--c);border-radius:10px;padding:1px 8px;margin-right:4px;vertical-align:1px}
+
+.adn .chip.one{color:var(--ap-0);box-shadow:inset 0 0 0 1.5px var(--ap-0)}
+.adn .ad-acc .who{font:500 11.5px var(--ad-mono);color:var(--ad-mute)}
+.adn .ad-acc td:nth-child(3){min-width:280px;white-space:normal}
+.adn .ad-acc td:nth-child(4){min-width:120px;white-space:normal}
+.adn .ad-air td{white-space:normal;vertical-align:top}
+.adn .ad-air td:last-child{min-width:200px}
+.adn svg .ad-gp{font-size:11px}
+.adn svg .ad-gp.hot{fill:var(--ad-hit)}
+.adn svg .ad-pl{font-size:13px}
+.adn .ad-k{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.adn .ad-k em{display:inline-block;margin-top:2px}
+.adn .ad-top{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:start}
+.adn .ad-top .ad-find ul{grid-template-columns:1fr}
+@media (max-width:760px){.adn .ad-top{grid-template-columns:1fr}}
+@media (max-width:640px){.adn .ad-acc{min-width:0}.adn .ad-acc thead{display:none}
+ .adn .ad-acc tr{display:grid;grid-template-columns:auto 1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--ad-rule)}
+ .adn .ad-acc td{border:0;padding:0;min-width:0!important}
+ .adn .ad-acc td:nth-child(3){grid-column:1/-1;grid-row:2}.adn .ad-acc td:nth-child(4){grid-column:1/-1;grid-row:3;font-size:12.5px;color:var(--ad-mute)}
+ .adn .ad-acc td:nth-child(5){grid-column:3;grid-row:1}}
+.adn .ad-top{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+.adn [data-c="map"] svg{max-height:470px;width:auto;max-width:100%;margin:0 auto}
+@media (max-width:760px){.adn .ad-top{grid-template-columns:1fr}}
 
 .span12{grid-column:span 12}.span7{grid-column:span 7}.span5{grid-column:span 5}.span6{grid-column:span 6}
 .panel h2{font:600 16px/1.2 var(--f-display);margin:0;letter-spacing:.005em}
@@ -655,7 +647,7 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
   </div>
 </header>
 
-<div class="gtabs-wrap"><nav class="gtabs" id="gtabs" role="tablist" aria-label="Governorate"></nav><nav class="secnav" id="secnav" aria-label="Sections"><a href="#sec-1">Inside Yemen</a><a href="#sec-2">Civilians</a><a href="#sec-3">Air campaign</a><a href="#sec-4">AA operations</a><a href="#aden-panel">Aden</a><a href="#airports-panel">Airports</a><a href="#sec-5">Three sides</a><a href="#sec-6">Compare</a><a href="#sec-7">Latest</a><a href="#sec-8">Method</a></nav></div>
+<div class="gtabs-wrap"><nav class="gtabs" id="gtabs" role="tablist" aria-label="Governorate"></nav><nav class="secnav" id="secnav" aria-label="Sections"><a href="#sec-1">Inside Yemen</a><a href="#sec-2">Civilians</a><a href="#sec-3">Air campaign</a><a href="#sec-4">AA operations</a><a href="#aden-panel">Aden and airports</a><a href="#sec-5">Three sides</a><a href="#sec-6">Compare</a><a href="#sec-7">Latest</a><a href="#sec-8">Method</a></nav></div>
 
 <div class="filters">
   <span class="lbl">Period</span>
@@ -804,14 +796,9 @@ body.brief .grid>*:not(.inbrief){display:none!important}body.brief .grid>.inbrie
     <div class="chart h260"><canvas id="c-ops" role="img" aria-label="AA operations per week"></canvas></div>
   </section>
   <section class="panel span12" id="aden-panel">
-    <h2>City strike count: Aden</h2>
-    <p class="sub">Every reported attack on the city since 1 Sep, whatever the period filter. Statements with no attack and incidents at sea are left out. Military casualties are not counted.</p>
+    <h2>Aden and the airports: city strike count, Sana'a and Aden airports compared</h2>
+    <p class="sub">Every reported attack on Aden city and on the two international airports since 1 Sep, whatever the period filter. Sana'a airport is hit by Saudi-led coalition air strikes, Aden by AA/Houthi missiles and drones. Statements with no attack and incidents at sea are left out. Military casualties are not counted.</p>
     <div id="aden-box"></div>
-  </section>
-  <section class="panel span12" id="airports-panel">
-    <h2>Airports compared: Sana'a and Aden</h2>
-    <p class="sub">Every reported attack on the two international airports since 1 Sep, whatever the period filter. Sana'a is hit by Saudi-led coalition air strikes, Aden by AA/Houthi missiles and drones.</p>
-    <div id="airports-box"></div>
   </section>
 
   <div class="block span12" id="sec-5"><span class="bn">5</span><div><h2 class="bh">Three sides, three versions</h2><p class="bs">What each party says: Sana'a (AA) media, the Yemeni army (PLC forces) and the Saudi-led coalition (KSA). Each claim is shown as that side reports it.</p></div></div>
@@ -2079,7 +2066,7 @@ function renderGov(){setTimeout(()=>motionAfter("#view-gov"),0);
   const nd=D.geo[g]?D.geo[g].length:0;const lastAll=EV.filter(e=>e.gov===g&&INC.has(e.cat)).map(e=>e.date).sort().pop();
   document.getElementById("g-name").textContent=D.gov[g];
   {const cs=Object.values(D.cities||{}).find(c=>c.gov===g&&(c.strikes||[]).length);let cl=document.getElementById("g-city");if(!cl){cl=document.createElement("p");cl.id="g-city";cl.className="g-city";document.getElementById("g-sub").after(cl)}
-   cl.innerHTML=cs?`${cs.strikes.length} attacks on ${cs.name} city since 1 Sep, including some not itemised here. <a href="#" id="g-city-a">Open the ${cs.name} strike count</a>`:"";cl.hidden=!cs;
+   cl.innerHTML=cs?`${cs.strikes.length} attacks on ${cs.name} city since 1 Sep, including some not itemised here. <a href="#" id="g-city-a">Open the ${cs.name} and airports panel</a>`:"";cl.hidden=!cs;
    const ca=document.getElementById("g-city-a");if(ca)ca.onclick=ev=>{ev.preventDefault();openGov(null);setTimeout(()=>document.getElementById("aden-panel").scrollIntoView({block:"start"}),60)}}
   document.getElementById("g-sub").textContent=`${nd} districts · ${items.length} with incidents in the period`+(lastAll?` · last incident ${dLab(lastAll)}`:" · no incident itemised since 1 Sep");
   // KPIs
@@ -2199,9 +2186,10 @@ function renderCompare(){if(GOV)return;
   el.setAttribute("viewBox",`0 0 ${W} ${H}`);el.innerHTML=`<path d="${y[1].map(p=>"M"+p[0].map(q=>P(q).join(",")).join("L")+"Z").join("")}" fill="currentColor"/>`+
   (D.adm1||[]).map(([n,pl])=>`<path d="${pl.map(p=>"M"+p[0].map(q=>P(q).join(",")).join("L")+"Z").join("")}" fill="none" stroke="var(--surface)" stroke-width="1"/>`).join("")})();
 (()=>{const a=document.getElementById("bn-alert");if(a&&D.bot&&/^\w{5,40}$/.test(D.bot)){a.href="https://t.me/"+D.bot+"?start=alerts";a.hidden=false}})();
-// City strike count (Aden first). drawCity(host, cities, asof, opt) renders: city selector (when more than one city),
-// KPIs, city map, daily chart with key events, projectile table, airport status, tempo, time of day, unit charts, log.
-// opt: {log:bool, keyev:[{d,t}], geo:{gov:[[district, multipolygon]]}, city:key}
+// Aden and the airports (consolidated 23 Oct 2026). drawCity(host, cities, asof, opt) renders one module:
+// KPIs, city map + findings, one daily chart (Aden city above the line, Sana'a airport below, running totals and the
+// gap in days between attacks), airports compared (table + flight status by day) and one merged table of every attack.
+// opt: {geo:{gov:[[district, multipolygon]]}, airports:[from airports_data.build], city:key}
 // Shared by the dashboard (build.py inlines it) and the standalone page (aden/page.py). Keep this file ASCII.
 function drawCity(host,cities,asof,opt){
   opt=opt||{};
@@ -2212,73 +2200,75 @@ function drawCity(host,cities,asof,opt){
   if(!host.__adR){host.__adW=host.clientWidth;let tm;host.__adR=()=>{clearTimeout(tm);tm=setTimeout(()=>{if(Math.abs(host.clientWidth-host.__adW)>40){host.__adW=host.clientWidth;drawCity(host,cities,asof,opt)}},200)};addEventListener("resize",host.__adR)}
   const NS="http://www.w3.org/2000/svg";let uid=0;
   const el=(t,a,p,x)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;if(p)p.appendChild(e);return e};
-  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   const fmt=d=>(+d.slice(8))+" "+MO[+d.slice(5,7)-1];
   const dnum=d=>Date.parse(d+"T00:00:00Z")/864e5;
   const dstr=n=>new Date(n*864e5).toISOString().slice(0,10);
   const hr=t=>t?(+t.slice(0,2))+(+t.slice(3,5))/60:null;
-  const AR="\u2192";
-  const ST={hit:"Hit, confirmed by both sides",int:"Intercepted (one side reports)",unc:"Reported, not confirmed"};
-  const CHIP={hit:"Hit",int:"Intercepted",unc:"Not confirmed"};
+  const ms=e=>Date.parse(e.d+"T"+(e.t||"12:00")+":00Z");
+  const dur=v=>v<1?Math.max(1,Math.round(v*24))+" hours":(Math.round(v*10)/10)+" days";
+  const PLANE="\u2708",GE="\u2265";
+  const ST={hit:"Hit, both sides report it",int:"Intercepted",unc:"Reported, not confirmed"};
+  const CHIP={hit:"Both sides",int:"Intercepted",unc:"Not confirmed",one:"Sana'a side only"};
   const L=C.strikes.slice().sort((a,b)=>(a.d+(a.t||"12:00")).localeCompare(b.d+(b.t||"12:00")));
+  const isAir=e=>/irport/.test(e.tg);
   const start="2026-09-01";
-  const pat=svg=>{const id="adh"+(++uid)+Math.random().toString(36).slice(2,6);const d=el("defs",{},svg);
+  // airports (optional): the city's own airport comes from L, the other airport from opt.airports
+  const AP=(opt.airports||[]).slice(0,2);
+  const other=AP.find(a=>a.city!==key&&a.key!==key)||null;
+  const own=AP.find(a=>a.key===key||a.city===key)||null;
+  const OE=other?other.events:[];
+  const pat=(svg,col)=>{const id="adh"+(++uid)+Math.random().toString(36).slice(2,6);const d=el("defs",{},svg);
     const p=el("pattern",{id,width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},d);
-    el("rect",{width:6,height:6,fill:"var(--ad-panel)"},p);el("rect",{width:2.5,height:6,fill:"var(--ad-hit)"},p);return id};
+    el("rect",{width:6,height:6,fill:"var(--ad-panel)"},p);el("rect",{width:2.5,height:6,fill:col||"var(--ad-hit)"},p);return id};
   const fill=(st,id)=>st==="hit"?"var(--ad-hit)":st==="int"?"var(--ad-int)":`url(#${id})`;
-  const strokeFor=st=>st==="unc"?"var(--ad-hit)":"none";
-  const KE=(opt.keyev||[]).filter(k=>k.d>=start&&k.d<=asof).sort((a,b)=>a.d.localeCompare(b.d));
 
-  // KPIs
+  // numbers
   const conf=L.filter(e=>e.st==="hit").length,wk=L.filter(e=>dnum(e.d)>dnum(asof)-7).length;
   const prev=L.filter(e=>dnum(e.d)>dnum(asof)-14&&dnum(e.d)<=dnum(asof)-7).length;
-  const misK=L.reduce((s,e)=>s+(e.mis||0),0),misU=L.some(e=>e.mis==null&&/issile/.test(e.w));
-  const civR=L.filter(e=>e.civ!=null),civ=civR.reduce((s,e)=>s+e.civ,0);
-  const firstD=L[0].d;
   const wkd=wk-prev,wkTxt=prev||wk?(wkd>0?`up ${wkd} on the week before`:wkd<0?`down ${-wkd} on the week before`:"same as the week before"):"";
+  const air=L.filter(isAir);
+  const ownOff=own?own.status.filter(x=>x.s==="closed"||x.s==="disrupted").length:0;
+  const civA=L.reduce((s,e)=>s+(e.civ||0),0);
+  const oK=OE.reduce((s,e)=>s+(e.k||0),0),oI=OE.reduce((s,e)=>s+(e.i||0),0);
+  const oN=OE.reduce((s,e)=>s+(e.n||1),0),oU=OE.some(e=>e.nu);
+  const casTxt=(k,i)=>k||i?`${k} killed, ${i} injured`:"none reported";
+  const gaps=[];for(let i=1;i<L.length;i++)gaps.push({a:L[i-1],b:L[i],v:(ms(L[i])-ms(L[i-1]))/864e5});
+  const since=(dnum(asof)-dnum(L[L.length-1].d));
+
   host.classList.add("adn");
   const sel=keys.length>1?`<div class="ad-sel" role="group" aria-label="City">${keys.map(k=>`<button data-k="${k}" aria-pressed="${k===key}">${esc(cities[k].name)}</button>`).join("")}</div>`:"";
   host.innerHTML=`${sel}<div class="ad-k">
-    <div><b>${L.length}</b><span>attacks since ${fmt(start)}</span></div>
-    <div><b>${conf}</b><span>confirmed by both sides</span></div>
-    <div><b>${wk}</b><span>in the last 7 days${wkTxt?`<br><em>${wkTxt}</em>`:""}</span></div>
-    <div><b>${misK}${misU?"+":""}</b><span>missiles reported${misU?"<br><em>some counts not reported</em>":""}</span></div>
-    <div><b class="${civR.length?"":"nr"}">${civR.length?civ:"None reported"}</b><span>civilian casualties${civR.length&&civR.length<L.length?`<br><em>${L.length-civR.length} attacks with no casualty report</em>`:""}</span></div></div>
-  <div class="ad-g2 ad-top"><div class="ad-c" data-c="map"><h3>Where strikes fell</h3><p class="s">Positions are approximate. Dot size grows with the number of strikes at a site.</p></div>
+    <div><b>${L.length}</b><span>attacks on ${esc(C.name)} city since ${fmt(start)}${wkTxt?`<br><em>${wk} in the last 7 days, ${wkTxt}</em>`:""}</span></div>
+    <div><b>${conf}</b><span>reported by both sides<br><em>${L.length-conf} known from one side only</em></span></div>
+    ${own?`<div><b>${air.length}</b><span>on ${esc(own.short)} airport<br><em>flights halted or diverted on ${ownOff} day${ownOff===1?"":"s"}</em></span></div>`:""}
+    ${other?`<div><b>${OE.length}</b><span>on ${esc(other.short)} airport<br><em>${oU?GE:""}${oN} ${esc(other.weapon)}${other.closedSince?`, closed since ${fmt(other.closedSince)}`:""}</em></span></div>`:""}
+    <div><b class="${civA||oK||oI?"":"nr"}">${civA+oK+oI||"None"}</b><span>civilian casualties<br><em>${esc(C.name)}: ${casTxt(0,civA)}${other?`. ${esc(other.short)} airport: ${casTxt(oK,oI)}`:""}</em></span></div></div>
+  <div class="ad-g2 ad-top"><div class="ad-c" data-c="map"><h3>Where strikes fell in ${esc(C.name)}</h3><p class="s">Positions are approximate. Number = attacks at the site.</p></div>
   <div class="ad-c ad-find" data-c="find"><h3>What the data shows</h3></div></div>
-  <div class="ad-c" data-c="daily"><h3>Daily count and running total</h3><p class="s">No attack on ${esc(C.name)} from ${fmt(start)} until ${fmt(firstD)}. Hover or tap a bar for detail. Diamonds mark key events.</p></div>
-  <div class="ad-lg"><span><i class="sw-hit"></i>${ST.hit}</span><span><i class="sw-int"></i>${ST.int}</span><span><i class="sw-unc"></i>${ST.unc}</span><span><i class="ln"></i>Running total</span><span><i class="dm"></i>Key event</span></div>
-  <div class="ad-c" data-c="acct"><h3>Two accounts of each attack</h3><p class="s">What AA/Houthis claim next to what the government side and other reports say. Most attacks are known from one side only.</p></div>
-  <div class="ad-c" data-c="proj"><h3>What was fired</h3><p class="s">Missiles and drones per attack, as reported. "Count n/r" means used but not counted.</p></div>
-  <div class="ad-g2"><div class="ad-c" data-c="tempo"><h3>Time between attacks</h3><p class="s">Red marks a gap under 2 days</p></div>
-  <div class="ad-c" data-c="hours"><h3>Time of day</h3><p class="s">Aden time. Shaded hours are night (18:00 to 06:00).</p></div></div>
-  <div class="ad-g2"><div class="ad-c"><h3>By target</h3><p class="s">One square per attack</p><div class="ad-u" data-c="tg"></div></div>
-  <div class="ad-c"><h3>By weapon</h3><p class="s">One square per attack</p><div class="ad-u" data-c="w"></div></div></div>
-  ${opt.log?`<div class="ad-c"><h3>Incident log</h3><p class="s">Aden time, newest first</p><div class="ad-log">${L.slice().reverse().map(e=>`<div><div class="d">${fmt(e.d)}<small>${e.t?"~"+e.t:"time not reported"}</small></div><div><h4>${esc(e.title)} <span class="chip ${e.st}">${CHIP[e.st]}</span></h4><p>${esc(e.note)}</p></div></div>`).join("")}</div></div>`:""}`;
+  <div class="ad-c" data-c="daily"><h3>Daily count and running total</h3><p class="s">${esc(C.name)} city above the line${other?`, ${esc(other.short)} airport below`:""}. One block per attack. The figure over each gap is the number of days since the previous attack on ${esc(C.name)}. Hover or tap a bar.</p></div>
+  ${AP.length>1?`<div class="ad-c" data-c="air"><h3>Airports compared</h3><p class="s">Both international airports since ${fmt(start)}. The strip shows flight status by day from 1 Oct, as reported. Grey days have no report.</p></div>`:""}
+  <div class="ad-c" data-c="log"><h3>Every attack</h3><p class="s">Newest first, Aden time. Reports of one attack are merged into one row. Both accounts are given where each side spoke.</p></div>`;
   host.querySelectorAll(".ad-sel button").forEach(b=>b.addEventListener("click",()=>{opt.city=b.dataset.k;drawCity(host,cities,asof,opt)}));
   const Q=k=>host.querySelector(`[data-c="${k}"]`);
-  const LEGS=`<div class="ad-lg sm"><span><i class="sw-hit"></i>Hit, confirmed</span><span><i class="sw-int"></i>Intercepted</span><span><i class="sw-unc"></i>Not confirmed</span></div>`;
   const tipBox=box=>{const t=document.createElement("div");t.className="ad-tip";t.hidden=true;box.appendChild(t);return t};
-  const hover=(g,box,tip,html,yfn)=>{const show=()=>{const br=box.getBoundingClientRect(),gr=g.getBoundingClientRect();tip.innerHTML=html;tip.hidden=false;tip.style.left=(gr.left-br.left+gr.width/2)+"px";tip.style.top=(yfn?yfn(br):gr.top-br.top)+"px"};
+  const hover=(g,box,tip,html)=>{const show=()=>{const br=box.getBoundingClientRect(),gr=g.getBoundingClientRect();tip.innerHTML=html;tip.hidden=false;tip.style.left=(gr.left-br.left+gr.width/2)+"px";tip.style.top=(gr.top-br.top)+"px"};
     ["mouseenter","focus","click"].forEach(ev=>g.addEventListener(ev,show));["mouseleave","blur"].forEach(ev=>g.addEventListener(ev,()=>tip.hidden=true))};
 
-  /* Findings: short computed reading of the city's record */
+  /* Findings */
   (function(){
-    const box=Q("find"),F=[],ms=e=>Date.parse(e.d+"T"+(e.t||"12:00")+":00Z");
+    const box=Q("find"),F=[];
     const loc={};L.filter(e=>e.lon!=null).forEach(e=>loc[e.tg]=(loc[e.tg]||0)+1);const ls=Object.entries(loc).sort((a,b)=>b[1]-a[1]),nl=ls.reduce((a,x)=>a+x[1],0);
-    if(ls.length)F.push(`<b>${nl} of ${L.length} attacks hit a named site</b>, all at ${ls.length===1?"one place":ls.length+" places"}: ${ls.map(([n,c])=>esc(n)+" ("+c+")").join(" and ")}. The rest name no target.`);
-    const gp=[];for(let i=1;i<L.length;i++)gp.push((ms(L[i])-ms(L[i-1]))/864e5);
-    if(gp.length>=3){const h=Math.ceil(gp.length/2),a=gp.slice(0,gp.length-h),b=gp.slice(-h),av=x=>x.reduce((p,q)=>p+q,0)/x.length,t=v=>v<1?Math.round(v*24)+" hours":v.toFixed(1)+" days";
-      const fa=av(a.length?a:gp.slice(0,1)),fb=av(b);
-      F.push(fb<fa?`<b>The tempo is rising.</b> Early attacks came ${t(fa)} apart on average, the last ${h} gaps average ${t(fb)}.`:`<b>The tempo is steady or slowing.</b> Early gaps average ${t(fa)}, recent ones ${t(fb)}.`)}
+    if(ls.length)F.push(`<b>${nl} of ${L.length} attacks on ${esc(C.name)} hit a named site:</b> ${ls.map(([n,c])=>esc(n)+" ("+c+")").join(" and ")}. ${L.length-nl?`${L.length-nl} name no target.`:""}`);
+    if(gaps.length){const big=gaps.reduce((p,q)=>q.v>p.v?q:p),avg=(ms(L[L.length-1])-ms(L[0]))/864e5/gaps.length,short=gaps.filter(g=>g.v<2).length;
+      F.push(`<b>An attack every ${dur(avg)} on average</b> since the first on ${fmt(L[0].d)}. The longest pause was ${dur(big.v)} (${fmt(big.a.d)} to ${fmt(big.b.d)}). ${short} of ${gaps.length} gaps were under 2 days. ${since>=1?`None reported in the ${Math.round(since)} day${Math.round(since)===1?"":"s"} since ${fmt(L[L.length-1].d)}.`:"The latest came on the cut-off day."}`)}
     const tm=L.filter(e=>e.t),nt=tm.filter(e=>{const x=hr(e.t);return x>=18||x<6}).length;
-    if(tm.length)F.push(`<b>${nt} of ${tm.length} timed attacks came after dark</b> (18:00 to 06:00, Aden time).`);
-    const aa=L.filter(e=>e.aa).length,ga=L.filter(e=>e.gack).length,bo=L.filter(e=>e.aa&&e.gack).length;
-    if(L.some(e=>"aa" in e))F.push(`<b>AA/Houthis claimed ${aa} of ${L.length}.</b> The government side acknowledged ${ga}, and both sides speak of the same attack in ${bo}. ${L.length-aa-ga+bo} ${L.length-aa-ga+bo===1?"is":"are"} known from other reports only.`);
-    const ap=L.filter(e=>/irport/.test(e.tg)).length,cl=(C.airport||[]).some(x=>x.s==="closed");
-    if(ap)F.push(`<b>The airport was hit ${ap} time${ap>1?"s":""}</b> and ${cl?"closed at least once":"no closure has been reported"}. ${opt.airLink?`<a href="${opt.airLink}">Compare with Sana'a airport</a>`:"See the airports comparison below."}`);
-    F.push(civR.length&&civ?`<b>${civ} civilian casualt${civ===1?"y":"ies"} reported</b> in ${civR.length} attack${civR.length>1?"s":""}. Military casualties are not counted.`:"<b>No civilian casualties reported.</b> Guards and other military casualties are not counted.");
+    if(tm.length)F.push(`<b>${nt} of ${tm.length} timed attacks came after dark</b> (18:00 to 06:00). ${L.length-tm.length} have no reported time.`);
+    if(L.some(e=>"aa" in e)){const aa=L.filter(e=>e.aa).length,ga=L.filter(e=>e.gack).length,bo=L.filter(e=>e.aa&&e.gack).length,no=L.filter(e=>!e.aa&&!e.gack).length;
+      F.push(`<b>AA/Houthis claimed ${aa} of ${L.length}, the government side acknowledged ${ga}.</b> Both speak of the same attack in ${bo}. ${no} ${no===1?"is":"are"} known from other reports only. AA/Houthis describe airport hits as strikes on Badr camp next to the airport.`)}
+    if(own&&other){F.push(`<b>Both international airports were hit.</b> ${esc(other.short)} ${OE.length} time${OE.length===1?"":"s"} by ${esc(other.attacker)} ${esc(other.weapon)}${OE.length?` (${fmt(OE[0].d)} to ${fmt(OE[OE.length-1].d)})`:""}, ${esc(own.short)} ${air.length} times by ${esc(own.attacker)} ${esc(own.weapon)}${air.length?` (${fmt(air[0].d)} to ${fmt(air[air.length-1].d)})`:""}. ${other.closedSince?`${esc(other.short)} has been closed to civilian flights since ${fmt(other.closedSince)}.`:""} ${esc(own.short)} stayed open, with flights halted or diverted on ${ownOff} day${ownOff===1?"":"s"}.`)}
+    F.push(civA||oK||oI?`<b>Civilian casualties:</b> ${esc(C.name)} ${casTxt(0,civA)}${other?`, ${esc(other.short)} airport ${casTxt(oK,oI)}`:""}. Military casualties are not counted.`:"<b>No civilian casualties reported.</b> Guards and other military casualties are not counted.");
     box.insertAdjacentHTML("beforeend",`<ul>${F.map(x=>`<li>${x}</li>`).join("")}</ul>`);
   })();
 
@@ -2296,290 +2286,120 @@ function drawCity(host,cities,asof,opt){
     geo.forEach(([n,mp])=>{let d="";mp.forEach(poly=>poly.forEach(r=>{d+=r.map((p,i)=>(i?"L":"M")+P(p[0],p[1]).map(v=>v.toFixed(1)).join(" ")).join("")+"Z"}));
       el("path",{d,fill:"var(--ad-land)",stroke:"var(--ad-rule)","stroke-width":1},g)});
     (C.sites||[]).filter(x=>x.area).forEach(x=>{const [px,py]=P(x.lon,x.lat);el("text",{x:px,y:py,"text-anchor":"middle",class:"t-area"},g,x.n)});
-    const by={};L.filter(e=>e.lon!=null).forEach(e=>{const kk=e.tg;(by[kk]=by[kk]||[]).push(e)});
+    const by={};L.filter(e=>e.lon!=null).forEach(e=>{(by[e.tg]=by[e.tg]||[]).push(e)});
     Object.entries(by).forEach(([n,a])=>{
       const lon=a.reduce((s,e)=>s+e.lon,0)/a.length,lat=a.reduce((s,e)=>s+e.lat,0)/a.length,[px,py]=P(lon,lat),r=8+5*Math.sqrt(a.length-1);
-      const gg=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${n}: ${a.length} strike(s)`},g);
+      const gg=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${n}: ${a.length} attack(s)`},g);
       el("circle",{cx:px,cy:py,r:r+6,fill:"var(--ad-hit)",opacity:.15},gg);
       const st=a.some(e=>e.st==="hit")?"hit":a[0].st;
       el("circle",{class:"bar",cx:px,cy:py,r,fill:fill(st,hid),stroke:"var(--ad-panel)","stroke-width":2},gg);
       el("text",{x:px,y:py+4,"text-anchor":"middle",class:"t-pin"},gg,a.length);
       const lf=px>W*0.62;el("text",{x:lf?px-r-8:px+r+8,y:py+4,"text-anchor":lf?"end":"start",class:"t-b"},gg,n);
-      hover(gg,box,tip,`<b>${esc(n)}</b>`+a.map(e=>fmt(e.d)+(e.t?" "+e.t:"")+": "+esc(e.w)).join("<br>"),br=>gg.getBoundingClientRect().top-br.top);
+      hover(gg,box,tip,`<b>${esc(n)}</b>`+a.map(e=>fmt(e.d)+(e.t?" "+e.t:"")+": "+esc(e.w)+" ("+CHIP[e.st].toLowerCase()+")").join("<br>"));
     });
-    box.insertAdjacentHTML("beforeend",LEGS.replace('</div>','<span>Number = strikes at the site</span></div>'));
     const un=L.filter(e=>e.lon==null).length;
-    if(un)box.insertAdjacentHTML("beforeend",`<p class="s ad-note">${un} attack${un>1?"s":""} with no site named ${un>1?"are":"is"} not on the map.</p>`);
+    box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i class="sw-hit"></i>${ST.hit}</span><span><i class="sw-int"></i>${ST.int}</span><span><i class="sw-unc"></i>${ST.unc}</span></div>`+(un?`<p class="s ad-note">${un} attack${un>1?"s":""} with no site named ${un>1?"are":"is"} not on the map.</p>`:""));
   })();
 
-  /* Daily */
+  /* Daily: city above the line, other airport below, running totals, day gaps */
   (function(){
     const box=Q("daily"),tip=tipBox(box);
     const o0=dnum("2026-10-01"),nd=Math.round(dnum(asof)-o0)+1;
     const by={};L.forEach(e=>(by[e.d]=by[e.d]||[]).push(e));
-    const max=Math.max(2,...Object.values(by).map(a=>a.length));
-    const cw=Math.max(380,box.clientWidth||600),SEP=cw<560?66:92,PL=34,GAP=14,R=cw<560?44:70,T=34,H=cw<560?140:160,B=66;
-    const slot=Math.min(48,(cw-PL-SEP-GAP-R)/nd),W=PL+SEP+GAP+nd*slot+R;
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+H+B}`,role:"img","aria-label":"Daily attacks on "+C.name},box);const hid=pat(s);
-    const Y=v=>T+H-v/max*H,X0=PL+SEP+GAP,X=i=>X0+i*slot;
-    for(let v=0;v<=max;v++){el("line",{x1:PL,x2:W-R,y1:Y(v),y2:Y(v),stroke:"var(--ad-rule)"},s);el("text",{x:PL-8,y:Y(v)+4,"text-anchor":"end"},s,v)}
-    el("rect",{x:PL,y:T,width:SEP,height:H,fill:"var(--ad-band)"},s);
-    el("text",{x:PL+SEP/2,y:T+H/2-2,"text-anchor":"middle",class:"t-big"},s,"0");
-    el("text",{x:PL+SEP/2,y:T+H/2+16,"text-anchor":"middle",class:"t-s"},s,"all of Sep");
-    el("text",{x:PL+SEP/2,y:T+H+18,"text-anchor":"middle"},s,"1\u201330 Sep");
-    [X0-GAP/2-3,X0-GAP/2+3].forEach(x=>el("line",{x1:x-3,x2:x+3,y1:T+H+6,y2:T+H-6,stroke:"var(--ad-mute)","stroke-width":1.5},s));
-    const under=el("g",{},s);let cum=0;const steps=[];const ticks=[];
-    for(let i=0;i<nd;i++){
-      const d=dstr(o0+i),a=by[d]||[],x=X(i)+3,bw=slot-6;
-      const g=el("g",a.length?{class:"hv",tabindex:0,role:"button","aria-label":`${fmt(d)}: ${a.length} attack(s)`}:{},s);
-      if(!a.length)el("rect",{x,y:T+H-3,width:bw,height:3,rx:1,fill:"var(--ad-empty)"},g);
-      let y=T+H;["hit","int","unc"].forEach(st=>a.filter(e=>e.st===st).forEach(()=>{const h=H/max;y-=h;el("rect",{class:"bar",x,y:y+1.5,width:bw,height:h-3,rx:3,fill:fill(st,hid),stroke:strokeFor(st),"stroke-width":st==="unc"?1.5:0},g)}));
-      if(a.length){
-        el("rect",{x:X(i),y:T,width:slot,height:H,fill:"transparent"},g);
-        const yy=y;hover(g,box,tip,`<b>${fmt(d)}</b>`+a.map(e=>esc(e.title)+(e.t?` (${e.t})`:"")).join("<br>"),br=>s.getBoundingClientRect().top-br.top+yy*s.getBoundingClientRect().height/(T+H+B));
-        cum+=a.length;steps.push([X(i)+slot/2,cum,i,d,a]);
-      }
-      const day=+d.slice(8);
-      if(a.length||day===1||i===nd-1)ticks.push([X(i)+slot/2,day,!!a.length]);
-      if(day===1)el("text",{x:X(i)+slot/2,y:T+H+33,"text-anchor":"middle"},s,MO[+d.slice(5,7)-1].toUpperCase());
-    }
-    {let lx=-1e9;ticks.forEach(([x,day,hot],k)=>{const nx=ticks[k+1];if(x-lx<20)return;if(!hot&&nx&&nx[2]&&nx[0]-x<20)return;
-      el("text",{x,y:T+H+18,"text-anchor":"middle",class:hot?"t-fg":""},s,day);lx=x})}
-    const YC=v=>T+H-v/Math.max(cum,1)*(H-8);
-    let p=`M${PL} ${YC(0)}`;steps.forEach(([x,v])=>{p+=` H${x} V${YC(v)}`});p+=` H${W-R}`;
-    el("path",{d:p,fill:"none",stroke:"var(--ad-fg)","stroke-width":2,"stroke-linejoin":"round",opacity:.7},under);
-    steps.forEach(([x,v],k)=>{const last=k===steps.length-1;el("circle",{cx:x,cy:YC(v),r:last?5:3.5,fill:"var(--ad-fg)",stroke:"var(--ad-panel)","stroke-width":1.5},s);
-      if(last)el("text",{x:x+9,y:YC(v)+5,class:"t-b"},s,v+" total")});
-    // lettered badge above each attack day; the names go in a list under the chart so they never overlap
-    const AL=[];steps.forEach(([x,v,i,d,a],n)=>{const L=String.fromCharCode(65+n),by0=T-16,top=Y(a.length);
-      el("line",{x1:x,x2:x,y1:by0+9,y2:top-3,stroke:"var(--ad-mute)","stroke-dasharray":"2 3"},s);
-      el("circle",{cx:x,cy:by0,r:9,fill:"var(--ad-fg)"},s);el("text",{x,y:by0+4,"text-anchor":"middle",class:"t-badge"},s,L);
-      AL.push(`<span><i>${L}</i>${fmt(d)}: ${esc([...new Set(a.map(e=>e.short))].join(" + "))}</span>`)});
-    // key events: diamonds under the axis, numbered; September events sit in the compressed block
-    const kl=[];KE.forEach((ke,n)=>{const inSep=ke.d<"2026-10-01";const x=inSep?PL+12+n*22:X(Math.round(dnum(ke.d)-o0))+slot/2,y=T+H+48;
-      const g=el("g",{class:"hv",tabindex:0,role:"button","aria-label":fmt(ke.d)+": "+ke.t},s);
-      el("path",{d:`M${x} ${y-10}L${x+10} ${y}L${x} ${y+10}L${x-10} ${y}Z`,fill:"var(--ad-key)"},g);
-      el("text",{x,y:y+4,"text-anchor":"middle",class:"t-key"},g,n+1);
-      if(!inSep)el("line",{x1:x,x2:x,y1:T,y2:T+H,stroke:"var(--ad-key)","stroke-width":1,opacity:.35},under);
-      hover(g,box,tip,`<b>${fmt(ke.d)}</b>${esc(ke.t)}`);kl.push(`<span><i>${n+1}</i>${fmt(ke.d)}: ${esc(ke.t)}</span>`)});
-    box.insertAdjacentHTML("beforeend",`<div class="ad-keys ad-att"><b>Attacks</b>${AL.join("")}</div>`+(kl.length?`<div class="ad-keys"><b>Key events</b>${kl.join("")}</div>`:""));
-  })();
-
-  /* Two accounts: verification ladder + side-by-side claims */
-  (function(){
-    const box=Q("acct");if(!L.some(e=>"aa" in e)){box.style.display="none";return}
-    const n=L.length,aa=L.filter(e=>e.aa).length,ga=L.filter(e=>e.gack).length,bo=L.filter(e=>e.aa&&e.gack).length;
-    const R=[["Reported by any source",n,"var(--ad-mute)"],["Claimed by AA/Houthis",aa,"var(--ad-key)"],["Acknowledged by the government side",ga,"var(--ad-int)"],["Both sides speak of it",bo,"var(--ad-hit)"]];
-    box.insertAdjacentHTML("beforeend",`<div class="ad-lad">${R.map(([l,v,c])=>`<div><span>${l}</span><span class="tr"><i style="width:${n?Math.max(2,v/n*100):0}%;background:${c}"></i></span><b>${v}</b></div>`).join("")}</div>
-      <div class="ad-tw"><table class="ad-t ad-acc"><thead><tr><th>Date</th><th>Target</th><th>AA/Houthis say</th><th>Government side and other reports</th></tr></thead><tbody>${L.slice().reverse().map(e=>`<tr><td>${fmt(e.d)}${e.t?`<br><small>${e.t}</small>`:""}</td><td>${esc(e.tg)}<br><span class="chip ${e.st}">${CHIP[e.st]}</span></td><td>${e.aa?esc(e.aa):'<span class="nr">No claim</span>'}</td><td>${e.oth?esc(e.oth):'<span class="nr">Nothing reported</span>'}</td></tr>`).join("")}</tbody></table></div>`);
-  })();
-
-  /* Projectiles */
-  (function(){
-    const box=Q("proj"),cell=(v,used)=>v==null?(used?'<span class="nr">count n/r</span>':'<span class="nr">not reported</span>'):v===0?'<span class="nr">none</span>':`<b>${v}</b>`;
-    const rows=L.map(e=>{const mU=/issile/.test(e.w),dU=/rone/.test(e.w);
-      const ic=e.intc==="all"?"All":e.intc==null?'<span class="nr">not reported</span>':e.intc;
-      return `<tr><td>${fmt(e.d)}${e.t?` <small>${e.t}</small>`:""}</td><td>${esc(e.tg)}</td><td>${e.w==="Unknown"?'<span class="nr">unknown</span>':cell(e.mis,mU)}</td><td>${e.w==="Unknown"?'<span class="nr">unknown</span>':cell(e.drn,dU)}</td><td>${ic}</td></tr>`}).join("");
-    box.insertAdjacentHTML("beforeend",`<div class="ad-tw"><table class="ad-t"><thead><tr><th>Date</th><th>Target</th><th>Missiles</th><th>Drones</th><th>Intercepted</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="2">Total counted</td><td><b>${misK}${misU?"+":""}</b></td><td><b>${(()=>{const n=L.reduce((s,e)=>s+(e.drn||0),0),u=L.some(e=>e.drn==null&&/rone/.test(e.w));return n?n+(u?"+":""):u?"n/r":"0"})()}</b></td><td></td></tr></tfoot></table></div>`);
-  })();
-
-  /* Tempo */
-  (function(){
-    const box=Q("tempo"),ms=e=>Date.parse(e.d+"T"+(e.t||"12:00")+":00Z");
-    const g=[];for(let i=1;i<L.length;i++){const v=(ms(L[i])-ms(L[i-1]))/864e5;g.push({a:L[i-1],b:L[i],v})}
-    if(!g.length){box.insertAdjacentHTML("beforeend",'<p class="s">Needs two attacks.</p>');return}
-    const W=Math.max(380,box.clientWidth||440),PL=178,rh=40,T=4,max=Math.ceil(Math.max(...g.map(x=>x.v),1));
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+g.length*rh+24}`,role:"img","aria-label":"Time between attacks"},box);
-    const X=v=>PL+v/max*(W-PL-56),tk=max<=4?1:max<=10?3:Math.ceil(max/4);
-    for(let v=0;v<=max;v+=tk){el("line",{x1:X(v),x2:X(v),y1:T,y2:T+g.length*rh,stroke:"var(--ad-rule)"},s);el("text",{x:X(v),y:T+g.length*rh+16,"text-anchor":"middle"},s,v+"d")}
-    g.forEach((x,i)=>{const y=T+i*rh,same=x.a.d===x.b.d;
-      el("text",{x:0,y:y+17,class:"t-b"},s,same?fmt(x.b.d)+", same day":fmt(x.a.d)+" "+AR+" "+fmt(x.b.d));
-      el("text",{x:0,y:y+32,class:"t-s"},s,x.a.short+" "+AR+" "+x.b.short);
-      el("rect",{x:PL,y:y+9,width:Math.max(4,X(x.v)-PL),height:20,rx:3,fill:x.v<2?"var(--ad-hit)":"var(--ad-int)"},s);
-      el("text",{x:Math.max(PL+4,X(x.v))+7,y:y+24,class:"t-fg"},s,x.v<1?Math.round(x.v*24)+" h":x.v.toFixed(1)+" d");
-    });
-    box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i style="background:var(--ad-hit)"></i>Gap under 2 days</span><span><i style="background:var(--ad-int)"></i>2 days or more</span><span>d = days, h = hours</span></div>`);
-  })();
-
-  /* Time of day */
-  (function(){
-    const box=Q("hours"),pts=L.filter(e=>e.t),miss=L.length-pts.length;
-    const W=Math.max(340,box.clientWidth||420),PL=64,R=14,T=8,rh=30,H=Math.max(1,pts.length)*rh;
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+H+44}`,role:"img","aria-label":"Time of day of attacks"},box);const hid=pat(s);
-    const X=h=>PL+h/24*(W-PL-R);
-    el("rect",{x:X(0),y:T,width:X(6)-X(0),height:H,fill:"var(--ad-band)"},s);el("rect",{x:X(18),y:T,width:X(24)-X(18),height:H,fill:"var(--ad-band)"},s);
-    [0,6,12,18,24].forEach(h=>{el("line",{x1:X(h),x2:X(h),y1:T,y2:T+H,stroke:"var(--ad-rule)"},s);el("text",{x:X(h),y:T+H+16,"text-anchor":"middle"},s,String(h%24).padStart(2,"0")+":00")});
-    pts.forEach((e,i)=>{const cy=T+i*rh+rh/2,cx=X(hr(e.t));
-      el("line",{x1:PL,x2:W-R,y1:cy,y2:cy,stroke:"var(--ad-rule)","stroke-dasharray":"1 4"},s);
-      el("text",{x:0,y:cy+4,class:"t-fg"},s,fmt(e.d));
-      el("circle",{cx,cy,r:8,fill:fill(e.st,hid),stroke:e.st==="unc"?"var(--ad-hit)":"var(--ad-panel)","stroke-width":e.st==="unc"?1.5:2},s);
-      const left=cx>X(19);el("text",{x:left?cx-14:cx+14,y:cy+4,"text-anchor":left?"end":"start",class:"t-b"},s,e.t);
-    });
-    const night=pts.filter(e=>{const h=hr(e.t);return h>=18||h<6}).length;
-    s.setAttribute("viewBox",`0 0 ${W} ${T+H+24}`);
-    box.insertAdjacentHTML("beforeend",LEGS.replace('</div>','<span><i style="background:var(--ad-band);box-shadow:inset 0 0 0 1px var(--ad-rule)"></i>Night</span></div>')+`<p class="s ad-note">${night} of ${pts.length} timed attacks came after dark.${miss?` ${miss} had no reported time.`:""}</p>`);
-  })();
-
-  /* Unit charts */
-  [["tg","tg"],["w","w"]].forEach(([c,k])=>{const box=Q(c),gr={};L.forEach(e=>(gr[e[k]]=gr[e[k]]||[]).push(e));
-    box.insertAdjacentHTML("afterend",LEGS);box.innerHTML=Object.entries(gr).sort((a,b)=>b[1].length-a[1].length).map(([n,a])=>`<div><span>${esc(n)}</span><span class="sq">${a.map(e=>`<i class="sw-${e.st}" title="${fmt(e.d)}: ${esc(e.title)}"></i>`).join("")}<em>${a.length}</em></span></div>`).join("")});
-}
-function drawAden(host,list,asof,opt){drawCity(host,{aden:{name:"Aden",gov:"aden",strikes:list}},asof,opt)}
-
-// Airports compared. drawAirports(host, airports, asof): duel cards, mirrored daily timeline, race to the latest count,
-// head-to-head bars, flight status by day and one merged event log. Data comes from build.py (data.airports), which
-// derives each airport's attacks from the trackers so no event is entered twice. Keep this file ASCII.
-function drawAirports(host,AP,asof){
-  if(!AP||AP.length<2){host.innerHTML="";return}
-  if(!host.__apR){host.__apW=host.clientWidth;let tm;host.__apR=()=>{clearTimeout(tm);tm=setTimeout(()=>{if(Math.abs(host.clientWidth-host.__apW)>40){host.__apW=host.clientWidth;drawAirports(host,AP,asof)}},200)};addEventListener("resize",host.__apR)}
-  const NS="http://www.w3.org/2000/svg";
-  const el=(t,a,p,x)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;if(p)p.appendChild(e);return e};
-  const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const fmt=d=>(+d.slice(8))+" "+MO[+d.slice(5,7)-1];
-  const dnum=d=>Date.parse(d+"T00:00:00Z")/864e5,dstr=n=>new Date(n*864e5).toISOString().slice(0,10);
-  const COL=["var(--ap-0)","var(--ap-1)"],start="2026-09-01";
-  const A=AP.slice(0,2).map((a,i)=>{const E=a.events,cnt=E.reduce((s,e)=>s+(e.n||(e.nu?1:0)),0),unk=E.some(e=>e.nu);
-    const k=E.reduce((s,e)=>s+(e.k||0),0),inj=E.reduce((s,e)=>s+(e.i||0),0),civRep=E.some(e=>e.k||e.i||e.civ!=null);
-    const off=a.closedSince?null:a.status.filter(x=>x.s==="closed"||x.s==="disrupted").length;
-    return {...a,i,col:COL[i],cnt,unk,k,inj,civRep,off,claimed:E.filter(e=>e.claimed).length,last:E.length?E[E.length-1].d:null}});
-  const unitW=a=>/strike/.test(a.weapon)?"strikes":"missiles and drones";
-  const nTxt=a=>(a.unk?"\u2265":"")+a.cnt;
-  host.classList.add("adn","apn");
-  host.innerHTML=`<div class="ap-duel">${A.map(a=>`<div class="ap-card" style="--c:${a.col}">
-      <div class="ap-nm">${esc(a.name)}</div><div class="ap-by">Hit by ${esc(a.attacker)} ${esc(a.weapon)}</div>
-      <div class="ap-big"><b>${a.events.length}</b><span>attacks since ${fmt(start)}</span></div>
-      <dl><dt>${unitW(a)[0].toUpperCase()+unitW(a).slice(1)} counted</dt><dd>${nTxt(a)}${a.unk?" <small>some not counted</small>":""}</dd>
-      <dt>Civilian casualties</dt><dd>${a.k||a.inj?`<span class="ap-cas">${a.k} killed, ${a.inj} injured</span>`:"None reported"}</dd>
-      <dt>Claimed by the attacker</dt><dd>${a.claimed} of ${a.events.length}</dd>
-      <dt>Latest attack</dt><dd>${a.last?fmt(a.last):"none"}</dd></dl>
-      <p class="ap-now">${esc(a.now)}</p></div>`).join('<div class="ap-vs" aria-hidden="true">vs</div>')}</div>
-    <div class="ad-c" data-c="tl"><h3>Day by day</h3><p class="s">${esc(A[0].short)} above the line, ${esc(A[1].short)} below. Bar height is the number of ${unitW(A[0])} or ${unitW(A[1])} reported. Hatched bars mean the count was not given. Hover or tap a bar.</p></div>
-    <div class="ad-g2"><div class="ad-c" data-c="race"><h3>Running total of attacks</h3><p class="s">Since ${fmt(start)}</p></div>
-    <div class="ad-c" data-c="h2h"><h3>Head to head</h3><p class="s">Each row compares the two airports. Bars scale to the larger of the two.</p></div></div>
-    <div class="ad-c" data-c="fl"><h3>Flights</h3><p class="s">Status by day, as reported. Days with no report stay grey.</p></div>
-    <div class="ad-c" data-c="log"><h3>Every attack, both airports</h3><p class="s">One row per attack, newest first. Reports of the same attack are merged.</p></div>`;
-  const Q=k=>host.querySelector(`[data-c="${k}"]`);
-  const tipBox=box=>{const t=document.createElement("div");t.className="ad-tip";t.hidden=true;box.appendChild(t);return t};
-  const hover=(g,box,tip,html)=>{const show=()=>{const br=box.getBoundingClientRect(),gr=g.getBoundingClientRect();tip.innerHTML=html;tip.hidden=false;tip.style.left=(gr.left-br.left+gr.width/2)+"px";tip.style.top=(gr.top-br.top)+"px"};
-    ["mouseenter","focus","click"].forEach(ev=>g.addEventListener(ev,show));["mouseleave","blur"].forEach(ev=>g.addEventListener(ev,()=>tip.hidden=true))};
-  const hatch=(svg,col,id)=>{const d=el("defs",{},svg),p=el("pattern",{id,width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},d);
-    el("rect",{width:6,height:6,fill:"var(--ad-panel)"},p);el("rect",{width:2.5,height:6,fill:col},p)};
-  const legend=`<div class="ad-lg sm">${A.map(a=>`<span><i style="background:${a.col}"></i>${esc(a.short)} airport, hit by ${esc(a.attacker)}</span>`).join("")}</div>`;
-
-  /* Mirrored day-by-day timeline: September compressed, one slot per day from 1 Oct */
-  (function(){
-    const box=Q("tl"),tip=tipBox(box);
-    const o0=dnum("2026-10-01"),nd=Math.round(dnum(asof)-o0)+1;
-    const cw=Math.max(360,box.clientWidth||700),PL=cw<560?62:84,SEP=cw<560?54:80,GAP=12,R=12,HH=cw<560?92:120,T=26,MID=T+HH,B=26;
-    const slot=(cw-PL-SEP-GAP-R)/nd,W=cw,H=MID*2-T+B;
-    const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Airport attacks per day, mirrored"},box);
-    const ids=A.map((a,i)=>{const id="aph"+i+Math.random().toString(36).slice(2,6);hatch(s,a.col,id);return id});
-    const vals=A.map(a=>{const m={};a.events.forEach(e=>(m[e.d]=m[e.d]||[]).push(e));return m});
-    const max=Math.max(2,...A.flatMap((a,i)=>Object.values(vals[i]).map(v=>v.reduce((t,e)=>t+(e.n||1),0))));
-    const hy=v=>v/max*(HH-14);
-    // halves
-    el("rect",{x:PL,y:T,width:W-PL-R,height:HH,fill:"var(--ad-band)",opacity:.35},s);
-    el("rect",{x:PL,y:MID,width:W-PL-R,height:HH,fill:"var(--ad-band)",opacity:.35},s);
-    A.forEach((a,i)=>{const y=i?MID+HH/2:T+HH/2;el("rect",{x:0,y:y-14,width:4,height:28,rx:2,fill:a.col},s);
-      el("text",{x:10,y:y-2,class:"t-b"},s,a.short);el("text",{x:10,y:y+13,class:"t-s"},s,i?"below":"above")});
-    // Sep block
-    el("rect",{x:PL,y:T,width:SEP,height:HH*2,fill:"var(--ad-band)"},s);
-    el("text",{x:PL+SEP/2,y:T+HH/2+8,"text-anchor":"middle",class:"t-big"},s,"0");
-    el("text",{x:PL+SEP/2,y:MID+HH/2+8,"text-anchor":"middle",class:"t-big"},s,"0");
-    el("text",{x:PL+SEP/2,y:H-8,"text-anchor":"middle"},s,"Sep");
-    const X0=PL+SEP+GAP,X=i=>X0+i*slot;
+    const ob={};OE.forEach(e=>(ob[e.d]=ob[e.d]||[]).push(e));
+    const max=Math.max(2,...Object.values(by).map(a=>a.length),...Object.values(ob).map(a=>a.length));
+    const narrow=(box.clientWidth||600)<560;
+    const cw=Math.max(360,box.clientWidth||600),SEP=narrow?50:84,PL=narrow?30:34,GAP=12,R=narrow?70:84,T=30,HH=narrow?104:130,HB=other?(narrow?62:78):0,B=26;
+    const slot=(cw-PL-SEP-GAP-R)/nd,W=cw,MID=T+HH;
+    const s=el("svg",{viewBox:`0 0 ${W} ${MID+HB+B+(other?6:0)}`,role:"img","aria-label":`Daily attacks on ${C.name}`+(other?` and ${other.short} airport`:"")},box);
+    const hid=pat(s),oid=pat(s,"var(--ap-0)");
+    const u=HH/max,ub=other?HB/Math.max(2,...Object.values(ob).map(a=>a.length)):0;
+    const X0=PL+SEP+GAP,X=i=>X0+i*slot,bw=Math.max(3,slot-(narrow?2:6)),bx=i=>X(i)+(slot-bw)/2;
+    for(let v=0;v<=max;v++){el("line",{x1:PL,x2:W-R,y1:MID-v*u,y2:MID-v*u,stroke:"var(--ad-rule)"},s);if(v)el("text",{x:PL-6,y:MID-v*u+4,"text-anchor":"end"},s,v)}
+    // September block
+    el("rect",{x:PL,y:T,width:SEP,height:HH+HB,fill:"var(--ad-band)"},s);
+    el("text",{x:PL+SEP/2,y:T+HH/2+6,"text-anchor":"middle",class:"t-big"},s,"0");
+    if(other)el("text",{x:PL+SEP/2,y:MID+HB/2+8,"text-anchor":"middle",class:"t-big"},s,"0");
+    el("text",{x:PL+SEP/2,y:MID+HB+18,"text-anchor":"middle"},s,"Sep");
     el("line",{x1:PL,x2:W-R,y1:MID,y2:MID,stroke:"var(--ad-fg)","stroke-width":1.5},s);
-    const ticks=[];
-    for(let d=0;d<nd;d++){const day=dstr(o0+d),x=X(d)+Math.max(1,slot*.14),bw=Math.max(3,slot*.72);let any=false;
-      A.forEach((a,i)=>{const ev=vals[i][day];if(!ev)return;any=true;const n=ev.reduce((t,e)=>t+(e.n||1),0),un=ev.some(e=>e.nu),h=hy(n);
-        const g=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${a.short}, ${fmt(day)}: ${ev.length} attack(s)`},s);
-        const y=i?MID+1:MID-h-1;
-        el("rect",{class:"bar",x,y,width:bw,height:h,rx:2,fill:un?`url(#${ids[i]})`:a.col,stroke:un?a.col:"none","stroke-width":un?1.2:0},g);
-        el("text",{x:x+bw/2,y:i?MID+h+13:MID-h-5,"text-anchor":"middle",class:"t-fg ap-v"},g,(un?"\u2265":"")+n);
-        hover(g,box,tip,`<b>${esc(a.short)} \u00b7 ${fmt(day)}</b>`+ev.map(e=>esc(e.note)).join("<br>"))});
-      const dd=+day.slice(8);if(any||dd===1||d===nd-1)ticks.push([X(d)+slot/2,dd,any])}
-    let lx=-1e9;ticks.forEach(([x,dd,hot],k)=>{const nx=ticks[k+1];if(x-lx<18)return;if(!hot&&nx&&nx[2]&&nx[0]-x<18)return;
-      el("text",{x,y:H-8,"text-anchor":"middle",class:hot?"t-fg":""},s,dd);lx=x});
-    el("text",{x:X0,y:H-8+0,"text-anchor":"start",class:"ap-mo"},s,"");
-    box.insertAdjacentHTML("beforeend",legend.replace("</div>",`<span><i class="ap-hx"></i>Count not given (shown as 1)</span></div>`));
+    const under=el("g",{},s);let cum=0,ocum=0;const steps=[],osteps=[],ticks=[];
+    for(let i=0;i<nd;i++){
+      const d=dstr(o0+i),a=by[d]||[],o=ob[d]||[];
+      if(a.length){const g=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${C.name}, ${fmt(d)}: ${a.length} attack(s)`},s);
+        el("rect",{x:X(i),y:T,width:slot,height:HH,fill:"transparent"},g);
+        let y=MID;["hit","int","unc"].forEach(st=>a.filter(e=>e.st===st).forEach(e=>{y-=u;el("rect",{class:"bar",x:bx(i),y:y+1.5,width:bw,height:u-3,rx:3,fill:fill(st,hid),stroke:st==="unc"?"var(--ad-hit)":"none","stroke-width":st==="unc"?1.5:0},g)}));
+        if(a.some(isAir))el("text",{x:X(i)+slot/2,y:y-5,"text-anchor":"middle",class:"t-fg ad-pl"},g,PLANE);
+        hover(g,box,tip,`<b>${esc(C.name)} \u00b7 ${fmt(d)}</b>`+a.map(e=>esc(e.title)+(e.t?` (${e.t})`:"")+` \u00b7 ${CHIP[e.st]}`).join("<br>"));
+        cum+=a.length;steps.push([X(i)+slot/2,cum])}
+      if(o.length&&other){const g=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${other.short} airport, ${fmt(d)}: ${o.length} attack(s)`},s);
+        el("rect",{x:X(i),y:MID,width:slot,height:HB,fill:"transparent"},g);
+        o.forEach((e,k)=>el("rect",{class:"bar",x:bx(i),y:MID+k*ub+1.5,width:bw,height:ub-3,rx:3,fill:"var(--ap-0)"},g));
+        hover(g,box,tip,`<b>${esc(other.short)} airport \u00b7 ${fmt(d)}</b>`+o.map(e=>esc(e.note)).join("<br>"));
+        ocum+=o.length;osteps.push([X(i)+slot/2,ocum])}
+      const day=+d.slice(8);if(a.length||o.length||day===1||i===nd-1)ticks.push([X(i)+slot/2,day,!!(a.length||o.length)]);
+    }
+    const yb=MID+HB+18;
+    {let lx=-1e9;ticks.forEach(([x,day,hot],k)=>{const nx=ticks[k+1];if(x-lx<18)return;if(!hot&&nx&&nx[2]&&nx[0]-x<18)return;
+      el("text",{x,y:yb,"text-anchor":"middle",class:hot?"t-fg":""},s,day);lx=x})}
+    el("text",{x:X0,y:yb+16,"text-anchor":"start",class:"t-s"},s,"Oct");
+    // running totals: step lines scaled to their own half, labelled at the right edge
+    const line=(st,tot,yf,cls)=>{if(!st.length)return;let p=`M${PL+SEP} ${yf(0)}`;st.forEach(([x,v])=>{p+=` H${x} V${yf(v)}`});p+=` H${W-R}`;
+      el("path",{d:p,fill:"none",stroke:cls,"stroke-width":2,"stroke-linejoin":"round",opacity:.75},under);
+      el("circle",{cx:W-R,cy:yf(tot),r:4.5,fill:cls,stroke:"var(--ad-panel)","stroke-width":1.5},s)};
+    const YC=v=>MID-4-v/Math.max(cum,1)*(HH-12),YO=v=>MID+4+v/Math.max(ocum,1)*(HB-12);
+    line(steps,cum,YC,"var(--ad-fg)");el("text",{x:W-R+9,y:YC(cum)+5,class:"t-b"},s,cum+" "+C.name);
+    if(other){line(osteps,ocum,YO,"var(--ap-0)");el("text",{x:W-R+9,y:YO(ocum)+5,class:"t-b",style:"fill:var(--ap-0)"},s,ocum+" "+other.short)}
+    // gaps between consecutive attack days on the city
+    const days=[...new Set(L.map(e=>e.d))];let lx=-1e9;
+    for(let k=1;k<days.length;k++){const a=dnum(days[k-1])-o0,b=dnum(days[k])-o0;if(a<0)continue;const xa=X(a)+slot/2,xb=X(b)+slot/2,xm=(xa+xb)/2,v=b-a;
+      if(xb-xa<16||xm-lx<22)continue;lx=xm;
+      el("path",{d:`M${xa+3} ${T-8}V${T-4}H${xb-3}V${T-8}`,fill:"none",stroke:v<2?"var(--ad-hit)":"var(--ad-mute)","stroke-width":1},s);
+      el("text",{x:xm,y:T-12,"text-anchor":"middle",class:v<2?"t-fg ad-gp hot":"ad-gp"},s,v+"d")}
+    const n0=dnum(L[0].d)-dnum(start);
+    box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i class="sw-hit"></i>${ST.hit}</span><span><i class="sw-int"></i>${ST.int}</span><span><i class="sw-unc"></i>${ST.unc}</span>${other?`<span><i style="background:var(--ap-0)"></i>${esc(other.short)} airport (${esc(other.attacker)})</span>`:""}<span>${PLANE} ${esc(C.name)} airport hit</span><span><i class="ln"></i>Running total</span><span>Nd = days since the previous attack, red under 2</span></div><p class="s ad-note">No attack on ${esc(C.name)} in the first ${Math.round(n0)} days of the period.</p>`);
   })();
 
-  /* Race: cumulative attacks */
+  /* Airports compared: one table and one flight-status strip */
   (function(){
-    const box=Q("race"),W=Math.max(320,box.clientWidth||420),PL=28,R=74,T=12,H=170,B=24;
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+H+B}`,role:"img","aria-label":"Running total of airport attacks"},box);
-    const d0=dnum(start),d1=dnum(asof),X=d=>PL+(dnum(d)-d0)/(d1-d0)*(W-PL-R);
-    const max=Math.max(2,...A.map(a=>a.events.length)),Y=v=>T+H-v/max*H;
-    for(let v=0;v<=max;v+=max>6?2:1){el("line",{x1:PL,x2:W-R,y1:Y(v),y2:Y(v),stroke:"var(--ad-rule)"},s);el("text",{x:PL-6,y:Y(v)+4,"text-anchor":"end"},s,v)}
-    ["2026-09-01","2026-10-01",asof].forEach((d,k)=>el("text",{x:X(d),y:T+H+16,"text-anchor":k===0?"start":k===2?"end":"middle"},s,fmt(d)));
-    const ends=[];
-    A.forEach(a=>{let p=`M${X(start)} ${Y(0)}`,c=0;a.events.forEach(e=>{c++;p+=` H${X(e.d)} V${Y(c)}`});p+=` H${X(asof)}`;
-      el("path",{d:p+` V${Y(0)} H${X(start)}Z`,fill:a.col,opacity:.1},s);
-      el("path",{d:p,fill:"none",stroke:a.col,"stroke-width":2.5,"stroke-linejoin":"round"},s);
-      a.events.forEach((e,k)=>el("circle",{cx:X(e.d),cy:Y(k+1),r:3,fill:a.col},s));
-      ends.push([a,Y(c),c])});
-    ends.sort((p,q)=>p[1]-q[1]);if(ends.length===2&&ends[1][1]-ends[0][1]<16){ends[0][1]-=8;ends[1][1]+=8}
-    ends.forEach(([a,y,c])=>{el("circle",{cx:X(asof),cy:Y(c),r:4.5,fill:a.col,stroke:"var(--ad-panel)","stroke-width":1.5},s);
-      el("text",{x:X(asof)+9,y:y+4,class:"t-b",style:`fill:${a.col}`},s,`${c} ${a.short}`)});
-    box.insertAdjacentHTML("beforeend",legend);
-  })();
-
-  /* Head to head: diverging bars from a centre spine */
-  (function(){
-    const box=Q("h2h"),[a,b]=A;
-    const rows=[
-      ["Attacks",a.events.length,b.events.length,x=>String(x)],
-      ["Strikes or projectiles counted",a.cnt,b.cnt,(x,s)=>((s.unk?"\u2265":"")+x)],
-      ["Civilians killed",a.k,b.k,(x,s)=>s.civRep||x?String(x):"n/r"],
-      ["Civilians injured",a.inj,b.inj,(x,s)=>s.civRep||x?String(x):"n/r"],
-      ["Attacks claimed by the attacker",a.claimed,b.claimed,x=>String(x)],
-      ["Days flights halted or diverted",a.off,b.off,x=>x==null?"closed all along":String(x)]];
-    const W=Math.max(320,box.clientWidth||420),C=W/2,rh=44,T=22,half=C-12;
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+rows.length*rh}`,role:"img","aria-label":"Head to head comparison"},box);
-    el("text",{x:C-10,y:12,"text-anchor":"end",class:"t-b",style:`fill:${a.col}`},s,"\u25c0 "+a.short);
-    el("text",{x:C+10,y:12,class:"t-b",style:`fill:${b.col}`},s,b.short+" \u25b6");
-    rows.forEach(([lab,va,vb,f],i)=>{const y=T+i*rh,m=Math.max(1,va||0,vb||0),wa=va==null?0:(va/m)*(half-58),wb=vb==null?0:(vb/m)*(half-58);
-      el("text",{x:C,y:y+12,"text-anchor":"middle",class:"t-s"},s,lab);
-      el("line",{x1:C,x2:C,y1:y+16,y2:y+36,stroke:"var(--ad-fg)","stroke-width":1},s);
-      el("rect",{x:C-2-wa,y:y+18,width:Math.max(wa,va?2:0),height:16,rx:3,fill:a.col},s);
-      el("rect",{x:C+2,y:y+18,width:Math.max(wb,vb?2:0),height:16,rx:3,fill:b.col},s);
-      if(va==null)el("rect",{x:C-2-(half-58),y:y+18,width:half-58,height:16,rx:3,fill:a.col,opacity:.18},s);
-      if(vb==null)el("rect",{x:C+2,y:y+18,width:half-58,height:16,rx:3,fill:b.col,opacity:.18},s);
-      el("text",{x:va==null?C-8:C-8-wa,y:y+30,"text-anchor":"end",class:"t-fg ap-v"},s,f(va,a));
-      el("text",{x:vb==null?C+8:C+8+wb,y:y+30,class:"t-fg ap-v"},s,f(vb,b))});
-
-  })();
-
-  /* Flights: one row per airport */
-  (function(){
-    const box=Q("fl"),o0=dnum("2026-10-01"),nd=Math.round(dnum(asof)-o0)+1;
-    const W=Math.max(320,box.clientWidth||700),PL=64,cw=(W-PL-4)/nd,rh=30,T=4;
-    const s=el("svg",{viewBox:`0 0 ${W} ${T+A.length*rh+22}`,role:"img","aria-label":"Flight status by day"},box),tip=tipBox(box);
+    const box=Q("air");if(!box)return;
+    const unit=a=>/strike/.test(a.weapon)?"strikes":"projectiles";
+    const row=a=>{const E=a.events,n=E.reduce((t,e)=>t+(e.n||(e.nu?1:0)),0),u=E.some(e=>e.nu),k=E.reduce((t,e)=>t+(e.k||0),0),i=E.reduce((t,e)=>t+(e.i||0),0),cl=E.filter(e=>e.claimed).length;
+      return `<tr><td><span class="ap-chip" style="--c:${a===other?"var(--ap-0)":"var(--ad-hit)"}">${esc(a.short)}</span><br><small>${esc(a.attacker)} ${esc(a.weapon)}</small></td><td><b>${E.length}</b>${E.length?`<br><small>${fmt(E[0].d)} to ${fmt(E[E.length-1].d)}</small>`:""}</td><td>${u?GE:""}${n} ${unit(a)}${u?"<br><small>some not counted</small>":""}</td><td>${k||i?`<span class="ap-cas">${k} killed, ${i} injured</span>`:"None reported"}</td><td>${cl} of ${E.length}</td><td>${esc(a.now)}</td></tr>`};
+    box.insertAdjacentHTML("beforeend",`<div class="ad-tw"><table class="ad-t ad-air"><thead><tr><th>Airport</th><th>Attacks</th><th>Fired</th><th>Civilian casualties</th><th>Claimed by attacker</th><th>Flights now</th></tr></thead><tbody>${AP.map(row).join("")}</tbody></table></div>`);
+    const o0=dnum("2026-10-01"),nd=Math.round(dnum(asof)-o0)+1;
+    const W=Math.max(320,box.clientWidth||700),PL=64,cw=(W-PL-4)/nd,rh=30,T=6;
+    const s=el("svg",{viewBox:`0 0 ${W} ${T+AP.length*rh+20}`,role:"img","aria-label":"Flight status by day"},box),tip=tipBox(box);
     const F={closed:"var(--ad-hit)",disrupted:"var(--ap-dis)","hit-open":"var(--ad-warn)",open:"var(--ad-ok)"};
-    A.forEach((a,i)=>{const y=T+i*rh,by={};a.status.forEach(x=>by[x.d]=x);
+    AP.forEach((a,i)=>{const y=T+i*rh,by={};a.status.forEach(x=>by[x.d]=x);
       el("text",{x:0,y:y+17,class:"t-b"},s,a.short);
       for(let d=0;d<nd;d++){const day=dstr(o0+d),x=PL+d*cw,st=by[day];let f="var(--ad-empty)",note=null;
         if(a.closedSince&&day>=a.closedSince){f=F.closed;note=st?st.note:`Closed to civilian flights since ${fmt(a.closedSince)}.`}
-        if(st&&!a.closedSince){f=F[st.s]||f;note=st.note}
-        const g=el("g",note?{class:"hv",tabindex:0,role:"button","aria-label":`${a.short} ${fmt(day)}: ${note}`}:{},s);
-        el("rect",{class:"bar",x:x+1,y:y+3,width:cw-2,height:rh-8,rx:2,fill:f},g);
-        if(a.events.some(e=>e.d===day))el("circle",{cx:x+cw/2,cy:y+rh/2-1,r:3.2,fill:"var(--ad-panel)",stroke:"var(--ad-fg)","stroke-width":1.5},g);
+        else if(st){f=F[st.s]||f;note=st.note}
+        const ev=a.events.filter(e=>e.d===day);if(ev.length)note=(note?note+" ":"")+`Attack: ${ev.map(e=>e.note).join(" ")}`;
+        const g=el("g",note?{class:"hv",tabindex:0,role:"button","aria-label":`${a.short} ${fmt(day)}`}:{},s);
+        el("rect",{class:"bar",x:x+1,y:y+3,width:Math.max(1,cw-2),height:rh-8,rx:2,fill:f},g);
+        if(ev.length)el("circle",{cx:x+cw/2,cy:y+rh/2-1,r:Math.min(3.4,cw/2.6),fill:"var(--ad-panel)",stroke:"var(--ad-fg)","stroke-width":1.5},g);
         if(note)hover(g,box,tip,`<b>${esc(a.short)} \u00b7 ${fmt(day)}</b>${esc(note)}`)}});
-    [0,nd-1].forEach(d=>el("text",{x:PL+d*cw+cw/2,y:T+A.length*rh+14,"text-anchor":d?"end":"start"},s,fmt(dstr(o0+d))));
+    [0,nd-1].forEach(d=>el("text",{x:PL+d*cw+(d?cw:0),y:T+AP.length*rh+12,"text-anchor":d?"end":"start"},s,fmt(dstr(o0+d))));
     box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i style="background:var(--ad-hit)"></i>Closed or halted</span><span><i style="background:var(--ap-dis)"></i>Flight diverted</span><span><i style="background:var(--ad-warn)"></i>Hit, flights continued</span><span><i style="background:var(--ad-empty)"></i>No report</span><span><i class="ap-dot"></i>Attack that day</span></div>`);
   })();
 
-  /* Merged log */
+  /* Every attack: one table for the city and the other airport */
   (function(){
-    const box=Q("log"),rows=A.flatMap(a=>a.events.map(e=>({a,e}))).sort((p,q)=>(q.e.d+(q.e.t||"12:00")).localeCompare(p.e.d+(p.e.t||"12:00")));
-    const cas=e=>e.k||e.i?`<span class="ap-cas">${e.k?e.k+" killed":""}${e.k&&e.i?", ":""}${e.i?e.i+" injured":""}</span>`:"";
-    box.insertAdjacentHTML("beforeend",`<div class="ad-log">${rows.map(({a,e})=>`<div><div class="d">${fmt(e.d)}<small>${e.t?"~"+e.t:"time not reported"}</small></div><div><h4><span class="ap-chip" style="--c:${a.col}">${esc(a.short)}</span> ${e.n?(e.nu?"\u2265":"")+e.n+" "+(/strike/.test(a.weapon)?(e.n>1?"strikes":"strike"):"projectile"+(e.n>1?"s":"")):"count not given"} ${cas(e)}</h4><p>${esc(e.note)}</p></div></div>`).join("")}</div>`);
+    const box=Q("log");
+    const fired=e=>{if(e.w==="Unknown")return'<span class="nr">unknown</span>';const p=[];const mU=/issile/.test(e.w),dU=/rone/.test(e.w);
+      if(mU)p.push(e.mis==null?"missiles <span class=\"nr\">(count n/r)</span>":`${e.mis} missile${e.mis===1?"":"s"}`);
+      if(dU)p.push(e.drn==null?"drones <span class=\"nr\">(count n/r)</span>":`${e.drn} drone${e.drn===1?"":"s"}`);
+      return (p.join(" + ")||esc(e.w))+(e.intc==="all"?"<br><small>all intercepted</small>":e.intc?`<br><small>${e.intc} intercepted</small>`:"")};
+    const rows=L.map(e=>({k:ms(e),h:`<tr><td>${fmt(e.d)}<br><small>${e.t||"time n/r"}</small></td><td><span class="ap-chip" style="--c:var(--ad-hit)">${esc(C.name)}</span><br>${esc(e.tg)}</td><td><b>${esc(e.title)}</b>${e.aa?`<br><span class="who">AA/Houthis:</span> ${esc(e.aa)}`:`<br><span class="who">AA/Houthis:</span> <span class="nr">no claim</span>`}${e.oth?`<br><span class="who">Government side and others:</span> ${esc(e.oth)}`:""}${e.civ?`<br><span class="ap-cas">${e.civ} civilian casualties</span>`:""}</td><td>${fired(e)}</td><td><span class="chip ${e.st}">${CHIP[e.st]}</span></td></tr>`}))
+      .concat(OE.map(e=>({k:ms(e),h:`<tr><td>${fmt(e.d)}<br><small>${e.t||"time n/r"}</small></td><td><span class="ap-chip" style="--c:var(--ap-0)">${esc(other.short)}</span><br>Airport</td><td><b>${esc(e.title)}</b><br>${esc(e.note)}${e.k||e.i?`<br><span class="ap-cas">${casTxt(e.k||0,e.i||0)} (civilians)</span>`:""}</td><td>${e.n?(e.nu?GE:"")+e.n+" strike"+(e.n>1?"s":""):GE+"1 strike <span class=\"nr\">(count n/r)</span>"}</td><td><span class="chip one">${CHIP.one}</span></td></tr>`})))
+      .sort((a,b)=>b.k-a.k);
+    box.insertAdjacentHTML("beforeend",`<div class="ad-tw"><table class="ad-t ad-acc"><thead><tr><th>Date</th><th>Place</th><th>What was reported</th><th>Fired</th><th>Status</th></tr></thead><tbody>${rows.map(r=>r.h).join("")}</tbody></table></div>`);
   })();
 }
+function drawAden(host,list,asof,opt){drawCity(host,{aden:{name:"Aden",gov:"aden",strikes:list}},asof,opt)}
 
-try{if(D.airports&&D.airports.length>1)drawAirports(document.getElementById("airports-box"),D.airports,D.asof);else document.getElementById("airports-panel").style.display="none"}catch(e){console.error(e)}
-try{if(D.cities&&Object.values(D.cities).some(c=>c.strikes&&c.strikes.length))drawCity(document.getElementById("aden-box"),D.cities,D.asof,{log:true,keyev:D.keyev,geo:D.cityGeo,airLink:"#airports-panel"});else document.getElementById("aden-panel").style.display="none"}catch(e){console.error(e)}
+try{if(D.cities&&Object.values(D.cities).some(c=>c.strikes&&c.strikes.length))drawCity(document.getElementById("aden-box"),D.cities,D.asof,{geo:D.cityGeo,airports:D.airports});else document.getElementById("aden-panel").style.display="none"}catch(e){console.error(e)}
 renderAll();revealSetup();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",renderAll);
 new MutationObserver(renderAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
