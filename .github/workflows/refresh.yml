@@ -1,0 +1,54 @@
+name: Data refresh
+# Runs the data jobs for the private pipeline repo from this public repo (free Actions minutes).
+# Everything runs inside the private checkout through ops/refresh.sh, which prints one status line per job and
+# nothing else. Needs the secret PRIVATE_REPO_TOKEN: a fine-grained token limited to ye-tracker-data, Contents read and write.
+on:
+  schedule:
+    - cron: '5,35 * * * *'           # feeds
+    - cron: '20,50 * * * *'          # statements
+    - cron: '10,25,40,55 * * * *'    # alerts bot
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [feeds, saba, alerts]
+    concurrency:
+      group: refresh-${{ matrix.job }}
+      cancel-in-progress: false
+    steps:
+      - name: Pick job
+        id: pick
+        env:
+          SCHED: ${{ github.event.schedule }}
+          JOB: ${{ matrix.job }}
+        run: |
+          run=no
+          case "$JOB:$SCHED" in
+            feeds:'5,35 * * * *'|saba:'20,50 * * * *'|alerts:'10,25,40,55 * * * *'|*:) run=yes;;
+          esac
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+      - name: Check token
+        if: steps.pick.outputs.run == 'yes'
+        env:
+          T: ${{ secrets.PRIVATE_REPO_TOKEN }}
+        run: |
+          if [ -z "$T" ]; then echo "Missing secret PRIVATE_REPO_TOKEN. Add it under Settings > Secrets and variables > Actions."; exit 1; fi
+      - name: Check out pipeline
+        if: steps.pick.outputs.run == 'yes'
+        uses: actions/checkout@v4
+        with:
+          repository: drelmalihi02-ai/ye-tracker-data
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: data
+      - name: Run
+        if: steps.pick.outputs.run == 'yes'
+        env:
+          TOKEN: ${{ secrets.ALERTS_TOKEN }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: bash data/ops/refresh.sh "${{ matrix.job }}"
