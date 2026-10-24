@@ -45,7 +45,7 @@ jobs:
           CHAT: ${{ secrets.CHANNEL_ID }}
         run: |
           curl -sS --fail "https://api.telegram.org/bot${TOKEN}/sendPhoto" \
-            -F "chat_id=${CHAT}" \
+            --form-string "chat_id=${CHAT}" \
             -F "photo=@weekly.png" \
             -F "caption=<weekly_caption.txt" \
-            -F "parse_mode=HTML" > /dev/null
+            --form-string "parse_mode=HTML" > /dev/null
