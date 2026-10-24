@@ -4,12 +4,31 @@ on:
     branches: [main]
     paths: [notice.txt]
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to post: text (the digest), weekly (the weekly snapshot card) or both"
+        type: choice
+        options: [text, weekly, both]
+        default: text
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Decide what to post
+        id: what
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            MODE=text
+            # Sundays: the run that made a new weekly card also posts it (weekly.png changed in this push)
+            if git diff --name-only HEAD~1 HEAD | grep -qx weekly.png; then MODE=both; fi
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
       - name: Send notice (text only)
+        if: steps.what.outputs.mode != 'weekly'
         env:
           TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT: ${{ secrets.CHANNEL_ID }}
@@ -19,3 +38,14 @@ jobs:
             --data-urlencode "text@notice.txt" \
             -d "parse_mode=HTML" \
             -d "disable_web_page_preview=true" > /dev/null
+      - name: Send weekly snapshot (photo with caption)
+        if: steps.what.outputs.mode != 'text' && hashFiles('weekly.png') != ''
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT: ${{ secrets.CHANNEL_ID }}
+        run: |
+          curl -sS --fail "https://api.telegram.org/bot${TOKEN}/sendPhoto" \
+            -F "chat_id=${CHAT}" \
+            -F "photo=@weekly.png" \
+            -F "caption=<weekly_caption.txt" \
+            -F "parse_mode=HTML" > /dev/null
