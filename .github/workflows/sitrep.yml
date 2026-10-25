@@ -1,20 +1,20 @@
 name: Weekly SITREP
 # Every Sunday 08:00 Sana'a (05:00 UTC): 6 cards + brief comparing the two Sunday-to-Saturday weeks just ended,
 # built from index.html by tools/sitrep/cards.py. Replaces the Sunday weekly snapshot card (user request, 25 Oct 2026).
-# DEST decides where scheduled runs post: "private" (owner's chat, secret PRIVATE_CHAT_ID) until the user
-# approves the format, then "channel" (secret CHANNEL_ID). Manual runs choose with the "dest" input.
+# Scheduled runs post publicly to the Telegram channel (secret CHANNEL_ID), user request 25 Oct 2026.
+# Manual runs can choose "private" (owner's chat, secret PRIVATE_CHAT_ID) for a test.
 on:
   schedule:
     - cron: "0 5 * * 0"
   workflow_dispatch:
     inputs:
       dest:
-        description: "Where to post: private (owner's chat) or channel"
+        description: "Where to post: channel (public) or private (owner's chat, test)"
         type: choice
-        options: [private, channel]
-        default: private
+        options: [channel, private]
+        default: channel
 env:
-  DEST: ${{ github.event.inputs.dest || 'private' }}
+  DEST: ${{ github.event.inputs.dest || 'channel' }}
 jobs:
   sitrep:
     runs-on: ubuntu-latest
