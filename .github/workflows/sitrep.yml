@@ -1,0 +1,83 @@
+name: Weekly SITREP
+# Every Sunday 08:00 Sana'a (05:00 UTC): 6 cards + brief comparing the two Sunday-to-Saturday weeks just ended,
+# built from index.html by tools/sitrep/cards.py. Replaces the Sunday weekly snapshot card (user request, 25 Oct 2026).
+# DEST decides where scheduled runs post: "private" (owner's chat, secret PRIVATE_CHAT_ID) until the user
+# approves the format, then "channel" (secret CHANNEL_ID). Manual runs choose with the "dest" input.
+on:
+  schedule:
+    - cron: "0 5 * * 0"
+  workflow_dispatch:
+    inputs:
+      dest:
+        description: "Where to post: private (owner's chat) or channel"
+        type: choice
+        options: [private, channel]
+        default: private
+env:
+  DEST: ${{ github.event.inputs.dest || 'private' }}
+jobs:
+  sitrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up fonts and browser
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-ibm-plex fonts-noto-color-emoji > /dev/null
+          pip install -q playwright==1.47.0
+          python -m playwright install --with-deps chromium > /dev/null
+      - name: Build cards and brief
+        run: python3 tools/sitrep/cards.py index.html out
+      - name: Keep a copy of the build
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitrep
+          path: |
+            out/*_card.png
+            out/sitrep.txt
+            out/status.json
+          retention-days: 14
+      - name: Pick the chat
+        id: chat
+        env:
+          ME: ${{ secrets.PRIVATE_CHAT_ID }}
+          CH: ${{ secrets.CHANNEL_ID }}
+        run: |
+          if [ "$DEST" = "channel" ]; then [ -n "$CH" ] || { echo "Missing secret CHANNEL_ID. Nothing sent."; exit 1; }
+          else [ -n "$ME" ] || { echo "Missing secret PRIVATE_CHAT_ID. Nothing sent."; exit 1; }; fi
+          echo "Posting to: $DEST"
+      - name: Check the data covers both weeks
+        id: ok
+        run: |
+          python3 -c "import json;s=json.load(open('out/status.json'));print(s);open('ok','w').write('yes' if s['ok'] else 'no')"
+          echo "ok=$(cat ok)" >> "$GITHUB_OUTPUT"
+      - name: Alert the owner (stale data, nothing posted)
+        if: steps.ok.outputs.ok != 'yes'
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          ME: ${{ secrets.PRIVATE_CHAT_ID }}
+        run: |
+          R=$(python3 -c "import json;print(json.load(open('out/status.json'))['reason'])")
+          [ -n "$ME" ] && curl -sS "https://api.telegram.org/bot${TOKEN}/sendMessage" --data-urlencode "chat_id=${ME}" \
+            --data-urlencode "text=Weekly SITREP not posted: ${R}. Run it by hand once the data is current." > /dev/null || true
+          echo "Not posted: $R"; exit 1
+      - name: Post brief and cards
+        if: steps.ok.outputs.ok == 'yes'
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          ME: ${{ secrets.PRIVATE_CHAT_ID }}
+          CH: ${{ secrets.CHANNEL_ID }}
+        run: |
+          CHAT="$ME"; [ "$DEST" = "channel" ] && CHAT="$CH"
+          API="https://api.telegram.org/bot${TOKEN}"
+          cd out
+          curl -sS --fail "$API/sendMessage" --data-urlencode "chat_id=${CHAT}" \
+            --data-urlencode "text@sitrep.txt" -d "parse_mode=HTML" -d "disable_web_page_preview=true" > /dev/null
+          media='['; args=(); i=0
+          for f in $(ls *_card.png | sort); do
+            [ $i -gt 0 ] && media="$media,"
+            media="$media{\"type\":\"photo\",\"media\":\"attach://p$i\"}"
+            args+=(-F "p$i=@$f"); i=$((i+1))
+          done
+          media="$media]"
+          curl -sS --fail "$API/sendMediaGroup" --form-string "chat_id=${CHAT}" --form-string "media=$media" "${args[@]}" > /dev/null
+          echo "Posted brief and $i cards to $DEST."

@@ -22,9 +22,9 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode }}"
           if [ -z "$MODE" ]; then
+            # Digest pushes post text only. The Sunday weekly card was replaced by the weekly SITREP
+            # (sitrep.yml, Sundays 08:00 Sana'a) at the user's request on 25 Oct 2026.
             MODE=text
-            # Sundays: the run that made a new weekly card also posts it (weekly.png changed in this push)
-            if git diff --name-only HEAD~1 HEAD | grep -qx weekly.png; then MODE=both; fi
           fi
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
       - name: Send notice (text only)
