@@ -1,0 +1,41 @@
+name: SITREP test (private chat only)
+# Manual only. Sends the SITREP draft stored in the private data repo (sitrep/) to the owner's
+# private chat (secret PRIVATE_CHAT_ID). It never posts to the public channel.
+on:
+  workflow_dispatch: {}
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check secrets
+        env:
+          ME: ${{ secrets.PRIVATE_CHAT_ID }}
+          T: ${{ secrets.PRIVATE_REPO_TOKEN }}
+        run: |
+          if [ -z "$ME" ]; then echo "Missing secret PRIVATE_CHAT_ID (owner's private chat id). Nothing sent."; exit 1; fi
+          if [ -z "$T" ]; then echo "Missing secret PRIVATE_REPO_TOKEN. Nothing sent."; exit 1; fi
+      - name: Get draft
+        uses: actions/checkout@v4
+        with:
+          repository: drelmalihi02-ai/ye-tracker-data
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: data
+          sparse-checkout: sitrep
+      - name: Send to private chat
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          ME: ${{ secrets.PRIVATE_CHAT_ID }}
+        run: |
+          cd data/sitrep
+          API="https://api.telegram.org/bot${TOKEN}"
+          curl -sS --fail "$API/sendMessage" --data-urlencode "chat_id=${ME}" \
+            --data-urlencode "text@sitrep.txt" -d "parse_mode=HTML" -d "disable_web_page_preview=true" > /dev/null
+          media='['; args=(); i=0
+          for f in $(ls *.png | sort); do
+            [ $i -gt 0 ] && media="$media,"
+            media="$media{\"type\":\"photo\",\"media\":\"attach://p$i\"}"
+            args+=(-F "p$i=@$f"); i=$((i+1))
+          done
+          media="$media]"
+          curl -sS --fail "$API/sendMediaGroup" --form-string "chat_id=${ME}" --form-string "media=$media" "${args[@]}" > /dev/null
+          echo "Sent text and $i images to the private chat."
