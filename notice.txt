@@ -1,24 +1,31 @@
-🇾🇪 <b>Yemen update | 24 Oct, 11:44 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 25 Oct, 08:06 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-🔻 KSA strike on a home in Al-Aqrud, Al-Misrakh, kills 4 civilians incl. 2 children and a woman, injures 5, AA/Houthis say. IRG/PLC blames AA/Houthi shelling.
-🏥 KSA strikes destroy a health centre in Bal'an, Al-Aqrud, and the Al-Ahli club stadium in Taiz city, AA/Houthis say.
-✈️ At least 5 KSA air strikes hit Al-Mukha district and city overnight and this morning, AA/Houthis say.
-💥 IRG/PLC says it hit an AA/Houthi command post and 2 tanks at the Sofitel hotel, Taiz city, and advanced on the Al-Aqrud front.
-
-<b>📍 Sa'dah</b>
-🔻 KSA attack on a migrants' shelter injures 7 African migrants, AA/Houthis say.
-✈️ 13 KSA air strikes hit east and south of Sa'dah city, Sahar, Kitaf wa al-Boqe' and Al Salem overnight, AA/Houthis say.
+✈️ About 20 KSA air strikes hit Al-Mukha city and district on 24 Oct.
+✈️ A KSA air strike hits Bani Hammad, Al-Mawasit, and 4 hit Al-Turbah city, Ash-Shamayatayn overnight.
+🔻 IRG/PLC says a man died of wounds from AA/Houthi shelling on his home in the old airport area, Taiz city.
 
 <b>📍 Sana'a</b>
-⚠️ IRG/PLC says the 23 Oct deaths in a Nihm home came from a failed AA/Houthi ballistic missile, not KSA strikes.
+🔻 3 KSA air strikes on cement factory workers' housing in Hamdan kill 8 civilians incl. 4 children and 3 women, injure 15.
+🔻 KSA strikes on a home in Asr, Sana'a city, kill 4 incl. 2 children and injure 2.
 
-<b>📍 Hajjah</b>
-🔻 A KSA cluster bomb remnant kills a child in Bakil al-Mir, AA/Houthis say.
+<b>📍 Hodeidah</b>
+🔻 A KSA air strike on a home in At-Tuhayta kills a family of 5 and injures a girl.
+
+<b>📍 Sa'dah</b>
+💥 KSA artillery shells villages in Razih, KSA rockets hit Marran and KSA fire injures a civilian in Baqim.
+
+<b>📍 Aden</b>
+🚀 AA/Houthi ballistic missiles hit Aden. IRG/PLC says 2 struck the coast guard HQ and 1 fell near Tawahi port, injuring a fisherman.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 Sirens and blasts in Riyadh, alerts in Najran, Wadi al-Dawasir and Yanbu. KSA says it intercepted a ballistic missile toward Riyadh and a drone over the Eastern Province.
+🚀 AA/Houthi missiles and drones target King Khalid airport in Riyadh, Aramco Yanbu, Rabigh refinery, the East-West pipeline, Dammam and Najran airports and Khamis Mushait air base. Dammam flights halted.
+🛡️ KSA says it intercepted missiles toward Taif, Yanbu, Riyadh, Mecca and Medina and a drone over Riyadh. AA/Houthis deny targeting the holy cities.
+⚠️ Sirens and 3 blasts in Riyadh early on 25 Oct.
 
-📊 Since 1 Sep: 573 incidents, 200 civilians killed, 348 injured
+<b>🏛️ Nationwide</b>
+📊 AA/Houthis count 100 KSA air strikes in 24 hours and 3,123 since the escalation. Their health ministry puts the toll at 193 killed and 468 injured.
+
+📊 Since 1 Sep: 583 incidents, 217 civilians killed, 367 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
