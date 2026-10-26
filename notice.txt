@@ -1,31 +1,33 @@
-🇾🇪 <b>Yemen update | 25 Oct, 08:06 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 26 Oct, 08:10 (Sana'a)</b>
+<i>Reports up to 26 Oct, 06:00</i>
 
 <b>📍 Taiz</b>
-✈️ About 20 KSA air strikes hit Al-Mukha city and district on 24 Oct.
-✈️ A KSA air strike hits Bani Hammad, Al-Mawasit, and 4 hit Al-Turbah city, Ash-Shamayatayn overnight.
-🔻 IRG/PLC says a man died of wounds from AA/Houthi shelling on his home in the old airport area, Taiz city.
-
-<b>📍 Sana'a</b>
-🔻 3 KSA air strikes on cement factory workers' housing in Hamdan kill 8 civilians incl. 4 children and 3 women, injure 15.
-🔻 KSA strikes on a home in Asr, Sana'a city, kill 4 incl. 2 children and injure 2.
-
-<b>📍 Hodeidah</b>
-🔻 A KSA air strike on a home in At-Tuhayta kills a family of 5 and injures a girl.
+🏥 KSA strike heavily damages the maternity and childhood hospital in Ash-Shamayatayn.
+✈️ KSA air strikes hit Al-Athawir, Hayfan, and an ice factory in Al-Mukha.
+🔻 IRG/PLC says AA/Houthi shelling killed a boy, 9, in Al-Aqrud and injured 2 civilians in Sabir al-Mawadim.
+⚠️ AA/Houthi security forces seize a truck of weapons at the western entrance to Taiz city.
 
 <b>📍 Sa'dah</b>
-💥 KSA artillery shells villages in Razih, KSA rockets hit Marran and KSA fire injures a civilian in Baqim.
+🔻 KSA fire kills a civilian in Al Thabit, Qatabir.
+✈️ 9 KSA air strikes hit around and east of Sa'dah city. KSA rockets hit border villages in Al-Dhaher, Marran and Haydan.
 
 <b>📍 Aden</b>
-🚀 AA/Houthi ballistic missiles hit Aden. IRG/PLC says 2 struck the coast guard HQ and 1 fell near Tawahi port, injuring a fisherman.
+🚀 AA/Houthi ballistic missiles hit Salah al-Din, Aden, and Al-Waht, Lahj. IRG/PLC says 2 fell near displacement camps in Salah al-Din.
+
+<b>📍 Amran</b>
+✈️ KSA air strike on Harf Sufyan.
+
+<b>📍 Ibb</b>
+✈️ 2 KSA air strikes hit the telecom network in As-Sabrah.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi missiles and drones target King Khalid airport in Riyadh, Aramco Yanbu, Rabigh refinery, the East-West pipeline, Dammam and Najran airports and Khamis Mushait air base. Dammam flights halted.
-🛡️ KSA says it intercepted missiles toward Taif, Yanbu, Riyadh, Mecca and Medina and a drone over Riyadh. AA/Houthis deny targeting the holy cities.
-⚠️ Sirens and 3 blasts in Riyadh early on 25 Oct.
+🚀 AA/Houthi missile and drone attacks on King Khalid airport in Riyadh (twice), Khamis Mushait base, a border guard naval base in Jizan and East-West pipeline pumping stations.
+🛡️ KSA says it intercepted 10 ballistic missiles over the south, a cruise missile toward Khamis Mushait and a missile toward Riyadh, and destroyed 2 launchers in Sana'a.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 100 KSA air strikes in 24 hours and 3,123 since the escalation. Their health ministry puts the toll at 193 killed and 468 injured.
+📊 AA/Houthis count 56 KSA air strikes in 24 hours and 3,179 since the escalation. Mahdi al-Mashat welcomes the Al-Azhar peace initiative.
+🇸🇦 A KSA delegation lands in Tehran amid reports of talks on Yemen.
 
-📊 Since 1 Sep: 583 incidents, 217 civilians killed, 367 injured
+📊 Since 1 Sep: 592 incidents, 218 civilians killed, 367 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
