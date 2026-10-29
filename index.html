@@ -210,6 +210,9 @@ h1{font:700 clamp(26px,4vw,40px)/1.05 var(--f-display);margin:0;text-wrap:balanc
 .adn [data-c="map"] svg{max-height:470px;width:auto;max-width:100%;margin:0 auto}
 @media (max-width:760px){.adn .ad-top{grid-template-columns:1fr}}
 
+.adn .ad-map{position:relative;border-radius:6px;overflow:hidden;background:var(--ad-sea);border:0}
+.adn .ad-map>svg{display:block;width:100%;height:auto}
+
 .span12{grid-column:span 12}.span7{grid-column:span 7}.span5{grid-column:span 5}.span6{grid-column:span 6}
 .panel h2{font:600 16px/1.2 var(--f-display);margin:0;letter-spacing:.005em}
 .panel .sub{margin:0;color:var(--muted);font-size:12.5px;line-height:1.4}
@@ -1652,7 +1655,7 @@ const ZOOMBTN=`<button data-z="in" title="Zoom in" aria-label="Zoom in">+</butto
 /* circle growth with zoom: slow and capped, so circles shrink relative to the map and keep locations precise */
 const GZ=z=>Math.min(1.5,Math.pow(z,.18));
 /* ---- flow arcs: each arc runs from the nearest point the attacker holds to the place hit (reports give no launch sites) ---- */
-let FLOWS=true;try{const f=localStorage.getItem("ydash-flows");if(f==="0")FLOWS=false}catch(e){}
+const FLOWS=false; /* flow arcs removed from all dashboard maps (29 Oct 2026, user request) */
 const FLOWSRC=(()=>{const ring=[],polys={saudi:[],plc:[],sanaa:[]};
   const sa=D.world.find(w=>w[0]==="Saudi Arabia");if(sa)sa[1].forEach(p=>polys.saudi.push(p[0]));
   (D.ctrl||[]).forEach(([f,n,rings])=>rings.forEach(r=>polys[f==="AA"?"sanaa":"plc"].push(r)));
@@ -1676,12 +1679,7 @@ function distFlows(items){const out=[];items.forEach(a=>{const c=GEOIX[a.key].c;
   if(side==="saudi"&&o.L>.8)o=KMAB;out.push({o,t:c,w:n,col:css(FLOWC[side])})})});return out}
 /* AA operations: one arc per site and operation type, from the nearest AA-held point */
 function opFlows(G,colOf){const out=[];G.forEach(g=>Object.entries(g.c).forEach(([kind,n])=>{const o=flowOrigin("sanaa",g.lon,g.lat);if(o)out.push({o,t:[g.lon,g.lat],w:n,col:colOf(kind,g)})}));return out}
-function flowUI(svgId,html){const svg=document.getElementById(svgId);if(!svg)return;const panel=svg.closest(".panel"),row=panel.querySelector(".lgrow");if(!row)return;
-  let b=row.querySelector(".flowbtn");if(!b){b=document.createElement("button");b.className="flowbtn";b.innerHTML="<i></i>Flows";b.title="Show or hide animated attack flows";row.appendChild(b);
-    b.addEventListener("click",()=>{FLOWS=!FLOWS;try{localStorage.setItem("ydash-flows",FLOWS?"1":"0")}catch(e){}renderAll()})}
-  b.setAttribute("aria-pressed",String(FLOWS));
-  let k=panel.querySelector(".flowkey");if(!k){k=document.createElement("div");k.className="flowkey";const ck=svg.closest(".gmap").parentNode.querySelector(".ctlkey");(ck||svg.closest(".gmap")).after(k)}
-  k.hidden=!FLOWS;k.innerHTML=html}
+function flowUI(svgId){const svg=document.getElementById(svgId);if(!svg)return;const panel=svg.closest(".panel");if(!panel)return;panel.querySelectorAll(".flowbtn,.flowkey").forEach(x=>x.remove())}
 const CLC={};(D.ctrlc||[]).forEach(c=>CLC[c[0]+"|"+c[1]]=c);
 const clRow=(g,n)=>{const c=CLC[g+"|"+n];return c?`<div class="row" style="color:var(--t-aa)">Claimed by AA since ${dLab(c[3])} (unconfirmed)</div><div class="row">${c[4]}</div>`:""};
 function drawGrav(svgId,opt){
@@ -2506,7 +2504,8 @@ function drawCity(host,cities,asof,opt){
     const tip=tipBox(box),[x0,x1,y0,y1]=C.view,k=Math.cos((y0+y1)/2*Math.PI/180);
     const W=Math.max(320,Math.min(560,box.clientWidth||420)),H=Math.round(W*(y1-y0)/((x1-x0)*k));
     const P=(lon,lat)=>[(lon-x0)/(x1-x0)*W,(y1-lat)/(y1-y0)*H];
-    const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Map of strikes in ${C.name}`},box);const hid=pat(s);
+    const mb=document.createElement("div");mb.className="mapbox ad-map";box.appendChild(mb);
+    const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Map of strikes in ${C.name}`},mb);const hid=pat(s);
     const cid="adc"+Math.random().toString(36).slice(2,7);el("rect",{x:0,y:0,width:W,height:H,rx:6,fill:"var(--ad-sea)"},s);
     el("clipPath",{id:cid},el("defs",{},s)).appendChild(el("rect",{x:0,y:0,width:W,height:H,rx:6}));
     const g=el("g",{"clip-path":`url(#${cid})`},s);
@@ -2514,15 +2513,34 @@ function drawCity(host,cities,asof,opt){
       el("path",{d,fill:"var(--ad-land)",stroke:"var(--ad-rule)","stroke-width":1},g)});
     (C.sites||[]).filter(x=>x.area).forEach(x=>{const [px,py]=P(x.lon,x.lat);el("text",{x:px,y:py,"text-anchor":"middle",class:"t-area"},g,x.n)});
     const by={};L.filter(e=>e.lon!=null).forEach(e=>{(by[e.tg]=by[e.tg]||[]).push(e)});
-    Object.entries(by).forEach(([n,a])=>{
-      const lon=a.reduce((s,e)=>s+e.lon,0)/a.length,lat=a.reduce((s,e)=>s+e.lat,0)/a.length,[px,py]=P(lon,lat),r=8+5*Math.sqrt(a.length-1);
-      const gg=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${n}: ${a.length} attack(s)`},g);
-      el("circle",{cx:px,cy:py,r:r+6,fill:"var(--ad-hit)",opacity:.15},gg);
-      const st=a.some(e=>e.st==="hit")?"hit":a[0].st;
-      el("circle",{class:"bar",cx:px,cy:py,r,fill:fill(st,hid),stroke:"var(--ad-panel)","stroke-width":2},gg);
-      el("text",{x:px,y:py+4,"text-anchor":"middle",class:"t-pin"},gg,a.length);
-      const lf=px>W*0.62;el("text",{x:lf?px-r-8:px+r+8,y:py+4,"text-anchor":lf?"end":"start",class:"t-b"},gg,n);
-      hover(gg,box,tip,`<b>${esc(n)}</b>`+a.map(e=>fmt(e.d)+(e.t?" "+e.t:"")+": "+esc(e.w)+" ("+CHIP[e.st].toLowerCase()+")").join("<br>"));
+    // one group per site, then labels placed so they never overlap each other or another circle
+    const S=Object.entries(by).map(([n,a])=>{const lon=a.reduce((q,e)=>q+e.lon,0)/a.length,lat=a.reduce((q,e)=>q+e.lat,0)/a.length,[px,py]=P(lon,lat);return{n,a,px,py,r:8+5*Math.sqrt(a.length-1)}});
+    // sites that sit on top of a bigger one are moved just clear of it, with a leader line back to the true position
+    S.sort((x,y)=>y.a.length-x.a.length);const placed=[];
+    S.forEach(o=>{o.tx=o.px;o.ty=o.py;const clash=q=>placed.some(b=>Math.hypot(b.px-q[0],b.py-q[1])<b.r+o.r+8);
+      if(clash([o.px,o.py])){const b=placed.reduce((m,x)=>Math.hypot(x.px-o.px,x.py-o.py)<Math.hypot(m.px-o.px,m.py-o.py)?x:m);
+        let a0=Math.atan2(o.py-b.py,o.px-b.px);if(!isFinite(a0)||Math.hypot(o.py-b.py,o.px-b.px)<1)a0=Math.PI/4;
+        for(let d=b.r+o.r+10;d<b.r+o.r+80;d+=6){const hitA=[0,.5,-.5,1,-1,1.6,-1.6,2.3,-2.3,Math.PI].map(t=>a0+t).find(t=>{const q=[b.px+d*Math.cos(t),b.py+d*Math.sin(t)];return q[0]>o.r+2&&q[0]<W-o.r-2&&q[1]>o.r+2&&q[1]<H-o.r-2&&!clash(q)});
+          if(hitA!=null){o.px=b.px+d*Math.cos(hitA);o.py=b.py+d*Math.sin(hitA);break}}}
+      placed.push(o)});
+    const boxes=S.map(o=>[o.px-o.r-3,o.py-o.r-3,o.px+o.r+3,o.py+o.r+3]),hit=(b,c)=>b[0]<c[2]&&c[0]<b[2]&&b[1]<c[3]&&c[1]<b[3];
+    S.forEach(o=>{if(o.tx!==o.px||o.ty!==o.py){el("line",{x1:o.tx,y1:o.ty,x2:o.px,y2:o.py,stroke:"var(--ad-fg)","stroke-width":1.2,"stroke-dasharray":"3 2",opacity:.7},g);el("circle",{cx:o.tx,cy:o.ty,r:2.5,fill:"var(--ad-fg)"},g)}});
+    S.forEach(o=>{
+      const gg=el("g",{class:"hv",tabindex:0,role:"button","aria-label":`${o.n}: ${o.a.length} attack(s)`},g);
+      el("circle",{cx:o.px,cy:o.py,r:o.r+6,fill:"var(--ad-hit)",opacity:.15},gg);
+      const st=o.a.some(e=>e.st==="hit")?"hit":o.a[0].st;
+      el("circle",{class:"bar",cx:o.px,cy:o.py,r:o.r,fill:fill(st,hid),stroke:"var(--ad-panel)","stroke-width":2},gg);
+      el("text",{x:o.px,y:o.py+4,"text-anchor":"middle",class:"t-pin"},gg,o.a.length);
+      const tw=o.n.length*7.4+4,th=16,gap=o.r+7,c=[];
+      const R=[o.px+gap,o.py-th/2,"start"],Lf=[o.px-gap-tw,o.py-th/2,"end"],Up=[o.px-tw/2,o.py-gap-th,"middle"],Dn=[o.px-tw/2,o.py+gap,"middle"];
+      (o.px>W*0.62?[Lf,R,Up,Dn]:[R,Lf,Up,Dn]).forEach(q=>c.push(q));
+      [1,2].forEach(m=>{c.push([o.px+gap,o.py-th/2-m*th,"start"],[o.px+gap,o.py-th/2+m*th,"start"],[o.px-gap-tw,o.py-th/2-m*th,"end"],[o.px-gap-tw,o.py-th/2+m*th,"end"])});
+      const fits=q=>{const b=[q[0],q[1],q[0]+tw,q[1]+th];return b[0]>=2&&b[2]<=W-2&&b[1]>=2&&b[3]<=H-2&&!boxes.some(x=>hit(b,x))};
+      const q=c.find(fits)||c[0],b=[q[0],q[1],q[0]+tw,q[1]+th];boxes.push(b);
+      const tx=q[2]==="start"?q[0]:q[2]==="end"?q[0]+tw:q[0]+tw/2,ty=q[1]+th/2+4.5;
+      if(Math.abs(ty-4.5-o.py)>th*0.75&&q[2]!=="middle")el("line",{x1:o.px+(q[2]==="start"?o.r:-o.r)*0.8,y1:o.py,x2:q[2]==="start"?q[0]-2:q[0]+tw+2,y2:ty-4.5,stroke:"var(--ad-mute)","stroke-width":1},gg);
+      el("text",{x:tx,y:ty,"text-anchor":q[2],class:"t-b"},gg,o.n);
+      hover(gg,box,tip,`<b>${esc(o.n)}</b>`+o.a.map(e=>fmt(e.d)+(e.t?" "+e.t:"")+": "+esc(e.w)+" ("+CHIP[e.st].toLowerCase()+")").join("<br>"));
     });
     const un=L.filter(e=>e.lon==null).length;
     box.insertAdjacentHTML("beforeend",`<div class="ad-lg sm"><span><i class="sw-hit"></i>${ST.hit}</span><span><i class="sw-int"></i>${ST.int}</span><span><i class="sw-unc"></i>${ST.unc}</span></div>`+(un?`<p class="s ad-note">${un} attack${un>1?"s":""} with no site named ${un>1?"are":"is"} not on the map.</p>`:""));
