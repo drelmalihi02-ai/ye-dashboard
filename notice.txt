@@ -1,31 +1,31 @@
-🇾🇪 <b>Yemen update | 31 Oct, 08:05 (Sana'a)</b>
-
-<b>📍 Taiz</b>
-🔻 KSA air strike on a home in Al-Masahin, Ash-Shamayatayn, kills 6, incl. a mother and 4 of her children.
-🔻 IRG/PLC mortar fire on a home in Al-A'mur, Hayfan, kills 2 incl. a girl and injures 6. Another shell injures a woman in Al-Sha'ubayn.
-✈️ KSA air strikes kill 2 in Al-Qahaf, Jabal Habashi, and 1 at a telecom site in Al-Majasha, Maqbanah.
-✈️ KSA air strike injures a man in Al-Ramah, Al-Misrakh. KSA strikes also hit Hayfan, Al-Zukayrah and Ash-Shamayatayn overnight.
-⚠️ IRG/PLC says AA/Houthi sniper fire killed a woman in Al-Aqrud, Al-Misrakh, and injured 5 incl. a child.
+🇾🇪 <b>Yemen update | 1 Nov, 08:08 (Sana'a)</b>
+<i>Reports up to 1 Nov, 05:58</i>
 
 <b>📍 Sa'dah</b>
-🔻 KSA fire kills 1 and injures 5, incl. 3 African migrants, in Baqim, Shada, Qatabir and Munabbih.
-💥 KSA artillery shells Ghafirah, Al-Dhaher, and villages in Al Thabit, Qatabir, again before dawn.
+🔻 KSA fire injures a civilian in Shada.
+💥 KSA artillery shells residential areas of Qatabir again.
 
-<b>📍 Al-Jawf</b>
-✈️ 2 KSA air strikes hit Huwaishan. AA/Houthi strikes hit IRG/PLC forces east of Al-Jawf, destroying vehicles.
+<b>📍 Hodeidah</b>
+✈️ 2 KSA air strikes hit the oil company station in Bajil before dawn, injuring 3 civilians.
 
-<b>📍 Aden</b>
-🚀 IRG/PLC says AA/Houthi ballistic missiles hit Aden airport and Maashiq palace in the evening, the airport's seventh attack.
+<b>📍 Taiz</b>
+🔻 KSA air strike on a grocery shop in Al-Wazi'iyah market injures 6 civilians, incl. children.
 
-<b>📍 Marib, Ibb, Lahj</b>
-✈️ KSA air strikes hit livestock in Mahliyah, Marib, Yarim district, Ibb, and a grocery shop in Al-Maqatirah, Lahj.
+<b>📍 Lahj</b>
+💥 IRG/PLC shelling injures 2 civilians on the Kahbub mountains, Al-Madaribah, and Jabal Sabir, Taiz.
+
+<b>📍 Al-Jawf, Marib</b>
+⚔️ IRG/PLC says its forces took several positions on the Al-Jawf fronts. AA/Houthi snipers target IRG/PLC forces on the Marib fronts.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted a drone over Riyadh, a ballistic missile toward the south and a drone over Al-Madinah. AA/Houthis deny any attack.
+🛡️ KSA says it intercepted a drone over the Riyadh region, debris fell with no injuries.
+⚠️ Flights at King Fahd airport, Dammam, halted again overnight, several planes held in the air.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 93 KSA strikes and missiles in 24 hours, 3,689 in total. AA/Houthi health ministry: 29 civilian casualties, mostly in Taiz. IRG/PLC says it carried out 1,087 strikes.
+📊 AA/Houthis count 66 KSA strikes and missiles in 24 hours, 3,755 in total. IRG/PLC says it carried out 1,119 strikes.
+🔻 AA/Houthi health ministry: 232 civilians killed, incl. 68 children and 35 women, and 536 injured since the escalation began.
+⚠️ The UN says Mohammed al-Shami, a UN human rights office staff member, died in AA/Houthi detention after 2 years held.
 
-📊 Since 1 Sep: 663 incidents, 265 civilians killed, 424 injured
+📊 Since 1 Sep: 668 incidents, 265 civilians killed, 436 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
