@@ -1,31 +1,30 @@
-🇾🇪 <b>Yemen update | 1 Nov, 08:08 (Sana'a)</b>
-<i>Reports up to 1 Nov, 05:58</i>
+🇾🇪 <b>Yemen update | 2 Nov, 08:04 (Sana'a)</b>
 
 <b>📍 Sa'dah</b>
-🔻 KSA fire injures a civilian in Shada.
-💥 KSA artillery shells residential areas of Qatabir again.
-
-<b>📍 Hodeidah</b>
-✈️ 2 KSA air strikes hit the oil company station in Bajil before dawn, injuring 3 civilians.
-
-<b>📍 Taiz</b>
-🔻 KSA air strike on a grocery shop in Al-Wazi'iyah market injures 6 civilians, incl. children.
+✈️ 2 KSA air strikes hit Bani Uwair and a telecom network in Al-Jabal al-Ahmar, Sahar.
+🚀 KSA rockets and artillery hit Al-Dhaher and Haydan.
+🔻 KSA fire injures 2 civilians in Shada in two separate attacks.
 
 <b>📍 Lahj</b>
-💥 IRG/PLC shelling injures 2 civilians on the Kahbub mountains, Al-Madaribah, and Jabal Sabir, Taiz.
+🔻 IRG/PLC attack on a home in Al-Sharaf, Al-Maqatirah, kills a man and injures his wife and son.
+💥 KSA strike cuts the Lahj to Taiz road at Karbah, Al-Maqatirah, damaging homes.
+⚔️ AA/Houthi forces move into Al-Maqatirah against IRG/PLC mobilisations.
 
-<b>📍 Al-Jawf, Marib</b>
-⚔️ IRG/PLC says its forces took several positions on the Al-Jawf fronts. AA/Houthi snipers target IRG/PLC forces on the Marib fronts.
+<b>📍 Taiz</b>
+🔻 AA/Houthi drone strike on a home in the Old Airport area, west Taiz city, kills 2 women incl. a girl and injures 1.
+💥 IRG/PLC shelling on homes injures 2 civilians in Al-Khazjah and hits Al-A'bus, Hayfan.
+
+<b>📍 Hodeidah</b>
+✈️ 2 KSA air strikes hit the Faculty of Medicine at Hodeidah University.
+🚢 KSA strikes on Ras Isa port, As-Salif, hit 2 commercial ships and trucks. Civilians injured at Ras Isa and Bajil rise to 7.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted a drone over the Riyadh region, debris fell with no injuries.
-⚠️ Flights at King Fahd airport, Dammam, halted again overnight, several planes held in the air.
+🛡️ KSA says it intercepted a drone and a ballistic missile toward the south.
+⚠️ AA/Houthis warn airlines off Saudi airspace except over Makkah and Madinah and name Aramco sites as targets.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 66 KSA strikes and missiles in 24 hours, 3,755 in total. IRG/PLC says it carried out 1,119 strikes.
-🔻 AA/Houthi health ministry: 232 civilians killed, incl. 68 children and 35 women, and 536 injured since the escalation began.
-⚠️ The UN says Mohammed al-Shami, a UN human rights office staff member, died in AA/Houthi detention after 2 years held.
+📊 AA/Houthis count 75 KSA strikes and missiles in 24 hours, 3,830 in total. IRG/PLC says it carried out 1,272 strikes and retook positions in Al-Jawf.
 
-📊 Since 1 Sep: 668 incidents, 265 civilians killed, 436 injured
+📊 Since 1 Sep: 681 incidents, 266 civilians killed, 446 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
