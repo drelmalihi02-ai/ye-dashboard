@@ -1,29 +1,29 @@
-🇾🇪 <b>Yemen update | 4 Nov, 08:04 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 5 Nov, 08:03 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-✈️ KSA air strikes on Khasha and Al-Fajr villages, Ash-Shamayatayn, kill 2 incl. a woman and injure 8, mostly women and children.
-🏥 KSA air strikes hit a health centre in Al-Qabilah, As-Silw, a mosque in Jashi', Hayfan, and a technical institute in Al-Khayami, Al-Ma'afer.
-✈️ KSA air strike on Al-Misrakh injures 1 and damages a home.
+🔻 KSA air strike on a home in Al-Barh, Maqbanah, kills 7 incl. 2 children and injures 6 incl. 4 children.
+🔻 KSA air strike on a home in Uzlat Al-Athawir, Hayfan, kills 3 children and a woman and injures 4 children. IRG/PLC says an AA/Houthi missile hit it.
+✈️ KSA air strike on Al-Mu'aytib village, Mawiyah, injures a man and a woman.
+🛡️ AA/Houthis down a KSA Wing Loong 2 drone over Taiz, the 10th of its type.
 
 <b>📍 Sa'dah</b>
-🔻 4 KSA air strikes on Allaf, Sahar, kill a child and injure 1.
-✈️ KSA air strikes hit around Al-Talh, Sahar, and a telecom network in Marran (2 each).
-💥 KSA artillery and rockets hit Razih, Shada, Ghafirah in Al-Dhaher, and Ghamr.
+⚠️ KSA fire injures 2 in Qahr Bani al-Harith, Baqim, and 1 in Shada.
+💥 KSA rockets and artillery hit villages in Al Thabit, Qatabir, and 2 air strikes hit the Marran telecom network again.
 
-<b>📍 Al-Bayda</b>
-✈️ 4 KSA air strikes hit Al-Bayda city before dawn.
+<b>📍 Al-Jawf</b>
+🚀 AA/Houthis fire 6 ballistic missiles at IRG/PLC gatherings east of Al-Jawf. IRG/PLC says it took Umm Lufayfah, Qurun al-Subayr and Duhaydah al-Aqir.
 
-<b>📍 Lahj, Al-Jawf and Hajjah</b>
-🚀 AA/Houthi missiles hit IRG/PLC gatherings in Ras al-Arah and Al-Madaribah, Lahj, and east Al-Jawf. AA/Houthi drones hit stores in Midi, Hajjah.
+<b>📍 Al-Bayda and Lahj</b>
+✈️ KSA air strike hits the telecom network in Al-Kharqa, Dhi Na'im. 🚀 AA/Houthi missile hits IRG/PLC gatherings at the iron factory, Lahj.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi drone hits Abha airport and a ballistic missile hits Khamis Mushait air base. KSA says it intercepted a drone toward the south.
-🛡️ KSA says it downed a drone over the Makkah region. AA/Houthis deny targeting Makkah.
-⚠️ Sirens in Riyadh warn of an AA/Houthi aerial attack overnight, and Dammam airport halts flights.
+🚀 AA/Houthi ballistic missile on King Khalid airport, Riyadh. Etihad suspends Riyadh and Dammam flights until 19 Nov.
+🚀 AA/Houthis hit a radar on the Al-Qahma peninsula and a border guard command in Jizan, and the Akfa camp in Najran.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 93 KSA strikes and missiles in 24 hours, 4,032 in total. IRG/PLC says it carried out 1,208 strikes and took positions in Taiz.
+📊 AA/Houthis count 104 KSA strikes and missiles in 24 hours, 4,136 in total. IRG/PLC says it carried out 1,322 strikes.
+🇹🇷 Turkish opposition parties reject the "Makkah agreement" that could send Turkish troops to Yemen.
 
-📊 Since 1 Sep: 712 incidents, 286 civilians killed, 484 injured
+📊 Since 1 Sep: 722 incidents, 297 civilians killed, 499 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
