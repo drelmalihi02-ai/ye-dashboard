@@ -1,31 +1,30 @@
-🇾🇪 <b>Yemen update | 6 Nov, 08:13 (Sana'a)</b>
-<i>Reports up to 6 Nov, 05:24</i>
-
-<b>📍 Sa'dah</b>
-🔻 KSA air strikes on 2 farming families in Al-Talh, Sahar, then on paramedics, kill 9 incl. children and injure 6. Some missing.
-⚠️ KSA fire injures 2 in Shada overnight.
-💥 KSA artillery hits Razih, Shada and Ayyash in Munabbih. A KSA drone drops a shell on Wadi Badr, Ghamr.
-✈️ KSA air strike on Al-Ja'malah, Majz.
+🇾🇪 <b>Yemen update | 7 Nov, 08:08 (Sana'a)</b>
+<i>Reports up to 7 Nov, 04:02</i>
 
 <b>📍 Taiz</b>
-🔻 IRG/PLC says AA/Houthi shelling kills a woman in Al-Dhira', Al-Misrakh, and sniper fire and shelling injure 5 incl. a girl.
-🏭 Toll from the KSA strike on the Al-Qudsi factory, Al-Ta'iziyah, rises to 4 killed. IRG/PLC says it took Sanmat.
+🔻 3 KSA air strikes hit the crowded Al-Hadarah market, Al-Wazi'iyah: 30 killed, 8 injured, toll not final.
+⚠️ IRG/PLC says an AA/Houthi ballistic missile hit the market and no air operation took place in the district.
+✈️ KSA air strike on the water project in Al-San'a, Ash-Shamayatayn.
+💥 IRG/PLC shelling injures a girl in Ras Najd, Al-Misrakh. IRG/PLC says AA/Houthi shelling injures 2 children in Sabir Al-Mawadim.
 
-<b>📍 Sana'a, Hajjah and Al-Dhale</b>
-✈️ 2 KSA air strikes destroy 2 water wells in Al-Hattab, Hamdan, Sana'a.
-✈️ KSA air strike on Al-Jarr, Abs, Hajjah, injures 1. Another hits the Al-Husha telecom network, Al-Dhale.
+<b>📍 Lahj</b>
+🚀 AA/Houthi forces storm the Kahbub mountains, Al-Madaribah, and take commanding positions held by 4 IRG/PLC Giants brigades.
+🛡️ IRG/PLC says it took positions on the Tur al-Bahah front.
 
-<b>📍 Al-Jawf</b>
-🚀 AA/Houthi Shuwadh drones hit IRG/PLC gatherings and vehicles east of Al-Jawf.
+<b>📍 Sa'dah and Hodeidah</b>
+⚠️ KSA fire injures 2 more in Shada, Sa'dah, in the evening.
+✈️ KSA air strike on Hays, Hodeidah.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi drone strike on King Fahd airport, Dammam. KSA says it downed a drone over the Eastern Province.
-🛡️ KSA says it intercepted a missile toward Madinah. AA/Houthis deny it and say they target only oil sites and bases.
+🛡️ KSA says it intercepted 2 ballistic missiles toward Najran, with debris falling, and drones over the Makkah and Riyadh regions.
+🇸🇾 Syria has sent military advisers to KSA to train Saudi and IRG/PLC forces, US and Syrian officials say.
+
+<b>🌊 Red Sea</b>
+🚢 AA/Houthis run an email clearance system for ships crossing the Red Sea. Captains must declare no US, UK, Israel or KSA ties.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 61 KSA strikes and missiles in 24 hours, 4,197 in total. Health ministry in Sana'a: 276 killed and 654 injured since the escalation began.
-🇹🇷 Turkey's parliament passes the defence pact with KSA and Pakistan. 119 MPs vote against.
+📊 AA/Houthis count 67 KSA strikes and missiles in 24 hours, 4,264 in total. Health ministry in Sana'a: 306 killed, 675 injured since the escalation began.
 
-📊 Since 1 Sep: 733 incidents, 307 civilians killed, 508 injured
+📊 Since 1 Sep: 739 incidents, 337 civilians killed, 519 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
