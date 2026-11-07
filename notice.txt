@@ -1,30 +1,20 @@
-🇾🇪 <b>Yemen update | 7 Nov, 08:08 (Sana'a)</b>
-<i>Reports up to 7 Nov, 04:02</i>
+🇾🇪 <b>Yemen update | 7 Nov, 15:54 (Sana'a)</b>
 
-<b>📍 Taiz</b>
-🔻 3 KSA air strikes hit the crowded Al-Hadarah market, Al-Wazi'iyah: 30 killed, 8 injured, toll not final.
-⚠️ IRG/PLC says an AA/Houthi ballistic missile hit the market and no air operation took place in the district.
-✈️ KSA air strike on the water project in Al-San'a, Ash-Shamayatayn.
-💥 IRG/PLC shelling injures a girl in Ras Najd, Al-Misrakh. IRG/PLC says AA/Houthi shelling injures 2 children in Sabir Al-Mawadim.
+<b>📍 Sa'dah</b>
+✈️ 5 KSA air strikes hit a bulldozer and road equipment on the Al-Buq'ah road, Marran. The driver survived.
+🚀 KSA rockets hit Al-Buq'ah village, Marran.
+✈️ KSA air strike on Allaf, Sahar.
+
+<b>📍 Sana'a</b>
+🔻 KSA air strikes on about 6 homes in Al-Shariyah, Bani Hushaysh, then on paramedics: 25 killed, mostly women and children, 30 injured. Toll not final.
+⚠️ AA/Houthis vow the Bani Hushaysh strike will not go unanswered.
 
 <b>📍 Lahj</b>
-🚀 AA/Houthi forces storm the Kahbub mountains, Al-Madaribah, and take commanding positions held by 4 IRG/PLC Giants brigades.
-🛡️ IRG/PLC says it took positions on the Tur al-Bahah front.
+✈️ 8 KSA air strikes on Al-Maqatirah kill a woman and destroy a solar water pump.
 
-<b>📍 Sa'dah and Hodeidah</b>
-⚠️ KSA fire injures 2 more in Shada, Sa'dah, in the evening.
-✈️ KSA air strike on Hays, Hodeidah.
+<b>📍 Amran</b>
+✈️ KSA air strikes on Harf Sufyan.
 
-<b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted 2 ballistic missiles toward Najran, with debris falling, and drones over the Makkah and Riyadh regions.
-🇸🇾 Syria has sent military advisers to KSA to train Saudi and IRG/PLC forces, US and Syrian officials say.
-
-<b>🌊 Red Sea</b>
-🚢 AA/Houthis run an email clearance system for ships crossing the Red Sea. Captains must declare no US, UK, Israel or KSA ties.
-
-<b>🏛️ Nationwide</b>
-📊 AA/Houthis count 67 KSA strikes and missiles in 24 hours, 4,264 in total. Health ministry in Sana'a: 306 killed, 675 injured since the escalation began.
-
-📊 Since 1 Sep: 739 incidents, 337 civilians killed, 519 injured
+📊 Since 1 Sep: 745 incidents, 363 civilians killed, 549 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
