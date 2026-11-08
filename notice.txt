@@ -1,20 +1,32 @@
-🇾🇪 <b>Yemen update | 7 Nov, 15:54 (Sana'a)</b>
+🇾🇪 <b>Yemen update | 8 Nov, 08:10 (Sana'a)</b>
+<i>Reports up to 8 Nov, 02:38</i>
+
+<b>📍 Taiz</b>
+🔻 KSA air strike on Al-Matali village, Al-Misrakh: 1 killed, 4 injured incl. a girl and an elderly man.
+⚠️ IRG/PLC mortar fire injures a girl in Hadhran, Al-Ta'iziyah.
+⚠️ AA/Houthi shelling injures 2 civilians in Mashra'a wa Hadnan and Jabal Habashi, IRG/PLC says.
+🔻 Al-Hadarah market, Al-Wazi'iyah: injured rise to 13, with 30 killed. IRG/PLC still blames an AA/Houthi missile.
 
 <b>📍 Sa'dah</b>
-✈️ 5 KSA air strikes hit a bulldozer and road equipment on the Al-Buq'ah road, Marran. The driver survived.
-🚀 KSA rockets hit Al-Buq'ah village, Marran.
-✈️ KSA air strike on Allaf, Sahar.
+✈️ 11 KSA air strikes hit telecom networks and a water project tank in Kitaf wa al-Boqe'.
+🔻 KSA army fire kills a civilian and injures another in Shada.
 
 <b>📍 Sana'a</b>
-🔻 KSA air strikes on about 6 homes in Al-Shariyah, Bani Hushaysh, then on paramedics: 25 killed, mostly women and children, 30 injured. Toll not final.
-⚠️ AA/Houthis vow the Bani Hushaysh strike will not go unanswered.
+🔻 Al-Shariyah, Bani Hushaysh: toll of the KSA air strikes rises to 33 killed (13 children, 8 women) and 39 injured.
 
-<b>📍 Lahj</b>
-✈️ 8 KSA air strikes on Al-Maqatirah kill a woman and destroy a solar water pump.
+<b>📍 Al-Jawf</b>
+💥 AA/Houthi missile and drone strikes on IRG/PLC gatherings east of Al-Jawf.
 
-<b>📍 Amran</b>
-✈️ KSA air strikes on Harf Sufyan.
+<b>📍 Marib</b>
+💥 AA/Houthi strikes on IRG/PLC gatherings east of Raghwan and Medghal.
 
-📊 Since 1 Sep: 745 incidents, 363 civilians killed, 549 injured
+<b>🇸🇦 Saudi Arabia</b>
+🚀 AA/Houthi missiles and drones target King Khalid airport and Aramco in Riyadh, Aramco Khurais, pumping station 8 at Al-Duwadimi and a National Guard camp in Najran.
+🛡️ KSA says it intercepted a cruise missile toward Riyadh.
+
+<b>🏛️ Nationwide</b>
+📊 AA/Houthis count 105 KSA strikes and missiles in 24 hours, 4,369 since the escalation. Their health ministry: 340 killed, 724 injured.
+
+📊 Since 1 Sep: 752 incidents, 373 civilians killed, 569 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
