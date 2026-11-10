@@ -1,33 +1,36 @@
-🇾🇪 <b>Yemen update | 9 Nov, 08:12 (Sana'a)</b>
-<i>Reports up to 9 Nov, 04:51</i>
+🇾🇪 <b>Yemen update | 10 Nov, 08:09 (Sana'a)</b>
 
 <b>📍 Sa'dah</b>
-🔻 KSA fire kills a civilian off Shada and injures 3 more in Shada into 9 Nov.
-🔻 3 KSA air strikes on Baqim. KSA fire injures 2 in Qahr Bani al-Harith, Baqim.
-✈️ KSA air strike on nomads in Al Ammar, Al-Safra, injures an elderly woman. KSA rockets hit Marran border villages.
-
-<b>📍 Taiz</b>
-✈️ KSA air strikes on Uzlat Al-Masahin, Ash-Shamayatayn, injure several incl. women and children.
-🔻 Al-Makhaf market, Al-Misrakh: 2 more die, one a child. Toll of the IRG/PLC attack rises to 12 killed.
-⚠️ AA/Houthi fire on an ambulance and cars in Sabir Al-Mawadim kills 2 and injures 3, IRG/PLC says.
-
-<b>📍 Sana'a</b>
-🔻 Al-Shariyah, Bani Hushaysh: KSA strike toll rises to 44 killed (21 children, 10 women) and 40 injured.
+✈️ 2 KSA air strikes by Al-Rahmah girls' school, Al-Harabah, Sahar, critically injure a schoolgirl and destroy a mosque.
+🔻 KSA fire injures 5 in Shada and kills 1, injures 4 in Razih.
+🚀 KSA rockets on east Sa'dah city (8), Sahar villages and Marran border villages. Artillery on Al-Dhaher.
 
 <b>📍 Hodeidah</b>
-✈️ 3 KSA air strikes on farms in Ad-Durayhimi and Az-Zuhrah destroy a solar system and a poultry hangar.
+✈️ 10 KSA air strikes on 7 residential buildings in Al-Eisi housing: a woman killed, a woman and her daughter injured.
+✈️ 4 KSA air strikes on a home in Al-Fazah, At-Tuhayta, seriously injure a man and his wife.
+✈️ KSA air strikes hit Hodeidah airport and the Zabid cotton gin (3).
 
-<b>📍 Hajjah</b>
-✈️ 2 KSA air strikes on farms in Al-Jarr, Abs.
+<b>📍 Sana'a</b>
+✈️ KSA air strikes on Qa' al-Qaydi, Sanhan, kill a woman and injure 2 women and 2 girls.
+💥 KSA strikes hit Al-Mafzar gas station, Bani al-Harith, and the oil company building in Al-Wahdah.
+
+<b>📍 Taiz</b>
+✈️ KSA air strike on Uzlat Al-Athawir, Hayfan.
+⚠️ IRG/PLC says AA/Houthi sniper fire and shelling injured 14 civilians, 4 of them children, across the governorate.
+
+<b>📍 Lahj</b>
+✈️ Several KSA air strikes on a school in Zurayqat al-Sham, Al-Maqatirah.
+
+<b>📍 Al-Jawf</b>
+🛡️ AA/Houthis down a KSA CH-4 armed drone.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi missiles and drones hit King Khalid airport, Aramco tanks and the Aramco tower in Riyadh's financial district, and Aramco in Abqaiq. KSA reports damage to an Aramco building.
-🛡️ KSA says it intercepted 5 missiles and destroyed launchers in Sa'dah and Sana'a.
+⚠️ Sirens and blasts in Riyadh after AA/Houthi missile launches. Sirens in Khamis Mushait and Abha.
 
 <b>🏛️ Nationwide</b>
-💥 AA/Houthi strikes on IRG/PLC gatherings east of Al-Jawf, in Medghal (Marib) and Al-Madaribah (Lahj).
-📊 AA/Houthis count 91 KSA strikes and missiles in 24 hours, 4,460 in total.
+🛡️ KSA says it destroyed an AA/Houthi missile parts factory, a solid fuel plant and an electronics lab.
+📊 AA/Houthis count 103 KSA strikes in 24 hours, 4,563 in total.
 
-📊 Since 1 Sep: 767 incidents, 387 civilians killed, 575 injured
+📊 Since 1 Sep: 783 incidents, 390 civilians killed, 593 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
