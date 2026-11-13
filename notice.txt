@@ -1,35 +1,33 @@
-🇾🇪 <b>Yemen update | 12 Nov, 08:04 (Sana'a)</b>
-<i>Reports up to 12 Nov, 05:23</i>
+🇾🇪 <b>Yemen update | 13 Nov, 08:09 (Sana'a)</b>
+<i>Reports up to 13 Nov, 02:48</i>
 
 <b>📍 Sa'dah</b>
-💥 KSA artillery shells Shada and Al Thabit villages, Qatabir, then KSA attacks hit the Qatabir district centre twice.
-💥 KSA artillery shells Ayyash area, Munabbih.
+🔻 Schoolgirl hurt in the 9 Nov KSA air strike on Al-Rahmah girls' school, Al-Harabah, Sahar, dies of her wounds.
+💥 KSA fire kills 1 civilian and injures 1 in Shada, and injures 1 off Al al-Shaykh, Munabbih.
+🚀 KSA rockets hit border villages in Marran and Al-Dhaher.
 
 <b>📍 Taiz</b>
-✈️ KSA air strike on 2 food trucks in Al-Kadahah, Al-Ma'afer, kills 2 civilians and injures 1.
-⚠️ IRG/PLC says AA/Houthi shelling injured 3 civilians, 2 of them children, in Taiz city and Al-Shaqab, Sabir al-Mawadim.
+✈️ 4 KSA air strikes hit Naqil al-Hajmah, Al-Maqarimah, Ash-Shamayatayn, then 2 more hit Al-Turbah city.
+⚠️ IRG/PLC says AA/Houthi shelling killed 1 civilian and injured 1 in Dabbah village, Al-Aqrud, south-east of Taiz city.
 
 <b>📍 Lahj</b>
-✈️ KSA air strike hits Al-Rassan school, Uzlat Al-Anbuwah, Al-Maqatirah.
-🚀 AA/Houthi ballistic missiles hit IRG/PLC mobilisations at Kharaz camp and Ras al-Ara, Al-Madaribah wa Al-Arah.
+🚀 AA/Houthis fire 6 ballistic missiles at IRG/PLC mobilisations at Kharaz camp and Ras al-Ara, Al-Madaribah wa Al-Arah, as AA/Houthi forces press their advance toward the coast.
+
+<b>📍 Marib</b>
+💥 AA/Houthi strikes hit IRG/PLC mobilisations and armoured vehicles east of Medghal.
 
 <b>📍 Aden</b>
-🚀 AA/Houthi ballistic missiles hit the KSA command room in Al-Buraiqa. IRG/PLC says the district was shelled at night.
-
-<b>📍 Sana'a</b>
-🔻 44 killed in the KSA strikes on Al-Shariyah, Bani Hushaysh, buried. Bomb remnants identified as Mark 82 and Paveway IV.
-
-<b>📍 Al-Jawf</b>
-🚀 AA/Houthi ballistic missiles hit IRG/PLC mobilisations east of Al-Jawf and east of Raghwan, Marib.
+🏛️ AA/Houthi-appointed Aden governor says AA/Houthi forces target only KSA-led mobilisations and do not plan to enter Aden.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi cruise missiles target King Khalid airport, Riyadh, and a drone targets pumping station 11 near Yanbu.
-🛡️ KSA says it intercepted 3 cruise missiles toward Riyadh, 2 drones over Makkah and the south, and 2 ballistic missiles in the west.
+🚀 AA/Houthi drones hit pumping station 7 on the East-West pipeline twice, a cargo plane at Sharurah airport and Aramco in Riyadh. A fire on the pipeline is reported.
+🚀 AA/Houthi ballistic missiles target the Yanbu oil facility and the Khamis Mushait air base.
+🛡️ KSA says it intercepted 2 drones over the Riyadh region and 2 over the Eastern Province.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 93 KSA strikes in 24 hours, 4,765 in total, and 359 civilians killed, 780 injured since the escalation.
-⚠️ IRG/PLC says it carried out 877 artillery, air, drone and rocket strikes on AA/Houthi positions.
+📊 AA/Houthis count 98 KSA strikes in 24 hours on Lahj, Taiz, Sa'dah, Al-Jawf and Marib, 4,863 in total.
+⚠️ IRG/PLC says it carried out 703 artillery, air, drone and rocket strikes on AA/Houthi positions.
 
-📊 Since 1 Sep: 799 incidents, 393 civilians killed, 603 injured
+📊 Since 1 Sep: 806 incidents, 395 civilians killed, 604 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
