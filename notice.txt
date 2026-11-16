@@ -1,33 +1,36 @@
-🇾🇪 <b>Yemen update | 15 Nov, 08:03 (Sana'a)</b>
-<i>Reports up to 15 Nov, 03:06</i>
+🇾🇪 <b>Yemen update | 16 Nov, 08:04 (Sana'a)</b>
+<i>Reports up to 16 Nov, 02:42</i>
 
 <b>📍 Lahj</b>
-✈️ 3 KSA air strikes on Naqil Al-Suha, Al-Maqatirah, cut the Taiz to Lahj road, injure 2 civilians and destroy a truck.
-✈️ KSA strikes hit a school, a health unit and a pharmacy in Zurayqat al-Sham, Al-Maqatirah.
-🚀 AA/Houthi ballistic missiles hit IRG/PLC forces in Kharaz, Al-Madaribah wa Al-Arah. AA/Houthi forces reportedly take Jabal Kharaz and Kharaz camp (unconfirmed).
+🔻 AA/Houthi forces take Al-Madaribah wa Al-Arah in a 60 km push from Kahbub to Khor Umayrah and cut the coastal road. IRG/PLC calls it a repositioning.
+🚀 6 AA/Houthi ballistic missiles hit IRG/PLC forces at Qa'wah camp, Al-Madaribah wa Al-Arah.
+✈️ 2 KSA air strikes hit Al-Ghudrah, Zurayqat al-Sham, Al-Maqatirah.
 
 <b>📍 Sa'dah</b>
-✈️ KSA air strikes hit south Sa'dah City and the telecom network in Uzlat Sarah, Majz.
-💥 KSA artillery hits villages in Razih. KSA rockets hit Marran and Al-Dhaher.
+✈️ 2 KSA air strikes hit the passports building in Sa'dah City. Strikes hit telecom networks in Majz and Ghamr.
+⚠️ KSA fire injures 3 civilians in Baqim, Shada and Munabbih.
+💥 KSA artillery hits Razih and Qatabir. KSA rockets hit Sahar.
 
 <b>📍 Taiz</b>
-⚠️ Sniper fire injures a woman in Al-Aqrud, Al-Misrakh. Each side blames the other.
-⚠️ IRG/PLC rights centre counts 51 civilians killed and 85 injured in Taiz on 1 to 12 Nov, blaming AA/Houthis.
+🔻 IRG/PLC forces pull back from the outskirts of Dhubab and Bab al-Mandab toward Aden. AA/Houthi forces enter Dhubab airport.
+⚠️ IRG/PLC says AA/Houthi snipers and shelling killed a woman in Kahlan and injured 13 civilians, incl. 6 children, around Taiz city.
 
 <b>📍 Sana'a</b>
-✈️ KSA strike on a residential area in Shu'ub, Sana'a city, injures 2 women and 2 girls.
+💥 KSA attack hits Hamdan district, Sana'a governorate.
+
+<b>📍 Amran</b>
+🚀 KSA rockets hit Harf Sufyan.
 
 <b>📍 Al-Jawf</b>
-⚠️ IRG/PLC says an AA/Houthi landmine injured 2 children and a woman in Khabb wa ash Sha'af.
+🛡️ AA/Houthis down a KSA CH-4 drone over Al-Jawf, the 5th of the type.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted 2 drones over Riyadh and the southern region and 1 over the Eastern Province.
+🚀 AA/Houthi missiles hit King Khalid airport and the financial centre in Riyadh, drones hit pumping stations 5 and 6. KSA says it intercepted 2 missiles toward Riyadh and drones over the east, Makkah and Madinah.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 72 KSA air strikes in 24 hours on Sa'dah, Taiz, Lahj and Al-Jawf, 5,020 in total.
-⚠️ IRG/PLC says it carried out 723 air, drone, rocket and artillery strikes on AA/Houthi positions.
-🔻 AA/Houthis pardon hundreds of IRG/PLC prisoners, with a release set for 15 Nov.
+📊 AA/Houthis count 75 KSA strikes in 24 hours on 5 governorates, 5,095 in total.
+🔻 AA/Houthis release 600 IRG/PLC prisoners with the ICRC.
 
-📊 Since 1 Sep: 823 incidents, 397 civilians killed, 617 injured
+📊 Since 1 Sep: 838 incidents, 397 civilians killed, 620 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
