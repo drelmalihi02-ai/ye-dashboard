@@ -1,37 +1,33 @@
-🇾🇪 <b>Yemen update | 18 Nov, 08:03 (Sana'a)</b>
-<i>Reports up to 18 Nov, 03:52</i>
-
-<b>📍 Sa'dah</b>
-⚠️ KSA air strikes on a demining team and paramedics in Kitaf wa al-Boqe' kill 4 and injure 3. The Noah mosque is destroyed.
-💥 KSA fire kills a civilian in Shada and injures 3 in Munabbih and Baqim.
-
-<b>📍 Hodeidah</b>
-⚠️ KSA strikes on the Al-Khawlani sponge factory north of Hodeidah city, then on rescuers, kill 15 and injure 13. 2 strikes hit Kamaran.
-
-<b>📍 Sana'a</b>
-✈️ KSA strikes destroy an orphan foundation factory in Ath-Thawrah, 9 injured. 7 strikes hit Bani Jarmouz, Bani al-Harith.
+🇾🇪 <b>Yemen update | 19 Nov, 08:08 (Sana'a)</b>
+<i>Reports up to 19 Nov, 03:08</i>
 
 <b>📍 Taiz</b>
-⚠️ KSA air strike on a home in Khadir kills a woman and injures another. Strikes hit Souq al-Sabt, Ash-Shamayatayn.
+⚠️ KSA air strike on homes at Mafraq Mawiyah, Al-Ta'iziyah, kills a girl and injures her mother.
+✈️ KSA strikes hit a lodging house in Al-Mukha city with dead and injured, and damage the Al-Hawban dialysis centre.
+💥 A landmine injures 4 children in Al-Kala'ibah, Al-Ma'afer. AA/Houthis and IRG/PLC blame each other.
 
-<b>📍 Lahj</b>
-🔻 AA/Houthi forces drive IRG/PLC forces out of Al-Maqatirah. AA/Houthis put the operation at 10 districts of Taiz and Lahj, about 7,100 sq km.
+<b>📍 Sa'dah</b>
+✈️ KSA air strike on the Ghamr telecom network. KSA fire injures 2 more in Baqim, KSA shelling on Razih.
 
-<b>📍 Marib</b>
-✈️ KSA air strikes hit telecom networks in Sirwah and Al-Jubah. IRG/PLC says it repelled an AA/Houthi push on Raghwan.
+<b>📍 Ibb</b>
+⚠️ KSA air strikes on homes and a mosque in Al-Talahi, As-Sabrah, kill 3 incl. a child and injure 5.
 
 <b>📍 Hajjah</b>
-✈️ 2 KSA air strikes on Uzlat Al-Atan, Bakil al-Mir.
+⚠️ KSA air strike on Hadaya Khuris, Mustaba, kills 2 civilians and injures 2.
 
-<b>📍 Amran</b>
-💥 KSA attack on Harf Sufyan.
+<b>📍 Hodeidah</b>
+🔻 Al-Khawlani factory toll rises to 15 killed and 15 injured.
+
+<b>📍 Al-Jawf</b>
+⚠️ Bodies of 2 AA/Houthi prisoners handed back from IRG/PLC custody on the Al-Jawf front. AA/Houthis allege torture and neglect.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi drones hit pumping stations 8 and 9 west of Riyadh and the Sharurah radar. KSA says it downed a drone over the Riyadh region.
+🚀 AA/Houthi cruise missiles target King Khalid airport and the financial centre in Riyadh. A blast and smoke are reported near the airport. KSA says it downed 2 cruise missiles.
+🚀 AA/Houthi strikes on Jizan and the Khamis Mushait air base. KSA says it downed a ballistic missile and 2 drones and hit the launcher in Sa'dah.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 81 KSA strikes in 24 hours, 5,264 in total. KSA says it destroyed 60 AA/Houthi targets in Sana'a, Hodeidah, Amran and Sa'dah.
+📊 AA/Houthis count 87 KSA strikes in 24 hours, 5,351 in total. Health ministry in Sana'a: 11 civilians killed, 36 injured in 24 hours.
 
-📊 Since 1 Sep: 868 incidents, 422 civilians killed, 670 injured
+📊 Since 1 Sep: 877 incidents, 428 civilians killed, 686 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
