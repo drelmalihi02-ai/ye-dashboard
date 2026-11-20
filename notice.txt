@@ -1,33 +1,20 @@
-🇾🇪 <b>Yemen update | 20 Nov, 08:04 (Sana'a)</b>
-<i>Reports up to 20 Nov, 02:33</i>
-
-<b>📍 Taiz</b>
-💥 KSA air strikes on the Hayjat Al-Abd road, Ash-Shamayatayn, kill 5 road repair workers and injure 5.
-🔻 Al-Mukha lodging house toll rises to at least 8 killed and 10 injured. A TV reporter is hurt at the scene.
-⚠️ KSA air strike on a cemetery in Al-Khazi'ah, Khadir, kills a woman. Another hits Al-Mu'ayniyah, Al-Misrakh.
-
-<b>📍 Lahj</b>
-⚠️ KSA air strike on a boat of displaced people from Ras al-Arah to Hays kills 19, incl. 8 children and 6 women, on 18 Nov.
-✈️ 2 KSA air strikes on Najd Karbah and Barh al-Ma', Al-Maqatirah, hit the Al-Amal schools.
-
-<b>📍 Sa'dah</b>
-✈️ KSA air strikes on Baqim, Sahar, the Majz telecom network and Marran. KSA shelling on Munabbih.
-⚠️ KSA fire injures 4 civilians in Baqim and Qatabir.
-
-<b>📍 Marib</b>
-🇾🇪 AA/Houthi forces clear several IRG/PLC positions east of Raghwan and take prisoners.
-✈️ KSA air strike on a fuel station and shops in Al-Jubah.
+🇾🇪 <b>Yemen update | 20 Nov, 16:53 (Sana'a)</b>
+<i>Reports up to 20 Nov, 09:15</i>
 
 <b>📍 Sana'a</b>
-✈️ KSA strikes the Orphan Foundation factory in Ath-Thawrah again. Another attack hits the capital late at night.
+💥 KSA attacks hit 2 car tyre warehouses in Ath-Thawrah overnight, one in Al-Hayrah.
+💥 KSA attack hits the Yemeni Saudi Metal Industries Company in Ma'in.
+💥 KSA attack hits a merchant's food warehouse in Shu'ub. No casualties reported.
 
-<b>📍 Hodeidah</b>
-✈️ KSA air strike on Kamaran island.
+<b>📍 Taiz</b>
+✈️ 2 KSA air strikes on Ash-Shamayatayn after midnight.
+
+<b>📍 Sa'dah</b>
+✈️ KSA air strike hits the telecom network in Uzlat Rabu' al-Hudud, Majz, again.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 AA/Houthi missiles hit the PIF tower at the Riyadh financial centre, damaging several floors. KSA reports fragments and damage.
-🚀 AA/Houthi strikes on Jubail petrochemicals, Khamis Mushait air base and Riyadh airport. KSA says it downed a cruise missile and hit a launcher in Dhamar.
+🛡️ KSA says it intercepted a ballistic missile and 4 drones over the Riyadh and southern regions. Blasts reported in southern Saudi areas.
 
-📊 Since 1 Sep: 892 incidents, 461 civilians killed, 711 injured
+📊 Since 1 Sep: 898 incidents, 461 civilians killed, 711 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
