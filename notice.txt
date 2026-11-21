@@ -1,20 +1,29 @@
-🇾🇪 <b>Yemen update | 20 Nov, 16:53 (Sana'a)</b>
-<i>Reports up to 20 Nov, 09:15</i>
-
-<b>📍 Sana'a</b>
-💥 KSA attacks hit 2 car tyre warehouses in Ath-Thawrah overnight, one in Al-Hayrah.
-💥 KSA attack hits the Yemeni Saudi Metal Industries Company in Ma'in.
-💥 KSA attack hits a merchant's food warehouse in Shu'ub. No casualties reported.
+🇾🇪 <b>Yemen update | 21 Nov, 08:04 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-✈️ 2 KSA air strikes on Ash-Shamayatayn after midnight.
+✈️ KSA air strike hits the Al-Mukha power station, then 8 more strikes hit Al-Makha district at night.
+⚠️ KSA air strike on Al-Mun'im police station, Jabal Habashi, kills a prisoner.
+✈️ KSA strike waves on Bani Shaybah, Al-Sukun park and a clothes hangar in Ash-Shamayatayn, plus Hayfan, Sabir al-Mawadim and Al-Mawasit.
+🔻 IRG/PLC sniper fire injures a woman in Al-Aqrud, Al-Misrakh.
 
 <b>📍 Sa'dah</b>
-✈️ KSA air strike hits the telecom network in Uzlat Rabu' al-Hudud, Majz, again.
+✈️ KSA air strike hits the power station in Qahzah, north of Sa'dah city.
+⚠️ KSA fire kills a civilian in Shada and shelling injures another. KSA shelling and rockets on Munabbih, Ghamr and Marran.
+
+<b>📍 Hajjah</b>
+⚠️ KSA attack kills 2 children and injures another herding sheep in Bani Amer, Aslam. KSA air strike on Mustaba.
+
+<b>📍 Hodeidah</b>
+💥 KSA strike hits a berth at Hodeidah port. KSA says it hit arms smuggling facilities.
+🛡️ AA/Houthis force KSA F-15 jets out of Hodeidah airspace.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted a ballistic missile and 4 drones over the Riyadh and southern regions. Blasts reported in southern Saudi areas.
+🚀 AA/Houthi missiles hit the Shuqaiq power station and Jizan port, with power cuts across Jizan. KSA says it downed 2 missiles.
+🛡️ Blasts in Riyadh overnight. KSA says it intercepted 3 ballistic missiles toward Riyadh and a drone toward the south.
 
-📊 Since 1 Sep: 898 incidents, 461 civilians killed, 711 injured
+<b>🏛️ Nationwide</b>
+📊 AA/Houthis count 78 KSA strikes and missiles in 24h, 5,429 in total. Their health ministry reports 41 civilians killed, incl. 11 children, and 28 injured in 24h.
+
+📊 Since 1 Sep: 919 incidents, 465 civilians killed, 714 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
