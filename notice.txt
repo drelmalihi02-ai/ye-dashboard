@@ -1,38 +1,36 @@
-🇾🇪 <b>Yemen update | 22 Nov, 08:08 (Sana'a)</b>
-<i>Reports up to 22 Nov, 03:11</i>
+🇾🇪 <b>Yemen update | 23 Nov, 08:08 (Sana'a)</b>
+<i>Reports up to 23 Nov, 05:24</i>
 
 <b>📍 Taiz</b>
-✈️ KSA air strike hits Al-Mukha port, Al-Makha.
-✈️ 3 more KSA strikes destroy the telecom network on Jabal al-Shawar, Al-Mawasit, damaging nearby homes.
-🔻 IRG/PLC mortar fire injures a man and his child in Souq al-Maqhayah, Sabir al-Mawadim.
-🚑 IRG/PLC says an AA/Houthi shell hit an ambulance in Sabir al-Mawadim, killing a paramedic and injuring 6.
-✈️ KSA air strike on Al-A'bus, Hayfan.
+✈️ KSA air strikes kill 1 in Yafrus, Jabal Habashi, and 1 in Al-Mu'ayninah, Sabir al-Mawadim, injuring 4.
+⚠️ KSA attack on a home in Warzan, Khadir, kills a girl. 2 KSA strikes on Al-Jarbub, Khadir, before dawn.
+✈️ 7 KSA strikes on Al-Athawir and Al-A'bus, Hayfan, injure a woman and a child.
+✈️ KSA strikes hit Al-Mukha city 3 times and the Jabal Matran telecom network, Al-Mawasit.
+🔻 IRG/PLC says AA/Houthi shelling and sniping injured 6 civilians, incl. a girl, in Sabir districts.
+
+<b>📍 Sana'a</b>
+✈️ KSA strike on an oil company depot on Sixty Street, Sana'a city, injures 6.
+⚠️ KSA attack on a stone crusher in Al-Ja'if, Hamdan, kills a worker.
 
 <b>📍 Sa'dah</b>
-🚀 KSA fires 11 missiles at Sahar and Majz.
-✈️ 2 KSA strikes hit the telecom network in Marar, Kitaf wa al-Boqe'. KSA rockets on Haydan border villages.
-
-<b>📍 Hajjah</b>
-⚠️ KSA attack on a home in Uzlat Al-Gharbi, Mustaba, kills 1 civilian and injures 2. KSA air strike on Abs.
+💥 KSA shelling and fire on Hattab market, Baqim, kill 3 civilians incl. a girl and injure 16, incl. 2 migrants.
+🚀 KSA missile attack on the Al-Hussein Medical City project, Sa'dah city, injures a child.
 
 <b>📍 Hodeidah</b>
-✈️ KSA strike series on Hodeidah city, then 3 strikes on Hodeidah airport.
+✈️ KSA strike destroys the telecom corporation building in Hodeidah city: 4 killed, 18 injured (not final).
 
-<b>📍 Al-Bayda</b>
-✈️ 8 KSA air strikes hit telecom towers in Mukayras.
+<b>📍 Hajjah</b>
+⚠️ KSA attack kills 2 children herding sheep in Bani Amer, Aslam, and injures another.
 
 <b>📍 Lahj</b>
-✈️ 2 KSA air strikes on Karsh, Al-Qubaytah.
-
-<b>📍 Al-Dhale</b>
-⚠️ AA/Houthi security forces seize a car bomb and a motorbike bomb bound for Dhamar, blaming KSA intelligence.
+✈️ KSA air strike on a home in Zurayqat al-Yaman, Al-Maqatirah.
 
 <b>🇸🇦 Saudi Arabia</b>
-🛡️ KSA says it intercepted a drone toward Riyadh and a ballistic missile toward the western region. AA/Houthis deny any threat to Mecca.
+🚀 AA/Houthis strike the Rabigh refinery and a radar in Al-Dawasir. KSA says it intercepted drones toward Riyadh and the south.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 71 KSA strikes and missiles in 24h, 5,500 in total. IRG/PLC says it carried out 816 strikes on AA/Houthi positions.
+📊 AA/Houthis count 81 KSA strikes and missiles in 24h, 5,581 in total. IRG/PLC says it carried out 639 strikes on AA/Houthi positions.
 
-📊 Since 1 Sep: 933 incidents, 466 civilians killed, 719 injured
+📊 Since 1 Sep: 949 incidents, 479 civilians killed, 767 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
