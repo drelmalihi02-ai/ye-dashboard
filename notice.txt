@@ -1,47 +1,36 @@
-🇾🇪 <b>Yemen update | 25 Nov, 08:11 (Sana'a)</b>
-<i>Reports up to 25 Nov, 05:18</i>
+🇾🇪 <b>Yemen update | 26 Nov, 08:05 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-💥 5 KSA air strikes on Al-Husayn village, Mawiyah, destroy a home and kill an elderly man.
-✈️ KSA strikes on Al-A'ruq and Al-Athawir, Hayfan (4) and Al-Misrakh (2), hitting the Anbiyan shrine again. IRG/PLC fire injures a woman in Al-Aqrud.
-⚠️ IRG/PLC says AA/Houthi shelling killed a girl in Yanan, Sabir al-Mawadim.
-
-<b>📍 Lahj</b>
-💥 KSA air strike on a reed hut of displaced people, Ras al-Arah: 8 killed, incl. 2 women and a child.
-🔻 Ma'baq bus strike, Al-Maqatirah: toll now 25 killed and missing, 6 injured, not final.
-🛡️ AA/Houthis shoot down a KSA Wing Loong 2 drone off the Lahj coast.
-
-<b>📍 Hodeidah</b>
-✈️ KSA strikes on Hodeidah port, airport and city, Al-Khawkhah and beehives in Az-Zuhrah.
-
-<b>📍 Sana'a</b>
-✈️ 5 KSA air strikes on an equestrian club in Bani al-Harith kill over 60 horses. Night strikes near Sana'a airport.
+✈️ KSA air strikes on Al-Ta'iziyah incl. Al-Janad (2), Al-Athawir, Hayfan, and Al-Misrakh (2).
+⚠️ IRG/PLC says AA/Houthi shelling killed a woman and injured 7, incl. a child, in Sabir al-Mawadim and Al-Misrakh.
+🚀 AA/Houthi drone strikes on IRG/PLC forces around Bab al-Mandab.
 
 <b>📍 Sa'dah</b>
-💥 KSA fire kills 1 and injures 1 in Shada and injures 1 in Hattab, Baqim. KSA shelling on Razih and Shada, missiles on Sahar.
+✈️ 4 KSA air strikes east of Sa'dah city. KSA gunfire injures a civilian in Qahr Bani al-Harith, Baqim, and KSA shelling hits Shada.
 
-<b>📍 Al-Bayda</b>
-💥 KSA attack on a truck in Al-Bayda district kills the driver and injures others.
+<b>📍 Lahj</b>
+✈️ KSA air strikes on Qal'at al-Maqatirah (2) and Al-Qubaytah. Remains of US-made GBU-12 bombs documented at the Ma'baq bus strike site.
 
 <b>📍 Amran</b>
-✈️ 3 KSA air strikes on Amran city and 3 on Harf Sufyan.
+💥 2 KSA air strikes on a home in Al-Qaflah kill 1 civilian and injure 1.
 
-<b>📍 Ibb</b>
-✈️ KSA strikes on telecom sites in Jiblah (3) and Yarim.
+<b>📍 Hajjah</b>
+✈️ 5 KSA air strikes on Abs.
 
-<b>📍 Aden</b>
-⚠️ IRG/PLC says an AA/Houthi drone killed 3 displaced civilians and injured 5 in Bir Ahmed, Al-Buraiqa, on 22 Nov.
+<b>📍 Hodeidah</b>
+✈️ New KSA attack on Hodeidah port. KSA says it hit "operational capabilities" at the port.
+
+<b>📍 Sana'a</b>
+✈️ KSA attack on the capital late on 25 Nov.
 
 <b>🇸🇦 Saudi Arabia</b>
-🚀 KSA says an AA/Houthi drone hit a tower in Riyadh's financial district, and 2 drones were downed over the Eastern Province.
-
-<b>🌊 Red Sea</b>
-⚠️ KSA asks civilians to leave Hodeidah port. AA/Houthis warn Jeddah and all Saudi Red Sea ports will be hit if it is bombed.
+🚀 AA/Houthis strike the Ras Tanura refinery and Riyadh's financial district. KSA says 4 drones were downed at Ras Tanura. Thick smoke seen over the site.
+🚀 AA/Houthis strike Jeddah and Jizan ports, citing the Hodeidah port strikes. KSA says a projectile hit Jizan port and a drone was downed near Jeddah port.
+🛡️ KSA says it downed 2 ballistic missiles toward Riyadh, a cruise missile and 2 drones. Blasts heard in Riyadh.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 72 KSA strikes and missiles in 24h, 5,720 in total. Health ministry: 41 civilians killed, 35 injured in 48h.
-📊 IRG/PLC says it carried out 697 strikes and that breaking the Taiz siege is its top priority.
+📊 AA/Houthis count 105 KSA strikes and missiles in 24h, the most since 10 Nov, 5,825 in total. IRG/PLC says it carried out 654 strikes.
 
-📊 Since 1 Sep: 990 incidents, 528 civilians killed, 786 injured
+📊 Since 1 Sep: 1003 incidents, 529 civilians killed, 788 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
