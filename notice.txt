@@ -1,33 +1,35 @@
-🇾🇪 <b>Yemen update | 27 Nov, 08:03 (Sana'a)</b>
-<i>Reports up to 27 Nov, 04:19</i>
+🇾🇪 <b>Yemen update | 28 Nov, 08:05 (Sana'a)</b>
 
 <b>📍 Taiz</b>
-💥 KSA attack on shops in Al-Hawjalah, Al-Misrakh, kills 3 civilians incl. a woman and a boy.
-✈️ KSA strike on a shop in Mawiyah kills 1. A strike on a farm in Al-Athawir, Hayfan, injures 1.
-✈️ KSA air strikes also hit Sami', Al-Mawasit, Al-Ta'iziyah, Salah, Sabir al-Mawadim, Al-Mukha (3) and Ash-Shamayatayn.
-⚠️ IRG/PLC says AA/Houthi shelling and sniping injured 9 civilians, incl. 4 children, in Taiz city, Sabir and Al-Misrakh.
-
-<b>📍 Sana'a</b>
-💥 KSA strike on a home in Al-Haymah Al-Kharijiyah kills a couple and injures 5 of their children.
-✈️ 3 KSA air strikes on a potato factory in Bani al-Harith injure 2 firefighters.
-
-<b>📍 Hodeidah</b>
-✈️ KSA air strikes destroy the Al-Mina sewage plant (6 injured). 2 strikes on Al-Qanawis injure 5.
-
-<b>📍 Hajjah</b>
-✈️ KSA strike on a farm bulldozer in Al-Jarr, Abs, kills a child. More strikes on Abs and Haradh.
+💥 KSA air strike on a residential building in Al-Turbah, Ash-Shamayatayn, kills 11, most of them children. IRG/PLC says no air operation took place and blames AA/Houthis.
+🔻 KSA attack kills a child and injures another in Wadi al-Dabab, Jabal Habashi.
+✈️ KSA strike on a home in Wadi al-Dabab, Sabir al-Mawadim, injures a woman and 2 girls.
+⚡ 5 KSA air strikes hit Al-Mukha power station. More strikes on Al-Misrakh and Salah.
+⚠️ IRG/PLC says AA/Houthi fire killed 3, incl. a boy and his father, and injured 3 in Taiz city and Sabir.
 
 <b>📍 Sa'dah</b>
-✈️ KSA air strikes on Sahar and Majz. KSA fire injures a civilian in Munabbih.
+✈️ 48 KSA air strikes and 10 missiles on Sa'dah in a day, 38 strikes on Sahar. A fuel tank burns in Sa'dah city.
+🔻 KSA fire kills 1 and injures 2 in Munabbih and injures 2 in Hattab, Baqim.
+
+<b>📍 Sana'a</b>
+💥 KSA attack on Bir Abu Shamlah, At-Tahrir, injures 13, incl. women, 3 critically, and damages 11 homes and shops.
+
+<b>📍 Lahj</b>
+✈️ 11 KSA air strikes on shepherds and homes in Al-Qubaytah injure a girl. IRG/PLC blames AA/Houthis and says 2 girls were hurt.
+
+<b>📍 Hodeidah</b>
+✈️ 8 KSA air strikes destroy telecom networks in Az-Zuhrah. A man hurt at the Al-Mina sewage plant dies.
+
+<b>📍 Ibb</b>
+💥 KSA attack hits gas tankers at Mithlath al-Suhul, Ibb district.
 
 <b>🇸🇦 Saudi Arabia</b>
-🔥 KSA says AA/Houthis attacked the Jizan refinery. Fire and a halt to operations reported. KSA says it destroyed the launcher in Hodeidah.
+🛡️ KSA says it intercepted a drone and a cruise missile fired toward Riyadh.
 
 <b>🏛️ Nationwide</b>
-📊 AA/Houthis count 109 KSA strikes and missiles in 24h, 5,934 in total. KSA says it hit 50 targets in Sana'a, Hodeidah and Sa'dah.
-🏥 AA/Houthi health ministry: 19 civilians killed, 25 injured in 48h.
-🤝 First body exchange under the Muscat deal: 20 AA/Houthi bodies to Sana'a, 15 IRG/PLC bodies to Lahj.
+📊 AA/Houthis count 104 KSA strikes and missiles in 24h, 6,038 in total.
+🏥 AA/Houthi health ministry: 14 civilians killed, incl. 12 children, and 20 injured in 24h.
 
-📊 Since 1 Sep: 1027 incidents, 536 civilians killed, 811 injured
+📊 Since 1 Sep: 1053 incidents, 550 civilians killed, 832 injured
 
 <a href="https://drelmalihi02-ai.github.io/ye-dashboard/">Open the dashboard</a>
